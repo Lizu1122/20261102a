@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="十三行行動博物館｜走進臺灣考古現場，認識千年前的史前文化。">
+    <title>單元二 工藝大挑戰 ｜ 十三行行動博物館</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/audio.css">
+    <link rel="stylesheet" href="css/tour.css">
+</head>
+<body>
+
+    <!-- ===== 頂部品牌列（沿用原本風格，LOGO + 教材名稱 + 右側常駐導覽） ===== -->
+    <header class="site-header" role="banner">
+        <!-- 左：LOGO + 教材名稱（LOGO 點擊回首頁） -->
+        <a href="index.html" class="brand brand--link" id="homeLink" aria-label="回到首頁">
+            <span class="brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 60 60" width="42" height="42">
+                    <polygon points="10,50 30,8 50,50" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                    <polygon points="18,50 30,26 42,50" fill="currentColor" opacity="0.85"/>
+                    <line x1="6" y1="54" x2="54" y2="54" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </span>
+            <span class="brand__text">
+                <span class="brand__title">十三行行動博物館</span>
+                <span class="brand__subtitle">SHIHSANHANG&nbsp;|&nbsp;Mobile Museum of Archaeology</span>
+            </span>
+        </a>
+
+        <!-- 右：常駐選單 + 總測驗入口 -->
+        <nav class="top-nav" aria-label="主要導覽">
+            <button class="top-nav__link" type="button" data-modal-open="map">課程地圖</button>
+            <button class="top-nav__link" type="button" data-modal-open="guide">操作說明</button>
+            <button class="top-nav__link" type="button" data-modal-open="recap">重點整理</button>
+            <button class="top-nav__link" type="button" data-modal-open="team">製作團隊</button>
+            <a class="top-nav__link top-nav__link--quiz" href="quiz.html">⏱ 總測驗</a>
+        </nav>
+
+        <!-- 頂部超薄進度條（沿用原本側欄進度條的漸層配色） -->
+        <div class="header-progress" aria-hidden="true">
+            <span class="header-progress__bar" id="headerProgressBar" style="width:0%"></span>
+        </div>
+    </header>
+
+    <!-- ===== 目前位置 / 麵包屑工具列（薄薄一條，沿用既有 line/indigo） ===== -->
+    <div class="locator" id="locator" aria-label="目前位置">
+        <div class="locator__inner">
+            <div class="locator__left">
+                <span class="locator__dot" aria-hidden="true"></span>
+                <span class="locator__path" id="locatorPath">單元二　·　工藝大挑戰　／　2-1 陶器的奧秘</span>
+            </div>
+            <div class="locator__right">
+                <span class="locator__progress-text" id="locatorProgress">學習進度 0%</span>
+                <button type="button" class="locator__quick" data-modal-open="map" aria-label="開啟課程地圖快速切換">快速切換單元</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 主版型：側邊欄 + 內容 ===== -->
+    <div class="layout">
+        <aside class="sidebar" aria-label="單元導覽">
+            <div class="sidebar__head">
+                <span class="sidebar__eyebrow">UNIT NAVIGATION</span>
+                <h2 class="sidebar__title">學習單元</h2>
+                <div class="sidebar__rule" aria-hidden="true"></div>
+            </div>
+
+            <ul class="unit-list" role="list">
+                <li class="unit-item" data-unit="1">
+                    <button class="unit-item__btn" type="button" data-unit-target="unit1.html">
+                        <span class="unit-item__no">01</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">初識十三行</span>
+                            <span class="unit-item__desc">考古現場・建築・信仰</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="unit1.html#sub-1-1" class="sub-link">1-1　我們的考古日記</a></li>
+                        <li><a href="unit1.html#sub-1-2" class="sub-link">1-2　奇特的房子</a></li>
+                        <li><a href="unit1.html#sub-1-3" class="sub-link">1-3　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item is-active" data-unit="2">
+                    <button class="unit-item__btn" type="button" aria-current="page" data-unit-target="#unit-2">
+                        <span class="unit-item__no">02</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">工藝大挑戰</span>
+                            <span class="unit-item__desc">陶器・煉鐵・玻璃珠</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="#sub-2-1" class="sub-link is-current">2-1　陶器的奧秘</a></li>
+                        <li><a href="#sub-2-2" class="sub-link">2-2　煉鐵高手</a></li>
+                        <li><a href="#sub-2-3" class="sub-link">2-3　小小玻璃珠</a></li>
+                        <li><a href="#sub-2-4" class="sub-link">2-4　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item" data-unit="3">
+                    <button class="unit-item__btn" type="button" data-unit-target="unit3.html">
+                        <span class="unit-item__no">03</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">社會與信仰</span>
+                            <span class="unit-item__desc">墓葬・人面陶罐・儀式</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="unit3.html#sub-3-1" class="sub-link">3-1　墓葬的祕密</a></li>
+                        <li><a href="unit3.html#sub-3-2" class="sub-link">3-2　人面陶罐</a></li>
+                        <li><a href="unit3.html#sub-3-3" class="sub-link">3-3　信仰與儀式</a></li>
+                        <li><a href="unit3.html#sub-3-4" class="sub-link">3-4　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item unit-item--quiz" data-unit="4">
+                    <button class="unit-item__btn" type="button" data-unit-target="quiz.html">
+                        <span class="unit-item__no">04</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">終極總測驗</span>
+                            <span class="unit-item__desc">10 題選擇＋5 題互動遊戲</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">⏱</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="sidebar__progress">
+                <div class="progress-label">
+                    <span>學習進度</span>
+                    <span class="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar"><span style="width:0%"></span></div>
+            </div>
+        </aside>
+
+        <!-- ===== 主要內容區 ===== -->
+        <main class="content" id="main">
+            <span id="top" tabindex="-1" aria-hidden="true"></span>
+            <!-- ============================================================
+                 ===== 單元二：工藝大挑戰 =====
+                 ============================================================ -->
+            <section class="unit-hero" id="unit-2" aria-labelledby="unit-2-title">
+                <div class="unit-hero__crumbs">
+                    <a href="index.html">行動展廳</a><span>／</span><a href="#unit-2">單元二</a><span>／</span><span>工藝大挑戰</span>
+                </div>
+                <div class="unit-hero__grid">
+                    <div class="unit-hero__copy">
+                        <span class="unit-hero__eyebrow">UNIT 02　・　工藝大挑戰</span>
+                        <h1 id="unit-2-title" class="unit-hero__title">千年前的<em>手作職人</em><br>養成計畫</h1>
+                        <p class="unit-hero__lead">
+                            十三行人不只會捕魚，還是厲害的工藝高手！他們會做陶器、會煉鐵，還收藏從海外來的玻璃珠。這個單元有四個小主題，大約要花 <b>50 分鐘</b>。
+                        </p>
+                        <div class="unit-hero__meta">
+                            <span class="chip">年級｜國小高年級</span>
+                            <span class="chip">領域｜社會・自然</span>
+                            <span class="chip">時長｜50 分</span>
+                        </div>
+                    </div>
+                    <div class="unit-hero__visual" aria-hidden="true">
+                        <div class="hero-stack">
+                            <div class="hero-stack__slab hero-stack__slab--1"></div>
+                            <div class="hero-stack__slab hero-stack__slab--2"></div>
+                            <div class="hero-stack__slab hero-stack__slab--3"></div>
+                            <div class="hero-stack__sun"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 子單元 2-1：陶器的奧秘 ===== -->
+            <section id="sub-2-1" class="sub-section" aria-labelledby="sub-2-1-title">
+                <header class="sub-section__head">
+                    <span class="sub-section__index">2-1</span>
+                    <div>
+                        <h2 id="sub-2-1-title" class="sub-section__title">陶器的奧秘</h2>
+                        <p class="sub-section__sub">一坨泥土，怎麼變成全家人的鍋碗瓢盆？跟著做一遍就知道！</p>
+                    </div>
+                    <span class="sub-section__time">12 min</span>
+                </header>
+
+                <div class="objectives" aria-label="本單元學習目標">
+                    <div class="objectives__head">
+                        <span class="objectives__eyebrow">LEARNING OBJECTIVES　·　學習目標</span>
+                        <div class="objectives__meta">
+                            <span class="objectives__time">⏱ 預估完成時間　<b>12 分鐘</b></span>
+                            <span class="objectives__level">難度　<b>★ ☆ ☆</b></span>
+                        </div>
+                    </div>
+                    <h3 class="objectives__title">完成本節後，你將能夠：</h3>
+                    <ul class="objectives__list">
+                        <li><span class="objectives__num">01</span><div><b>說出十三行陶器的招牌特色</b>：紅褐色、摻了砂、用手拍打做成。</div></li>
+                        <li><span class="objectives__num">02</span><div>照順序說出<b>做陶的五個步驟</b>：採土、練土、成形、陰乾、燒製。</div></li>
+                        <li><span class="objectives__num">03</span><div>玩燒陶模擬器，了解<b>火的溫度怎麼影響陶器</b>。</div></li>
+                        <li><span class="objectives__num">04</span><div>說說看陶土裡<b>為什麼要故意加砂</b>。</div></li>
+                    </ul>
+                </div>
+
+                <!-- 教學文本 -->
+                <h3 class="mini-h">陶器：十三行出土數量第一名的文物</h3>
+                <div class="lead-block">
+                    <span class="lead-block__eyebrow">POTTERY　·　陶器</span>
+                    <h4 class="lead-block__title">如果十三行有「全民必備家電」，那一定是陶罐</h4>
+                    <div class="lead-block__body">
+                        <p>在十三行遺址裡，挖到最多的東西就是<strong>陶器碎片</strong>，數量多到成千上萬。它們大多是<strong>紅褐色的夾砂陶</strong>。「夾砂陶」就是陶土裡摻了砂粒的陶器，所以摸起來粗粗的。</p>
+                        <p>對十三行人來說，陶器就是煮飯的鍋、裝水的瓶、存糧的桶。<em>沒有陶器，日子可就難過了</em>！</p>
+                        <p>陶器也是考古學家眼中「<strong>會說話的證據</strong>」：看陶片的成分，可以猜它從哪裡來；看形狀，可以猜它拿來做什麼；看表面的黑色煙燻痕，就知道它煮過東西。這一節，我們就跟著十三行的做陶師傅，把一坨土變成一個罐子吧！</p>
+                    </div>
+                </div>
+
+                <!-- 互動：製陶五步驟 -->
+                <h3 class="mini-h">互動工坊：跟著師傅做陶罐（點步驟或按「下一步」）</h3>
+                <div class="steps-flow" id="potterySteps" aria-label="製陶五步驟互動">
+                    <div class="steps-flow__tabs" role="tablist" aria-label="製陶步驟">
+                        <button class="steps-flow__tab is-active" type="button" data-step="0" role="tab" aria-selected="true"><b>01</b><span>採土</span></button>
+                        <button class="steps-flow__tab" type="button" data-step="1" role="tab" aria-selected="false"><b>02</b><span>練土</span></button>
+                        <button class="steps-flow__tab" type="button" data-step="2" role="tab" aria-selected="false"><b>03</b><span>成形</span></button>
+                        <button class="steps-flow__tab" type="button" data-step="3" role="tab" aria-selected="false"><b>04</b><span>陰乾</span></button>
+                        <button class="steps-flow__tab" type="button" data-step="4" role="tab" aria-selected="false"><b>05</b><span>燒製</span></button>
+                    </div>
+
+                    <div class="steps-flow__stage">
+                        <!-- STEP 1 採土 -->
+                        <div class="steps-flow__panel is-active" data-step-panel="0">
+                            <div class="steps-flow__svg" aria-hidden="true">
+                                <svg viewBox="0 0 300 220">
+                                    <rect x="0" y="150" width="300" height="70" fill="#8A6438"/>
+                                    <path d="M0,150 Q75,138 150,150 Q225,160 300,148 L300,220 L0,220 Z" fill="#6B4A2A"/>
+                                    <path d="M0,120 Q80,105 160,118 Q240,130 300,115 L300,150 L0,150 Z" fill="#4F86B3" opacity="0.75"/>
+                                    <ellipse cx="105" cy="175" rx="34" ry="12" fill="#3D2A18"/>
+                                    <ellipse cx="105" cy="171" rx="26" ry="8" fill="#5A3F1A"/>
+                                    <g transform="translate(180,120)">
+                                        <circle cx="0" cy="-24" r="10" fill="#C8965C"/>
+                                        <rect x="-6" y="-14" width="12" height="30" rx="4" fill="#6B4A2A"/>
+                                        <line x1="-4" y1="16" x2="-10" y2="42" stroke="#6B4A2A" stroke-width="5" stroke-linecap="round"/>
+                                        <line x1="4" y1="16" x2="12" y2="40" stroke="#6B4A2A" stroke-width="5" stroke-linecap="round"/>
+                                        <line x1="-6" y1="-6" x2="-30" y2="18" stroke="#C8965C" stroke-width="4" stroke-linecap="round"/>
+                                        <line x1="-30" y1="18" x2="-46" y2="40" stroke="#8A8A8A" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M-52,40 L-40,40 L-46,52 Z" fill="#8A8A8A"/>
+                                    </g>
+                                    <text x="20" y="30" font-size="12" fill="#3D2A18" font-weight="700" letter-spacing="2">河邊的黏土層</text>
+                                </svg>
+                            </div>
+                            <div class="steps-flow__text">
+                                <h4>STEP 1　採土：到河邊找「會黏手」的土</h4>
+                                <p>不是每種土都能做陶器喔！師傅會到<b>河岸或山坡邊</b>，挖細細的<b>黏土</b>。怎麼試？用手搓成長條，彎起來不會斷，就是好陶土。挖回來後，還要把小石頭、樹根挑乾淨。</p>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2 練土 -->
+                        <div class="steps-flow__panel" data-step-panel="1">
+                            <div class="steps-flow__svg" aria-hidden="true">
+                                <svg viewBox="0 0 300 220">
+                                    <rect x="40" y="160" width="220" height="14" fill="#A88A5C"/>
+                                    <rect x="50" y="174" width="200" height="8" fill="#6B4A2A"/>
+                                    <ellipse cx="150" cy="140" rx="46" ry="26" fill="#8B6A3A"/>
+                                    <ellipse cx="150" cy="132" rx="40" ry="20" fill="#A0794A"/>
+                                    <g fill="#D9C8A8">
+                                        <circle cx="132" cy="132" r="3"/>
+                                        <circle cx="150" cy="126" r="3"/>
+                                        <circle cx="166" cy="134" r="3"/>
+                                        <circle cx="142" cy="142" r="2.5"/>
+                                        <circle cx="160" cy="144" r="2.5"/>
+                                    </g>
+                                    <g transform="translate(150,70)">
+                                        <circle cx="-42" cy="0" r="9" fill="#C8965C"/>
+                                        <rect x="-48" y="9" width="12" height="26" rx="4" fill="#A8341F" opacity="0.85"/>
+                                        <line x1="-40" y1="18" x2="-16" y2="46" stroke="#C8965C" stroke-width="4" stroke-linecap="round"/>
+                                        <line x1="-44" y1="18" x2="-24" y2="50" stroke="#C8965C" stroke-width="4" stroke-linecap="round"/>
+                                    </g>
+                                    <text x="20" y="30" font-size="12" fill="#3D2A18" font-weight="700" letter-spacing="2">摻砂・搓揉・排出氣泡</text>
+                                </svg>
+                            </div>
+                            <div class="steps-flow__text">
+                                <h4>STEP 2　練土：摻砂、搓揉、趕走氣泡</h4>
+                                <p>這一步藏著十三行陶器的秘密！師傅會在黏土裡<b>故意加入砂粒</b>，再像揉麵團一樣反覆搓揉。加砂讓陶器比較不怕忽冷忽熱，不容易裂開。搓揉是為了<b>擠出土裡的氣泡</b>，因為氣泡裡的空氣和水氣一受熱就會膨脹，可能讓陶器「啵」一聲裂開。</p>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3 成形 -->
+                        <div class="steps-flow__panel" data-step-panel="2">
+                            <div class="steps-flow__svg" aria-hidden="true">
+                                <svg viewBox="0 0 300 220">
+                                    <rect x="40" y="176" width="220" height="12" fill="#A88A5C"/>
+                                    <path d="M110 90 Q104 130 112 168 L188 168 Q196 130 190 90 Q172 80 150 82 Q128 80 110 90 Z" fill="#A0794A" stroke="#5A3F1A" stroke-width="2"/>
+                                    <ellipse cx="150" cy="90" rx="40" ry="10" fill="#8B6A3A" stroke="#5A3F1A" stroke-width="2"/>
+                                    <g transform="translate(228,120) rotate(18)">
+                                        <rect x="-6" y="-38" width="12" height="52" rx="5" fill="#6B4A2A"/>
+                                        <rect x="-16" y="-52" width="32" height="16" rx="4" fill="#8A6438"/>
+                                    </g>
+                                    <g transform="translate(88,128)">
+                                        <ellipse cx="0" cy="0" rx="14" ry="18" fill="#7E7E7E"/>
+                                        <ellipse cx="0" cy="-4" rx="10" ry="12" fill="#9A9A9A"/>
+                                    </g>
+                                    <g stroke="#5A3F1A" stroke-width="1" opacity="0.55">
+                                        <path d="M116,110 Q150,118 186,110" fill="none"/>
+                                        <path d="M114,128 Q150,136 188,128" fill="none"/>
+                                        <path d="M113,146 Q150,154 189,146" fill="none"/>
+                                    </g>
+                                    <text x="20" y="30" font-size="12" fill="#3D2A18" font-weight="700" letter-spacing="2">拍墊法：外拍內墊</text>
+                                </svg>
+                            </div>
+                            <div class="steps-flow__text">
+                                <h4>STEP 3　成形：沒有轆轤的「拍墊法」</h4>
+                                <p>十三行人<b>沒有會旋轉的陶輪（轆轤）</b>。他們先用手捏出罐子的大概形狀，接著一手拿<b>木拍</b>在外面拍，一手拿<b>鵝卵石</b>在裡面頂著，邊拍邊轉，把罐壁拍得又薄又平均。這就叫「<b>拍墊法</b>」。木拍上刻的花紋，也順便印在罐子上，變成漂亮的<b>拍印紋</b>（常見格子、線條等幾何圖案）。</p>
+                            </div>
+                        </div>
+
+                        <!-- STEP 4 陰乾 -->
+                        <div class="steps-flow__panel" data-step-panel="3">
+                            <div class="steps-flow__svg" aria-hidden="true">
+                                <svg viewBox="0 0 300 220">
+                                    <rect x="30" y="180" width="240" height="10" fill="#A88A5C"/>
+                                    <polygon points="60,60 240,60 260,80 40,80" fill="#8A6438"/>
+                                    <line x1="60" y1="80" x2="60" y2="180" stroke="#6B4A2A" stroke-width="6"/>
+                                    <line x1="240" y1="80" x2="240" y2="180" stroke="#6B4A2A" stroke-width="6"/>
+                                    <g>
+                                        <path d="M100 110 Q96 140 102 168 L138 168 Q144 140 140 110 Q128 102 120 104 Q112 102 100 110 Z" fill="#B08556" stroke="#5A3F1A" stroke-width="1.5"/>
+                                        <ellipse cx="120" cy="110" rx="20" ry="6" fill="#96703F" stroke="#5A3F1A" stroke-width="1.5"/>
+                                    </g>
+                                    <g>
+                                        <path d="M165 118 Q162 144 167 168 L197 168 Q202 144 199 118 Q188 111 181 113 Q174 111 165 118 Z" fill="#BC9060" stroke="#5A3F1A" stroke-width="1.5"/>
+                                        <ellipse cx="181" cy="118" rx="17" ry="5" fill="#A07A48" stroke="#5A3F1A" stroke-width="1.5"/>
+                                    </g>
+                                    <g stroke="#4F86B3" stroke-width="2" stroke-linecap="round" opacity="0.7" fill="none">
+                                        <path d="M52,120 q8,-6 16,0 q8,6 16,0"/>
+                                        <path d="M220,140 q8,-6 16,0 q8,6 16,0"/>
+                                    </g>
+                                    <text x="20" y="30" font-size="12" fill="#3D2A18" font-weight="700" letter-spacing="2">通風處慢慢陰乾</text>
+                                </svg>
+                            </div>
+                            <div class="steps-flow__text">
+                                <h4>STEP 4　陰乾：最考驗耐心的一步</h4>
+                                <p>剛做好的陶罐裡面還有很多水，<b>不能馬上拿去燒</b>，也不能放在大太陽下曬（乾太快會裂開）。師傅會把罐子放在<b>陰涼通風的地方</b>，等上好幾天，讓水分慢慢跑掉。急性子的人，可做不出好陶器喔！</p>
+                            </div>
+                        </div>
+
+                        <!-- STEP 5 燒製 -->
+                        <div class="steps-flow__panel" data-step-panel="4">
+                            <div class="steps-flow__svg" aria-hidden="true">
+                                <svg viewBox="0 0 300 220">
+                                    <rect x="30" y="186" width="240" height="8" fill="#6B4A2A"/>
+                                    <ellipse cx="150" cy="186" rx="90" ry="14" fill="#3D2A18"/>
+                                    <g fill="#5A3F1A">
+                                        <rect x="76" y="172" width="40" height="8" rx="3" transform="rotate(-12 96 176)"/>
+                                        <rect x="186" y="170" width="40" height="8" rx="3" transform="rotate(12 206 174)"/>
+                                        <rect x="130" y="178" width="44" height="8" rx="3"/>
+                                    </g>
+                                    <g>
+                                        <path d="M126 116 Q122 146 127 172 L173 172 Q178 146 174 116 Q162 108 150 110 Q138 108 126 116 Z" fill="#B5653A" stroke="#5A2010" stroke-width="1.5"/>
+                                        <ellipse cx="150" cy="116" rx="24" ry="7" fill="#8E4526" stroke="#5A2010" stroke-width="1.5"/>
+                                    </g>
+                                    <g class="anim-flame">
+                                        <path d="M96,170 Q90,140 104,124 Q106,142 114,148 Q116,132 126,126 Q122,150 116,168 Z" fill="#FF8A45" opacity="0.9"/>
+                                        <path d="M186,168 Q182,138 196,122 Q198,142 206,148 Q208,134 216,128 Q212,152 204,168 Z" fill="#FF8A45" opacity="0.9"/>
+                                        <path d="M102,166 Q100,150 108,140 Q112,152 118,156 Q118,162 114,168 Z" fill="#FFD068"/>
+                                        <path d="M192,164 Q190,148 198,138 Q202,150 208,154 Q208,160 204,166 Z" fill="#FFD068"/>
+                                    </g>
+                                    <g fill="#B8B8B8" opacity="0.7">
+                                        <ellipse cx="120" cy="86" rx="8" ry="4"/>
+                                        <ellipse cx="185" cy="76" rx="10" ry="5"/>
+                                        <ellipse cx="150" cy="62" rx="12" ry="5"/>
+                                    </g>
+                                    <text x="20" y="30" font-size="12" fill="#3D2A18" font-weight="700" letter-spacing="2">露天堆燒 約 600–900°C</text>
+                                </svg>
+                            </div>
+                            <div class="steps-flow__text">
+                                <h4>STEP 5　燒製：與火共舞的最後關卡</h4>
+                                <p>學者認為十三行人用的是<b>露天堆燒</b>：不用窯，直接把陶器和柴火堆在一起點火，溫度大約 <b>600–900°C</b>。燒過之後，軟軟的黏土起了變化，變成<b>泡水也不會散開的陶</b>。燒的時候空氣很流通（氧氣充足），所以陶器大多燒成紅褐色。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps-flow__nav">
+                        <button class="steps-flow__navbtn" type="button" id="potteryPrev" disabled>← 上一步</button>
+                        <span class="steps-flow__counter" id="potteryCounter">STEP 1 / 5</span>
+                        <button class="steps-flow__navbtn steps-flow__navbtn--primary" type="button" id="potteryNext">下一步 →</button>
+                    </div>
+                </div>
+
+                <!-- 互動：燒窯溫度模擬器 -->
+                <h3 class="mini-h">燒陶模擬器：拖動滑桿，控制火候</h3>
+                <p style="font-size:13.5px;color:var(--c-text-soft);margin-bottom:12px;letter-spacing:var(--ls-wide);">
+                    燒陶最難的就是<b style="color:var(--c-indigo);">控制溫度</b>。拖動下面的滑桿，改變火的溫度，看看陶罐會怎麼變。火太小燒不熟，火太猛又容易裂，你找得到剛剛好的溫度嗎？
+                </p>
+                <div class="kiln-lab" id="kilnLab" aria-label="燒陶溫度模擬器">
+                    <div class="kiln-lab__stage" aria-hidden="true">
+                        <svg viewBox="0 0 320 260" class="kiln-svg">
+                            <rect x="20" y="228" width="280" height="10" fill="#6B4A2A"/>
+                            <ellipse cx="160" cy="228" rx="110" ry="16" fill="#3D2A18"/>
+                            <g id="kilnFire" style="transform-origin:160px 224px;">
+                                <path d="M92,222 Q84,178 104,152 Q108,180 120,188 Q122,160 138,150 Q132,190 124,220 Z" fill="#FF8A45" opacity="0.92"/>
+                                <path d="M196,220 Q192,176 212,150 Q214,180 226,186 Q230,164 242,156 Q236,192 224,220 Z" fill="#FF8A45" opacity="0.92"/>
+                                <path d="M102,218 Q100,192 112,176 Q118,194 126,198 Q126,208 120,220 Z" fill="#FFD068"/>
+                                <path d="M202,216 Q200,190 212,174 Q218,192 226,196 Q226,206 220,218 Z" fill="#FFD068"/>
+                            </g>
+                            <g id="kilnPotG">
+                                <path id="kilnPotBody" d="M120 138 Q114 180 122 216 L198 216 Q206 180 200 138 Q180 126 160 129 Q140 126 120 138 Z" fill="#8B7355" stroke="#3D2A18" stroke-width="2"/>
+                                <ellipse id="kilnPotRim" cx="160" cy="138" rx="40" ry="11" fill="#6E5A42" stroke="#3D2A18" stroke-width="2"/>
+                                <g id="kilnCrack" opacity="0" stroke="#1F1208" stroke-width="2.5" fill="none" stroke-linecap="round">
+                                    <path d="M150,150 L158,172 L150,190 L160,208"/>
+                                    <path d="M158,172 L170,180"/>
+                                    <path d="M150,190 L138,198"/>
+                                </g>
+                            </g>
+                            <g id="kilnGlow" opacity="0">
+                                <ellipse cx="160" cy="175" rx="60" ry="52" fill="#FF7A45" opacity="0.25"/>
+                            </g>
+                            <text x="24" y="34" font-size="13" fill="#3D2A18" font-weight="700" letter-spacing="2">露天燒陶現場</text>
+                        </svg>
+                    </div>
+                    <div class="kiln-lab__ctrl">
+                        <h4 class="kiln-lab__title">爐火控制台</h4>
+                        <input type="range" id="kilnRange" min="100" max="1200" value="100" step="10" aria-label="爐火溫度">
+                        <div class="kiln-lab__readout">
+                            <span class="kiln-lab__temp" id="kilnTemp">100°C</span>
+                            <span class="kiln-lab__state" id="kilnState" data-zone="low">還只是溫溫的泥土……</span>
+                        </div>
+                        <ul class="kiln-lab__zones">
+                            <li data-zone="low"><b>低於 600°C</b><span>燒不熟：裡面還是生土，泡到水就會散掉。</span></li>
+                            <li data-zone="good"><b>約 600–900°C</b><span>剛剛好：黏土變成堅固的陶，燒出紅褐色的夾砂陶。</span></li>
+                            <li data-zone="high"><b>超過 900°C</b><span>太猛了：露天堆燒的火很難控制，火太猛、受熱不平均，陶器容易裂開！</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 為什麼摻砂 -->
+                <div class="two-col">
+                    <div class="two-col__col">
+                        <p><b>為什麼要在陶土裡加砂？</b>這是很聰明的科學！只用黏土的話，乾燥和燒的時候會縮很多，也很怕忽冷忽熱。加了砂，砂粒就像水泥裡的小石頭，變成撐住陶器的「骨架」，讓陶器<b>不容易裂、更耐得住火烤</b>。</p>
+                        <p>所以十三行用來煮東西的陶器，大多是<b>夾砂陶</b>。它們天天要放在火上煮魚湯，沒有這個配方，可撐不了幾餐！</p>
+                    </div>
+                    <div class="two-col__col">
+                        <p><b>為什麼挖到的碎陶片比完整陶罐多？</b>陶器很容易摔破，又天天在用。考古學家推測，一戶人家一年可能就會打破好幾個罐子。破掉的陶片被丟在村子各處，越積越多，就變成考古學家挖到的<b>大量陶片</b>。</p>
+                        <p>相反地，<em>比較完整的陶罐</em>常常是在墓葬裡找到的。它們被小心放進墓裡陪伴過世的人，才能保存一千多年。</p>
+                    </div>
+                </div>
+
+                <!-- 陶器家族 -->
+                <h3 class="mini-h">十三行的陶器家族</h3>
+                <div class="know-grid cols-3">
+                    <article class="know-card">
+                        <div class="know-card__no">TYPE · 01</div>
+                        <h4 class="know-card__title">炊煮罐</h4>
+                        <div class="know-card__body">
+                            <p>家家戶戶的「鍋子」。<b>摻了砂、耐火烤</b>，底部常有黑黑的煙燻痕，代表它真的常常在火上煮東西。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">TYPE · 02</div>
+                        <h4 class="know-card__title">貯物罐</h4>
+                        <div class="know-card__body">
+                            <p>肚子大、開口小的罐子，可能用來<b>裝水、存糧、醃東西</b>，就像古時候的冰箱和米缸。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">TYPE · 03</div>
+                        <h4 class="know-card__title">陶缽與陶盆</h4>
+                        <div class="know-card__body">
+                            <p>開口大、身體淺，方便<b>裝菜、分著吃</b>，就像那時候的碗盤。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">TYPE · 04</div>
+                        <h4 class="know-card__title">陶紡輪</h4>
+                        <div class="know-card__body">
+                            <p>中間有洞的小圓陶片，套在木棒上轉呀轉，就能<b>把纖維搓成線</b>。有它，代表十三行人會紡線、織布。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">TYPE · 05</div>
+                        <h4 class="know-card__title">陶支腳</h4>
+                        <div class="know-card__body">
+                            <p>常幾個一組立在火堆裡，<b>把陶罐架在火上</b>，就像古時候的「瓦斯爐架」。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">TYPE · 06</div>
+                        <h4 class="know-card__title">人面陶罐</h4>
+                        <div class="know-card__body">
+                            <p>陶器家族的超級明星，罐子上有一張人臉！學者認為它不是平常用的，可能和<b>墓葬、信仰</b>有關。單元三會告訴你更多！</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 先猜猜看 -->
+                <div class="spoiler">
+                    <span class="spoiler__label">GUESS · 01</span>
+                    <h4 class="spoiler__q">沒有電窯、沒有溫度計，十三行人怎麼知道「燒好了沒」？</h4>
+                    <div class="spoiler__answer" role="button" tabindex="0" aria-label="點擊揭示答案">
+                        <div class="spoiler__answer-content">
+                            <b>答案：可能是靠火的顏色、聲音和經驗。</b>有經驗的師傅會看<em>火和陶器的顏色</em>（越熱，紅光越亮），聽柴火劈啪的聲音，還會看<em>天氣和風向</em>調整柴堆。這些訣竅一代教一代傳下來。<b>技術本身，就是一種珍貴的文化資產</b>。
+                        </div>
+                    </div>
+                    <p class="spoiler__hint">提示：想想看，家裡的大廚炒菜時，有用溫度計嗎？</p>
+                </div>
+
+                <div class="data-strip">
+                    <div class="data-strip__cell">
+                        <span class="data-strip__num">No.1</span>
+                        <span class="data-strip__label">出土數量第一的文物</span>
+                    </div>
+                    <div class="data-strip__cell">
+                        <span class="data-strip__num">600–900<small>°C</small></span>
+                        <span class="data-strip__label">露天堆燒溫度</span>
+                    </div>
+                    <div class="data-strip__cell">
+                        <span class="data-strip__num">5<small> 步驟</small></span>
+                        <span class="data-strip__label">採土到燒成</span>
+                    </div>
+                    <div class="data-strip__cell">
+                        <span class="data-strip__num">0<small> 台</small></span>
+                        <span class="data-strip__label">陶輪（全靠手工）</span>
+                    </div>
+                </div>
+
+                <!-- 本節重點整理 -->
+                <div class="recap-block" aria-label="本節重點整理">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">RECAP　·　本節重點整理</span>
+                        <h3 class="recap-block__title">2-1 學到的 4 個核心觀念</h3>
+                    </div>
+                    <div class="recap-block__grid">
+                        <div class="recap-chip"><b>① 紅褐夾砂陶</b><span>十三行陶器的招牌：紅褐色、摻了砂、用手拍打做成。</span></div>
+                        <div class="recap-chip"><b>② 拍墊法</b><span>沒有陶輪，用木拍在外面拍、鵝卵石在裡面墊，順便印出花紋。</span></div>
+                        <div class="recap-chip"><b>③ 加砂的科學</b><span>砂粒像陶器的骨架，讓鍋子耐火烤、不怕冷熱變化而裂開。</span></div>
+                        <div class="recap-chip"><b>④ 火候是關鍵</b><span>露天堆燒約 600–900°C，火太小燒不熟，火太猛容易裂。</span></div>
+                    </div>
+                    <div class="recap-block__actions">
+                        <a class="recap-block__btn" href="#sub-2-1" aria-label="再讀一次本節">↻ 再讀一次</a>
+                        <a class="recap-block__btn recap-block__btn--primary" href="#sub-2-2" aria-label="繼續閱讀 2-2">繼續閱讀：2-2 煉鐵高手 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 子單元 2-2：煉鐵高手（重點） ===== -->
+            <section id="sub-2-2" class="sub-section sub-section--feature" aria-labelledby="sub-2-2-title">
+                <header class="sub-section__head">
+                    <span class="sub-section__index">2-2</span>
+                    <div>
+                        <h2 id="sub-2-2-title" class="sub-section__title">煉鐵高手</h2>
+                        <p class="sub-section__sub">十三行是目前台灣唯一確認有史前煉鐵遺跡的地方——一起走進他們的高溫工坊！</p>
+                    </div>
+                    <span class="sub-section__time">15 min</span>
+                </header>
+
+                <div class="objectives" aria-label="本單元學習目標">
+                    <div class="objectives__head">
+                        <span class="objectives__eyebrow">LEARNING OBJECTIVES　·　學習目標</span>
+                        <div class="objectives__meta">
+                            <span class="objectives__time">⏱ 預估完成時間　<b>15 分鐘</b></span>
+                            <span class="objectives__level">難度　<b>★ ★ ☆</b></span>
+                        </div>
+                    </div>
+                    <h3 class="objectives__title">完成本節後，你將能夠：</h3>
+                    <ul class="objectives__list">
+                        <li><span class="objectives__num">01</span><div>說出<b>十三行文化為什麼屬於鐵器時代</b>，以及「自己會煉鐵」為什麼很特別。</div></li>
+                        <li><span class="objectives__num">02</span><div>用互動剖面圖，認識煉鐵爐的<b>爐壁、風口、爐料、出渣口</b>四個部位。</div></li>
+                        <li><span class="objectives__num">03</span><div>了解<b>塊煉法</b>：為什麼煉出來的不是鐵水，而是「海綿鐵」。</div></li>
+                        <li><span class="objectives__num">04</span><div>比較<b>石器和鐵器</b>有什麼不同，說說鐵器怎麼改變生活。</div></li>
+                    </ul>
+                </div>
+
+                <!-- 互動：煉鐵爐剖面 -->
+                <div class="house-lab">
+                    <div class="house-stage" id="furnaceStage" role="region" aria-label="煉鐵爐互動剖面圖">
+                        <div class="house-stage__hint">
+                            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                                <path d="M12 3v18M3 12h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>滑鼠移上爐子的不同部位查看解析</span>
+                        </div>
+
+                        <div class="house-3d">
+                            <svg viewBox="0 0 520 520" class="house-svg" role="img" aria-label="煉鐵爐構造剖面解析">
+                                <defs>
+                                    <linearGradient id="furnWallGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#B08556"/>
+                                        <stop offset="100%" stop-color="#6B4A2A"/>
+                                    </linearGradient>
+                                    <linearGradient id="furnFireGrad" x1="0" y1="1" x2="0" y2="0">
+                                        <stop offset="0%" stop-color="#FF5A20"/>
+                                        <stop offset="60%" stop-color="#FF8A45"/>
+                                        <stop offset="100%" stop-color="#FFD068"/>
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- 地面陰影 -->
+                                <ellipse cx="250" cy="480" rx="200" ry="20" fill="#000" opacity="0.16"/>
+                                <rect x="40" y="462" width="430" height="14" fill="#8A6438"/>
+
+                                <!-- 爐壁 part:wall -->
+                                <g class="house-part" data-part="wall" tabindex="0" role="button" aria-label="黏土爐壁">
+                                    <path d="M170,120 Q166,90 200,80 L300,80 Q334,90 330,120 L344,440 L156,440 Z" fill="url(#furnWallGrad)" stroke="#3D2A18" stroke-width="2.5"/>
+                                    <path d="M200,86 L300,86" stroke="#3D2A18" stroke-width="1" opacity="0.4"/>
+                                    <g stroke="#3D2A18" stroke-width="1" opacity="0.35" fill="none">
+                                        <path d="M168,180 L332,180"/>
+                                        <path d="M164,250 L336,250"/>
+                                        <path d="M160,320 L340,320"/>
+                                        <path d="M158,390 L342,390"/>
+                                    </g>
+                                    <!-- 爐口冒煙 -->
+                                    <g class="anim-smoke" fill="#B8B8B8">
+                                        <ellipse cx="250" cy="62" rx="14" ry="6" opacity="0.6"/>
+                                        <ellipse cx="242" cy="44" rx="18" ry="7" opacity="0.45"/>
+                                        <ellipse cx="252" cy="24" rx="22" ry="8" opacity="0.3"/>
+                                    </g>
+                                </g>
+
+                                <!-- 爐內爐料 part:charge -->
+                                <g class="house-part" data-part="charge" tabindex="0" role="button" aria-label="木炭與鐵砂">
+                                    <path d="M196,110 L304,110 L318,430 L182,430 Z" fill="#2A2A2A"/>
+                                    <!-- 分層：木炭 / 鐵砂 交疊 -->
+                                    <g>
+                                        <rect x="196" y="130" width="108" height="26" fill="#1A1A1A"/>
+                                        <rect x="194" y="156" width="112" height="18" fill="#5A4632"/>
+                                        <rect x="192" y="174" width="116" height="26" fill="#1A1A1A"/>
+                                        <rect x="190" y="200" width="120" height="18" fill="#5A4632"/>
+                                        <rect x="188" y="218" width="124" height="26" fill="#1A1A1A"/>
+                                        <rect x="186" y="244" width="128" height="18" fill="#5A4632"/>
+                                    </g>
+                                    <!-- 爐心火焰 -->
+                                    <g class="anim-flame">
+                                        <path d="M210,428 Q200,360 226,318 Q230,362 246,374 Q248,330 268,312 Q262,372 288,336 Q292,388 276,428 Z" fill="url(#furnFireGrad)" opacity="0.95"/>
+                                        <path d="M232,426 Q228,382 246,356 Q252,384 262,392 Q264,402 258,426 Z" fill="#FFE38A"/>
+                                    </g>
+                                    <!-- 鐵砂顆粒 -->
+                                    <g fill="#8A8A8A">
+                                        <circle cx="212" cy="164" r="2.5"/><circle cx="236" cy="160" r="2.5"/><circle cx="262" cy="166" r="2.5"/><circle cx="286" cy="162" r="2.5"/>
+                                        <circle cx="208" cy="208" r="2.5"/><circle cx="240" cy="206" r="2.5"/><circle cx="270" cy="210" r="2.5"/><circle cx="296" cy="206" r="2.5"/>
+                                        <circle cx="206" cy="252" r="2.5"/><circle cx="238" cy="250" r="2.5"/><circle cx="272" cy="254" r="2.5"/><circle cx="300" cy="250" r="2.5"/>
+                                    </g>
+                                </g>
+
+                                <!-- 風口與鼓風 part:tuyere -->
+                                <g class="house-part" data-part="tuyere" tabindex="0" role="button" aria-label="風口與鼓風">
+                                    <rect x="66" y="368" width="100" height="20" rx="8" fill="#8B6A3A" stroke="#3D2A18" stroke-width="2"/>
+                                    <g>
+                                        <path d="M20,340 L74,356 L74,400 L20,416 Q6,378 20,340 Z" fill="#A8341F" stroke="#5A2010" stroke-width="2"/>
+                                        <line x1="30" y1="352" x2="30" y2="404" stroke="#5A2010" stroke-width="1.2" opacity="0.7"/>
+                                        <line x1="44" y1="348" x2="44" y2="408" stroke="#5A2010" stroke-width="1.2" opacity="0.7"/>
+                                        <line x1="58" y1="352" x2="58" y2="402" stroke="#5A2010" stroke-width="1.2" opacity="0.7"/>
+                                    </g>
+                                    <g class="anim-wind" stroke="#4F86B3" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.85">
+                                        <path d="M170,372 q10,-4 20,0"/>
+                                        <path d="M172,382 q12,4 24,0"/>
+                                    </g>
+                                </g>
+
+                                <!-- 出渣口 part:slag -->
+                                <g class="house-part" data-part="slag" tabindex="0" role="button" aria-label="出渣口與爐渣">
+                                    <path d="M330,414 L392,438 L386,462 L326,444 Z" fill="#5A5A5A" stroke="#2E2E2E" stroke-width="2"/>
+                                    <path d="M340,424 Q368,432 380,448" stroke="#FF7A45" stroke-width="5" fill="none" stroke-linecap="round"/>
+                                    <g fill="#3A3A3A" stroke="#1F1F1F" stroke-width="1">
+                                        <path d="M396,452 L416,444 L428,458 L410,468 Z"/>
+                                        <path d="M432,448 L448,442 L456,456 L440,462 Z"/>
+                                    </g>
+                                    <circle cx="420" cy="456" r="2.5" fill="#FF7A45"/>
+                                    <circle cx="444" cy="452" r="2" fill="#FF7A45"/>
+                                </g>
+
+                                <!-- 部位指示線 -->
+                                <g class="part-callouts" aria-hidden="true">
+                                    <g class="callout" data-for="wall">
+                                        <line x1="330" y1="150" x2="450" y2="120" stroke="#1F3A5F" stroke-width="1" stroke-dasharray="3 3"/>
+                                        <circle cx="450" cy="120" r="4" fill="#1F3A5F"/>
+                                        <text x="458" y="116" fill="#1F3A5F" font-size="13" font-weight="600">黏土爐壁</text>
+                                    </g>
+                                    <g class="callout" data-for="charge">
+                                        <line x1="250" y1="200" x2="120" y2="150" stroke="#1F3A5F" stroke-width="1" stroke-dasharray="3 3"/>
+                                        <circle cx="120" cy="150" r="4" fill="#1F3A5F"/>
+                                        <text x="112" y="140" text-anchor="end" fill="#1F3A5F" font-size="13" font-weight="600">木炭＋鐵砂</text>
+                                    </g>
+                                    <g class="callout" data-for="tuyere">
+                                        <line x1="110" y1="378" x2="80" y2="300" stroke="#1F3A5F" stroke-width="1" stroke-dasharray="3 3"/>
+                                        <circle cx="80" cy="300" r="4" fill="#1F3A5F"/>
+                                        <text x="72" y="292" text-anchor="end" fill="#1F3A5F" font-size="13" font-weight="600">風口・鼓風</text>
+                                    </g>
+                                    <g class="callout" data-for="slag">
+                                        <line x1="400" y1="450" x2="466" y2="400" stroke="#1F3A5F" stroke-width="1" stroke-dasharray="3 3"/>
+                                        <circle cx="466" cy="400" r="4" fill="#1F3A5F"/>
+                                        <text x="460" y="392" text-anchor="end" fill="#1F3A5F" font-size="13" font-weight="600">出渣口</text>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <aside class="info-panel" aria-live="polite">
+                        <div class="info-card info-card--default" data-info="default">
+                            <span class="info-card__eyebrow">FURNACE ANALYSIS</span>
+                            <h3 class="info-card__title">煉鐵爐剖面</h3>
+                            <p class="info-card__lead">把滑鼠移到左邊煉鐵爐的不同地方，看看十三行人怎麼用黏土、木炭和風，讓爐子熱到超過 1000°C！</p>
+                            <div class="info-card__stats">
+                                <div><b>約 1200°C</b><span>目標爐溫</span></div>
+                                <div><b>4</b><span>關鍵部位</span></div>
+                                <div><b>台灣唯一</b><span>確認的史前煉鐵遺址</span></div>
+                            </div>
+                        </div>
+
+                        <div class="info-card" data-info="wall" hidden>
+                            <span class="info-card__eyebrow">PART 01　・　WALL</span>
+                            <h3 class="info-card__title">黏土爐壁</h3>
+                            <p class="info-card__lead">用耐高溫的黏土一層層堆起來，是整座高溫爐子的「外殼」。</p>
+                            <ul class="info-card__list">
+                                <li><b>材料</b>：推測是黏土加砂，和做陶器的配方很像。</li>
+                                <li><b>功能</b>：把熱關在爐子裡，讓溫度一路往上升。</li>
+                                <li><b>證據</b>：遺址裡找到被高溫燒得變硬的爐壁碎塊。</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card" data-info="charge" hidden>
+                            <span class="info-card__eyebrow">PART 02　・　CHARGE</span>
+                            <h3 class="info-card__title">木炭＋鐵砂</h3>
+                            <p class="info-card__lead">爐子的「燃料」和「原料」：一層木炭、一層鐵砂，像千層蛋糕一樣交錯疊上去。</p>
+                            <ul class="info-card__list">
+                                <li><b>木炭</b>：比木柴更耐燒、火更熱，還能提供把鐵「救出來」需要的碳。</li>
+                                <li><b>鐵砂</b>：含有鐵的黑色砂粒，是煉鐵的原料。</li>
+                                <li><b>化學</b>：高溫下，木炭產生的氣體會把鐵砂裡的氧「搶走」，留下金屬鐵（這叫「還原」）。</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card" data-info="tuyere" hidden>
+                            <span class="info-card__eyebrow">PART 03　・　TUYERE</span>
+                            <h3 class="info-card__title">風口與鼓風</h3>
+                            <p class="info-card__lead">整座爐子的靈魂！一直送風進去，木炭才會燒得夠旺，溫度才衝得上一千多度。</p>
+                            <ul class="info-card__list">
+                                <li><b>原理</b>：氧氣越多，火燒得越旺，就像對營火吹氣一樣。</li>
+                                <li><b>工具</b>：推測用皮袋或木頭做的鼓風工具一直送風。</li>
+                                <li><b>人力</b>：鼓風超累人，推測要好幾個人輪流合作。</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card" data-info="slag" hidden>
+                            <span class="info-card__eyebrow">PART 04　・　SLAG</span>
+                            <h3 class="info-card__title">出渣口與爐渣</h3>
+                            <p class="info-card__lead">煉鐵剩下的「垃圾」從這裡排出來，而它正是考古學家最愛的「鐵證」！</p>
+                            <ul class="info-card__list">
+                                <li><b>爐渣</b>：鐵砂裡的雜質熔化後，冷卻變成的黑色硬塊。</li>
+                                <li><b>意義</b>：大量爐渣是「這裡煉過鐵」的重要證據。</li>
+                                <li><b>發現</b>：十三行遺址挖到很多爐渣和煉鐵爐遺跡，證明這裡有煉鐵。</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- 為什麼煉鐵了不起 -->
+                <h3 class="mini-h">為什麼「會煉鐵」這麼了不起？</h3>
+                <div class="lead-block">
+                    <span class="lead-block__eyebrow">IRON SMELTING　·　煉鐵</span>
+                    <h4 class="lead-block__title">台灣史前少見的「自己煉鐵」技術</h4>
+                    <div class="lead-block__body">
+                        <p>在十三行遺址裡，考古學家找到了<strong>煉鐵爐遺跡、大量爐渣和鐵器</strong>。這代表十三行人不只是拿別人做好的鐵器來用，而是<strong>自己就能把原料煉成鐵</strong>！</p>
+                        <p>台灣史前有好幾個文化都用過鐵器，但十三行是<em>目前唯一確認有煉鐵遺跡的史前遺址</em>，所以它是台灣「鐵器時代」最有代表性的文化之一。</p>
+                        <p>煉鐵可不簡單：要會選原料、蓋爐子、燒木炭、鼓風、控制火候，少一樣都不行。所以它不只是一種工具，更代表<strong>知識、組織和分工</strong>。需要一群人一起合作，才能煉好一爐鐵。</p>
+                    </div>
+                </div>
+
+                <!-- 塊煉法迷思 -->
+                <div class="tip-box is-myth">
+                    <div class="tip-box__icon">!</div>
+                    <div>
+                        <div class="tip-box__title">迷思破解：煉出來的不是「鐵水」！</div>
+                        <div class="tip-box__body">
+                            卡通裡煉鐵常常是一鍋橘紅色的鐵水。不過學者認為，十三行人用的是<b>塊煉法（Bloomery）</b>，也就是「把鐵煉成一塊一塊，而不是煉成鐵水」的方法。這種爐子大約 1100–1300°C，還<em>不到鐵的熔點（1538°C）</em>，所以鐵不會變成液體，而是在爐底變成一塊夾著爐渣、到處是小洞的<b>「海綿鐵」</b>。工匠拿出海綿鐵後，還要趁熱<b>一直敲打</b>，把雜質擠出去，才能拿來做刀子、箭頭。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 煉鐵六步驟 -->
+                <h3 class="mini-h">六個步驟，煉出一爐好鐵</h3>
+                <div class="know-grid cols-3">
+                    <article class="know-card">
+                        <div class="know-card__no">STEP · 01</div>
+                        <h4 class="know-card__title">採集鐵砂</h4>
+                        <div class="know-card__body">
+                            <p>收集<b>含有鐵的砂粒</b>。學者推測，原料可能就來自附近河口、海邊的黑色鐵砂，近在家門口。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">STEP · 02</div>
+                        <h4 class="know-card__title">燒製木炭</h4>
+                        <div class="know-card__body">
+                            <p>把木頭悶燒成<b>木炭</b>。木炭燒起來比木柴熱得多，也能提供把鐵「救出來」需要的<b>碳</b>。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">STEP · 03</div>
+                        <h4 class="know-card__title">築爐</h4>
+                        <div class="know-card__body">
+                            <p>用耐高溫的黏土蓋爐子，下方留<b>風口和出渣口</b>。爐壁被高溫燒得變硬，一千多年後還能被挖到。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">STEP · 04</div>
+                        <h4 class="know-card__title">裝料點火</h4>
+                        <div class="know-card__body">
+                            <p>一層木炭、一層鐵砂輪流放進爐子，點火後<b>一直鼓風</b>，讓溫度慢慢爬到大約 1100–1300°C。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">STEP · 05</div>
+                        <h4 class="know-card__title">排渣取鐵</h4>
+                        <div class="know-card__body">
+                            <p>雜質熔化變成<b>爐渣</b>，從出渣口流出去。燒上好幾個小時後打開爐子，拿出爐底那塊寶貴的<b>海綿鐵</b>。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">STEP · 06</div>
+                        <h4 class="know-card__title">鍛打成器</h4>
+                        <div class="know-card__body">
+                            <p>把海綿鐵再加熱、<b>一直敲打</b>，把雜質擠出來，再打成刀子、箭頭（鏃）等工具。一件鐵器就誕生啦！</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="divider">WORKSHOP　·　工坊實戰體驗</div>
+
+                <!-- 互動：鼓風挑戰 -->
+                <h3 class="mini-h">鼓風挑戰：把爐溫衝上 1200°C！</h3>
+                <div class="bellows-game" id="bellowsGame" aria-label="鼓風小遊戲">
+                    <div class="bellows-game__stage" aria-hidden="true">
+                        <svg viewBox="0 0 320 270">
+                            <rect x="30" y="248" width="260" height="10" fill="#6B4A2A"/>
+                            <path d="M120,70 Q118,56 136,50 L184,50 Q202,56 200,70 L210,246 L110,246 Z" fill="#8B6A3A" stroke="#3D2A18" stroke-width="2"/>
+                            <path d="M138,80 L182,80 L190,240 L130,240 Z" fill="#2A2A2A"/>
+                            <g id="bellowsFire" style="transform-origin:160px 238px;">
+                                <path d="M140,238 Q134,196 150,172 Q154,198 164,204 Q166,180 178,170 Q174,208 168,238 Z" fill="#FF8A45"/>
+                                <path d="M148,236 Q146,212 156,198 Q160,212 168,218 Q168,228 164,236 Z" fill="#FFD068"/>
+                            </g>
+                            <g id="bellowsGlow" opacity="0.2">
+                                <ellipse cx="160" cy="200" rx="52" ry="46" fill="#FF7A45"/>
+                            </g>
+                            <rect x="48" y="196" width="64" height="14" rx="6" fill="#8B6A3A" stroke="#3D2A18" stroke-width="1.6"/>
+                            <g id="bellowsBag">
+                                <path d="M14,178 L52,190 L52,218 L14,230 Q2,204 14,178 Z" fill="#A8341F" stroke="#5A2010" stroke-width="2"/>
+                                <line x1="24" y1="186" x2="24" y2="222" stroke="#5A2010" stroke-width="1.2" opacity="0.7"/>
+                                <line x1="38" y1="182" x2="38" y2="226" stroke="#5A2010" stroke-width="1.2" opacity="0.7"/>
+                            </g>
+                            <g id="bellowsWind" stroke="#4F86B3" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0">
+                                <path d="M116,200 q10,-4 20,0"/>
+                                <path d="M118,208 q12,4 24,0"/>
+                            </g>
+                            <g id="bellowsBloom" opacity="0">
+                                <circle cx="160" cy="228" r="12" fill="#D8D8D8" stroke="#8A8A8A" stroke-width="2"/>
+                                <circle cx="155" cy="224" r="2.5" fill="#FF8A45"/>
+                                <circle cx="166" cy="230" r="2" fill="#FF8A45"/>
+                                <circle cx="158" cy="233" r="1.8" fill="#FFB07A"/>
+                            </g>
+                            <text x="34" y="32" font-size="13" fill="#3D2A18" font-weight="700" letter-spacing="2">煉鐵工坊</text>
+                        </svg>
+                    </div>
+                    <div class="bellows-game__panel">
+                        <h4 class="bellows-game__title">輪到你上工了！</h4>
+                        <p class="bellows-game__lead">一直按「鼓風」按鈕，幫爐子送風！小心，一停下來<b>溫度就會慢慢往下掉</b>。來體驗十三行工匠有多辛苦吧！在這個遊戲裡，衝到 <b>1200°C</b> 就能煉出海綿鐵！</p>
+                        <div class="bellows-game__gauge" aria-hidden="true">
+                            <span class="bellows-game__bar" id="bellowsBar"></span>
+                            <span class="bellows-game__target">1200°C</span>
+                        </div>
+                        <div class="bellows-game__read">
+                            <b id="bellowsTemp">20°C</b>
+                            <span id="bellowsMsg">爐子還是冷的，開始鼓風吧！</span>
+                        </div>
+                        <button class="bellows-game__btn" type="button" id="bellowsBtn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 12h10M10 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            鼓風！
+                        </button>
+                        <button class="bellows-game__reset" type="button" id="bellowsReset" hidden>↻ 再玩一次</button>
+                    </div>
+                </div>
+
+                <h3 class="mini-h">小挑戰：把煉鐵步驟排回正確順序！</h3>
+                <p class="watch-lead">從最前面的步驟開始點。點錯沒關係，想想看：要先有材料，才能生火；要先煉出鐵塊，才能敲成刀子。</p>
+                <div class="strata-game is-steps" aria-label="煉鐵工序排序"
+                     data-done="🎉 完成！先準備材料、再生火煉鐵，最後才能敲成工具。少一步，鐵就煉不出來。"
+                     data-hint-first="還不是這一步喔！提示：要煉鐵，得先找到<b>含鐵的砂</b>。"
+                     data-hint-later="還不是這一步喔！提示：想想看，現在爐子裡已經有什麼了？">
+                    <div class="strata-game__bar">
+                        <span>🔥 煉鐵工序</span>
+                        <span class="strata-game__progress">0 / 6</span>
+                        <button type="button" class="strata-game__reset">↻ 重排</button>
+                    </div>
+                    <div class="strata-game__body">
+                        <div class="strata-game__pool">
+                            <button type="button" class="strata-card" data-order="3" data-name="03 築爐" data-reveal="先把爐子蓋好，才能裝料點火。" style="--layer:#C8965C"><b>築爐</b><span>把爐子蓋起來</span></button>
+                            <button type="button" class="strata-card" data-order="6" data-name="06 鍛打成器" data-reveal="最後趁熱敲打，把海綿鐵變成刀子、箭頭。" style="--layer:#1F3A5F"><b>鍛打成器</b><span>敲成刀子、箭頭</span></button>
+                            <button type="button" class="strata-card" data-order="1" data-name="01 採集鐵砂" data-reveal="沒有含鐵的砂，後面都做不了。" style="--layer:#6B4A2A"><b>採集鐵砂</b><span>先找到原料</span></button>
+                            <button type="button" class="strata-card" data-order="5" data-name="05 排渣取鐵" data-reveal="爐底出現海綿鐵，才能拿出來繼續加工。" style="--layer:#4F86B3"><b>排渣取鐵</b><span>拿出海綿鐵</span></button>
+                            <button type="button" class="strata-card" data-order="2" data-name="02 燒製木炭" data-reveal="木炭負責把爐溫燒高，是煉鐵的燃料。" style="--layer:#8A6438"><b>燒製木炭</b><span>準備燃料</span></button>
+                            <button type="button" class="strata-card" data-order="4" data-name="04 裝料點火" data-reveal="鐵砂和木炭交疊放進爐裡，再用力鼓風。" style="--layer:#A8341F"><b>裝料點火</b><span>放進爐裡生火</span></button>
+                        </div>
+                        <div class="strata-game__column" aria-label="已排好的步驟">
+                            <p class="strata-game__empty">從第一步開始點，<br>正確的步驟會排到這邊</p>
+                        </div>
+                    </div>
+                    <p class="strata-game__msg">先點「最一開始」要做的事。</p>
+                </div>
+
+                <!-- 石器 vs 鐵器 -->
+                <h3 class="mini-h">石器 vs 鐵器：一場工具大革命</h3>
+                <table class="cmp-table">
+                    <thead>
+                        <tr>
+                            <th>比較項目</th>
+                            <th>磨製石器</th>
+                            <th>鐵器</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>取得原料</td>
+                            <td>附近的石頭（例如觀音山一帶的安山岩），比較好找</td>
+                            <td>要收集鐵砂，還要會煉</td>
+                        </tr>
+                        <tr>
+                            <td>製作難度</td>
+                            <td>敲一敲、磨一磨，大家都學得會</td>
+                            <td>要會蓋爐、鼓風、敲打的專業團隊</td>
+                        </tr>
+                        <tr>
+                            <td>鋒利與耐用</td>
+                            <td>容易變鈍、容易崩缺</td>
+                            <td>更鋒利，鈍了可以再磨利</td>
+                        </tr>
+                        <tr>
+                            <td>壞掉之後</td>
+                            <td>小缺口可再磨，斷了多半只能重做</td>
+                            <td>可以加熱重新敲打，材料能回收</td>
+                        </tr>
+                        <tr>
+                            <td>改變的生活</td>
+                            <td>——</td>
+                            <td>砍樹、蓋房子、種田、打獵都更快更省力</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pull-quote">
+                    <p class="pull-quote__text">爐渣不會說謊。想像一千多年前的某個下午，一群人圍著爐子，滿身大汗地輪流鼓風。</p>
+                    <p class="pull-quote__cite">— 考古現場的想像</p>
+                </div>
+
+                <!-- 本節重點整理 -->
+                <div class="recap-block" aria-label="本節重點整理">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">RECAP　·　本節重點整理</span>
+                        <h3 class="recap-block__title">2-2 學到的 4 個核心觀念</h3>
+                    </div>
+                    <div class="recap-block__grid">
+                        <div class="recap-chip"><b>① 自己煉鐵</b><span>爐渣和煉鐵爐遺跡證明：十三行人會自己煉鐵，不只是使用鐵器。</span></div>
+                        <div class="recap-chip"><b>② 塊煉法</b><span>爐溫約 1100–1300°C，不到鐵的熔點，煉出的是海綿鐵，還要敲打才能做成工具。</span></div>
+                        <div class="recap-chip"><b>③ 鼓風是靈魂</b><span>一直送風才能保持高溫，煉鐵需要大家分工合作。</span></div>
+                        <div class="recap-chip"><b>④ 鐵器革命</b><span>鐵器更鋒利耐用、壞了還能回收重打，讓生活和工作更有效率。</span></div>
+                    </div>
+                    <div class="recap-block__actions">
+                        <a class="recap-block__btn" href="#sub-2-2" aria-label="再讀一次本節">↻ 再讀一次</a>
+                        <a class="recap-block__btn recap-block__btn--primary" href="#sub-2-3" aria-label="繼續閱讀 2-3">繼續閱讀：2-3 小小玻璃珠 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 子單元 2-3：小小玻璃珠 ===== -->
+            <section id="sub-2-3" class="sub-section" aria-labelledby="sub-2-3-title">
+                <header class="sub-section__head">
+                    <span class="sub-section__index">2-3</span>
+                    <div>
+                        <h2 id="sub-2-3-title" class="sub-section__title">小小玻璃珠</h2>
+                        <p class="sub-section__sub">一顆米粒大的小珠子，怎麼證明一千多年前的台灣就和海外有往來？</p>
+                    </div>
+                    <span class="sub-section__time">11 min</span>
+                </header>
+
+                <div class="objectives" aria-label="本單元學習目標">
+                    <div class="objectives__head">
+                        <span class="objectives__eyebrow">LEARNING OBJECTIVES　·　學習目標</span>
+                        <div class="objectives__meta">
+                            <span class="objectives__time">⏱ 預估完成時間　<b>11 分鐘</b></span>
+                            <span class="objectives__level">難度　<b>★ ★ ☆</b></span>
+                        </div>
+                    </div>
+                    <h3 class="objectives__title">完成本節後，你將能夠：</h3>
+                    <ul class="objectives__list">
+                        <li><span class="objectives__num">01</span><div>說說看，玻璃珠為什麼是<b>十三行人參與海上貿易的證據</b>。</div></li>
+                        <li><span class="objectives__num">02</span><div>分辨十三行文物中，哪些是<b>「本地自製」、哪些是「海外舶來」</b>（從外地運來的東西）。</div></li>
+                        <li><span class="objectives__num">03</span><div>設計一顆自己的玻璃珠，認識<b>珠子的顏色和花紋</b>。</div></li>
+                        <li><span class="objectives__num">04</span><div>猜猜看，十三行人<b>拿什麼去交換</b>這些海外寶貝。</div></li>
+                    </ul>
+                </div>
+
+                <h3 class="mini-h">米粒大的「進口精品」</h3>
+                <div class="lead-block">
+                    <span class="lead-block__eyebrow">GLASS BEADS　·　玻璃珠</span>
+                    <h4 class="lead-block__title">十三行人應該不會做玻璃，卻擁有很多玻璃珠</h4>
+                    <div class="lead-block__body">
+                        <p>十三行遺址挖到了<strong>數以千計的玻璃珠</strong>，有藍的、綠的、橘的、黃的，五顏六色。但是有個重點：遺址裡<strong>沒有找到做玻璃的痕跡</strong>，沒有玻璃熔爐、沒有做到一半的珠子，也沒有失敗品。</p>
+                        <p>科學家分析玻璃珠的<strong>成分</strong>，發現它們和<em>東南亞、南亞一帶</em>的玻璃很相似。所以學者認為，這些珠子是<strong>坐船漂洋過海來的舶來品</strong>。「舶來品」就是從海外運來的東西。一顆顆小珠子串起來的不只是項鍊，還是一張跨越大海的<em>貿易網</em>！</p>
+                    </div>
+                </div>
+
+                <!-- 互動：玻璃珠設計工坊 -->
+                <h3 class="mini-h">玻璃珠設計工坊：做一顆你的專屬珠</h3>
+                <div class="bead-lab" id="beadLab" aria-label="玻璃珠設計工坊">
+                    <div class="bead-lab__stage" aria-hidden="true">
+                        <svg viewBox="0 0 260 260" id="beadSvg">
+                            <defs>
+                                <radialGradient id="beadShine" cx="35%" cy="32%" r="70%">
+                                    <stop offset="0%" stop-color="#fff" stop-opacity="0.75"/>
+                                    <stop offset="45%" stop-color="#fff" stop-opacity="0.12"/>
+                                    <stop offset="100%" stop-color="#000" stop-opacity="0.22"/>
+                                </radialGradient>
+                            </defs>
+                            <line x1="130" y1="8" x2="130" y2="252" stroke="#8A6438" stroke-width="4" opacity="0.55"/>
+                            <circle id="beadBase" cx="130" cy="130" r="84" fill="#2E5E9E" stroke="#1F3A5F" stroke-width="3"/>
+                            <g id="beadPat-stripe" opacity="0">
+                                <path d="M58,100 Q130,124 202,100" fill="none" stroke="#fff" stroke-width="7" opacity="0.85"/>
+                                <path d="M52,132 Q130,158 208,132" fill="none" stroke="#FFD068" stroke-width="7" opacity="0.9"/>
+                                <path d="M60,164 Q130,186 200,164" fill="none" stroke="#fff" stroke-width="7" opacity="0.85"/>
+                            </g>
+                            <g id="beadPat-eye" opacity="0">
+                                <g transform="translate(92,108)"><circle r="17" fill="#fff"/><circle r="10" fill="#1F3A5F"/><circle r="4" fill="#fff"/></g>
+                                <g transform="translate(168,108)"><circle r="17" fill="#fff"/><circle r="10" fill="#1F3A5F"/><circle r="4" fill="#fff"/></g>
+                                <g transform="translate(130,172)"><circle r="17" fill="#fff"/><circle r="10" fill="#1F3A5F"/><circle r="4" fill="#fff"/></g>
+                            </g>
+                            <g id="beadPat-dot" opacity="0" fill="#FFD068">
+                                <circle cx="96" cy="96" r="7"/><circle cx="164" cy="96" r="7"/>
+                                <circle cx="80" cy="140" r="7"/><circle cx="130" cy="130" r="7"/><circle cx="180" cy="140" r="7"/>
+                                <circle cx="104" cy="182" r="7"/><circle cx="158" cy="182" r="7"/>
+                            </g>
+                            <circle cx="130" cy="130" r="84" fill="url(#beadShine)"/>
+                            <ellipse cx="130" cy="46" rx="12" ry="6" fill="#1A1A1A" opacity="0.55"/>
+                        </svg>
+                    </div>
+                    <div class="bead-lab__ctrl">
+                        <h4 class="bead-lab__title">STEP 1　選一個底色</h4>
+                        <div class="bead-lab__row" role="group" aria-label="選擇底色">
+                            <button class="bead-swatch is-active" type="button" data-bead-color="#2E5E9E" data-color-name="靛藍" style="--sw:#2E5E9E" aria-label="靛藍"></button>
+                            <button class="bead-swatch" type="button" data-bead-color="#2E7D5B" data-color-name="湖綠" style="--sw:#2E7D5B" aria-label="湖綠"></button>
+                            <button class="bead-swatch" type="button" data-bead-color="#C85A20" data-color-name="橘紅" style="--sw:#C85A20" aria-label="橘紅"></button>
+                            <button class="bead-swatch" type="button" data-bead-color="#C8A020" data-color-name="鵝黃" style="--sw:#C8A020" aria-label="鵝黃"></button>
+                            <button class="bead-swatch" type="button" data-bead-color="#7A4A8E" data-color-name="紫水晶" style="--sw:#7A4A8E" aria-label="紫水晶"></button>
+                        </div>
+                        <h4 class="bead-lab__title">STEP 2　選一種紋樣</h4>
+                        <div class="bead-lab__row" role="group" aria-label="選擇紋樣">
+                            <button class="bead-pattern is-active" type="button" data-bead-pattern="plain">素面</button>
+                            <button class="bead-pattern" type="button" data-bead-pattern="stripe">波紋</button>
+                            <button class="bead-pattern" type="button" data-bead-pattern="eye">眼紋</button>
+                            <button class="bead-pattern" type="button" data-bead-pattern="dot">點紋</button>
+                        </div>
+                        <button class="bead-lab__done" type="button" id="beadDone">✦ 完成我的玻璃珠</button>
+                        <p class="bead-lab__result" id="beadResult" aria-live="polite">試試看搭配顏色和花紋，做出一顆一千多年前的「精品」！</p>
+                    </div>
+                </div>
+
+                <!-- 互動：本地 vs 舶來 分類挑戰 -->
+                <h3 class="mini-h">分類挑戰：這是「自己做的」還是「換來的」？</h3>
+                <p style="font-size:13.5px;color:var(--c-text-soft);margin-bottom:12px;letter-spacing:var(--ls-wide);">
+                    當一天考古學家：判斷文物從哪裡來！看看下面 6 件十三行出土的文物，它是<b style="color:var(--c-indigo);">本地自製</b>，還是<b style="color:var(--c-accent);">海外舶來</b>？點按鈕作答吧！
+                </p>
+                <div class="sort-game" id="sortGame" aria-label="文物來源分類遊戲">
+                    <div class="sort-game__score" id="sortScore">已答對 0 / 6</div>
+                    <div class="sort-game__grid">
+                        <div class="sort-card" data-answer="local" data-why="陶器是十三行人自己拍打、燒製的日常用品，遺址裡有大量使用過的痕跡。">
+                            <div class="sort-card__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="52" height="52"><path d="M26 28 Q23 48 27 66 L53 66 Q57 48 54 28 Q47 23 40 24 Q33 23 26 28 Z" fill="#B5653A" stroke="#5A2010" stroke-width="2"/><ellipse cx="40" cy="28" rx="14" ry="5" fill="#8E4526" stroke="#5A2010" stroke-width="2"/></svg>
+                            </div>
+                            <h5 class="sort-card__name">夾砂陶罐</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="local">本地自製</button>
+                                <button type="button" data-choice="import">海外舶來</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card" data-answer="import" data-why="玻璃珠的成分和東南亞、南亞的玻璃很相似，遺址裡也沒有做玻璃的痕跡。">
+                            <div class="sort-card__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="52" height="52"><circle cx="34" cy="38" r="15" fill="#4F86B3" stroke="#1F3A5F" stroke-width="2"/><circle cx="58" cy="52" r="10" fill="#E8A845" stroke="#6B4A2A" stroke-width="2"/><circle cx="34" cy="38" r="5" fill="#fff" opacity="0.7"/></svg>
+                            </div>
+                            <h5 class="sort-card__name">玻璃珠</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="local">本地自製</button>
+                                <button type="button" data-choice="import">海外舶來</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card" data-answer="local" data-why="爐渣是煉鐵時剩下的東西，加上遺址裡的煉鐵爐遺跡，證明是在這裡煉出來的。">
+                            <div class="sort-card__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="52" height="52"><path d="M20 60 L40 24 L60 60 Z" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/><circle cx="40" cy="46" r="4" fill="#FF7A45"/></svg>
+                            </div>
+                            <h5 class="sort-card__name">煉鐵爐渣</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="local">本地自製</button>
+                                <button type="button" data-choice="import">海外舶來</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card" data-answer="import" data-why="這種外圓內方的銅錢是中國唐、宋時期做的，透過貿易或交換才來到十三行。">
+                            <div class="sort-card__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="52" height="52"><circle cx="40" cy="40" r="24" fill="#C8A85C" stroke="#3D2A18" stroke-width="2"/><rect x="33" y="33" width="14" height="14" fill="#3D2A18"/></svg>
+                            </div>
+                            <h5 class="sort-card__name">唐宋銅錢</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="local">本地自製</button>
+                                <button type="button" data-choice="import">海外舶來</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card" data-answer="local" data-why="石斧可能用附近觀音山一帶的安山岩磨成，原料和製作都在本地。">
+                            <div class="sort-card__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="52" height="52"><polygon points="32,16 48,16 56,64 24,64" fill="#7E7E7E" stroke="#2E2E2E" stroke-width="2"/><polygon points="32,16 48,16 46,26 34,26" fill="#5A5A5A"/></svg>
+                            </div>
+                            <h5 class="sort-card__name">磨製石斧</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="local">本地自製</button>
+                                <button type="button" data-choice="import">海外舶來</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card" data-answer="import" data-why="學者推測瑪瑙珠來自南亞、東南亞一帶，和玻璃珠一樣是從海上運來的寶貝。">
+                            <div class="sort-card__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="52" height="52"><ellipse cx="40" cy="40" rx="22" ry="14" fill="#B5432A" stroke="#5A2010" stroke-width="2"/><ellipse cx="40" cy="40" rx="12" ry="7" fill="#E8845C" opacity="0.8"/><line x1="14" y1="40" x2="66" y2="40" stroke="#5A2010" stroke-width="2" opacity="0.5"/></svg>
+                            </div>
+                            <h5 class="sort-card__name">瑪瑙珠</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="local">本地自製</button>
+                                <button type="button" data-choice="import">海外舶來</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 貿易網 -->
+                <div class="two-col">
+                    <div class="two-col__col">
+                        <p><b>他們拿什麼交換？</b>交換一定是你來我往。學者推測，十三行人可能用<b>鐵器、陶器、獸皮、魚貝乾貨</b>等自己的產品，和來往的人交換玻璃珠、瑪瑙珠、銅器等寶貝。十三行就在淡水河出海口，船隻容易來來去去，很適合當<b>交換貨物的中繼站</b>。</p>
+                        <p>也就是說，十三行不是偏僻的小漁村，而是一個<em>面向大海、消息靈通</em>的村落。遠方來的船，帶來的不只是貨物，還有新消息和新文化。</p>
+                    </div>
+                    <div class="two-col__col">
+                        <p><b>珠子在當時有多珍貴？</b>玻璃珠和瑪瑙珠常常出現在<b>墓葬的陪葬品</b>裡，而且不是每個人都有。學者推測，墓裡珠子越多，主人生前的地位可能越高。</p>
+                        <p>這給了考古學家重要線索：十三行社會可能已經有<b>身分高低的差別</b>。一串珠鍊，既是漂亮的裝飾，也像一張「一千多年前的名片」。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <h3 class="mini-h">關於玻璃珠的 3 個快問快答（點擊展開）</h3>
+                <div class="accordion">
+                    <div class="accordion__item">
+                        <button type="button" class="accordion__head" aria-expanded="false">
+                            <span class="accordion__num">Q1</span>
+                            <span class="accordion__q">怎麼確定玻璃珠不是十三行人自己做的？</span>
+                            <span class="accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion__body">
+                            <div class="accordion__content">
+                                <p>有三個線索：① 遺址裡<b>沒有玻璃熔爐、熔玻璃的小鍋（坩堝）或做到一半的珠子</b>；② 做玻璃和煉鐵是不同的技術，也沒有挖到做玻璃的工具；③ <b>成分分析</b>發現，珠子的成分「指紋」和東南亞、南亞的玻璃很相似。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button type="button" class="accordion__head" aria-expanded="false">
+                            <span class="accordion__num">Q2</span>
+                            <span class="accordion__q">十三行人沒有使用貨幣，要怎麼交易？</span>
+                            <span class="accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion__body">
+                            <div class="accordion__content">
+                                <p>學者推測主要靠<b>以物易物</b>：用我多的東西，換你有的東西。雖然當時中國已經在用銅錢，但十三行挖到的唐宋銅錢，對十三行人來說可能不是「錢」，而是<b>特別的裝飾品或代表身分的寶物</b>，就像今天有人收集外國紀念幣一樣。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button type="button" class="accordion__head" aria-expanded="false">
+                            <span class="accordion__num">Q3</span>
+                            <span class="accordion__q">這些珠子是誰運來的？</span>
+                            <span class="accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion__body">
+                            <div class="accordion__content">
+                                <p>目前還沒有確定的答案。學者推測，可能是透過<b>南島語族的海上交換網絡</b>，像接力賽一樣一站一站傳過來：珠子也許先從南亞到東南亞，再經過菲律賓呂宋島等地往北，最後在淡水河口上岸。（「南島語族」是一大群住在太平洋、印度洋島嶼上、語言相近的民族。）<em>一顆小珠子的旅程，可能要花上好多年。</em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 本節重點整理 -->
+                <div class="recap-block" aria-label="本節重點整理">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">RECAP　·　本節重點整理</span>
+                        <h3 class="recap-block__title">2-3 學到的 4 個核心觀念</h3>
+                    </div>
+                    <div class="recap-block__grid">
+                        <div class="recap-chip"><b>① 舶來品</b><span>玻璃珠成分和東南亞、南亞的玻璃很像，本地也沒有製作痕跡。</span></div>
+                        <div class="recap-chip"><b>② 貿易節點</b><span>河口位置讓十三行可能成為海上交換網的一站。</span></div>
+                        <div class="recap-chip"><b>③ 以物易物</b><span>推測用鐵器、陶器、獸皮等自己的產品，交換海外寶貝。</span></div>
+                        <div class="recap-chip"><b>④ 珠子＝名片</b><span>陪葬珠子的多寡，可能代表墓主的身分地位。</span></div>
+                    </div>
+                    <div class="recap-block__actions">
+                        <a class="recap-block__btn" href="#sub-2-3" aria-label="再讀一次本節">↻ 再讀一次</a>
+                        <a class="recap-block__btn recap-block__btn--primary" href="#sub-2-4" aria-label="前往 2-4 評量">繼續挑戰：2-4 單元評量 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 子單元 2-4：單元總結與評量 ===== -->
+            <section id="sub-2-4" class="sub-section" aria-labelledby="sub-2-4-title">
+                <header class="sub-section__head">
+                    <span class="sub-section__index">2-4</span>
+                    <div>
+                        <h2 id="sub-2-4-title" class="sub-section__title">單元總結與評量</h2>
+                        <p class="sub-section__sub">陶器、煉鐵、玻璃珠都學完了！來測驗看看你的職人等級吧！</p>
+                    </div>
+                    <span class="sub-section__time">12 min</span>
+                </header>
+
+                <div class="objectives" aria-label="本單元學習目標">
+                    <div class="objectives__head">
+                        <span class="objectives__eyebrow">LEARNING OBJECTIVES　·　學習目標</span>
+                        <div class="objectives__meta">
+                            <span class="objectives__time">⏱ 預估完成時間　<b>12 分鐘</b></span>
+                            <span class="objectives__level">難度　<b>★ ★ ★</b></span>
+                        </div>
+                    </div>
+                    <h3 class="objectives__title">完成本節後，你將能夠：</h3>
+                    <ul class="objectives__list">
+                        <li><span class="objectives__num">01</span><div>看<b>單元回顧影片</b>，把 2-1 到 2-3 的重點<b>濃縮成五句話</b>記起來。</div></li>
+                        <li><span class="objectives__num">02</span><div>像偵探一樣用證據思考，<b>從文物中挑出最能證明「和海外貿易」的一件</b>。</div></li>
+                        <li><span class="objectives__num">03</span><div>挑戰 5 題進階測驗，<b>看看自己學會了多少</b>。</div></li>
+                        <li><span class="objectives__num">04</span><div>弄懂<b>夾砂陶、塊煉法、舶來品</b>等重要名詞。</div></li>
+                    </ul>
+                </div>
+
+                <h3 class="mini-h">先看教學影片，再開始闖關</h3>
+                <p class="watch-lead">把 2-1 到 2-3 的重點在腦子裡轉一圈。看完再往下挑戰，會輕鬆很多！</p>
+                <div class="video-frame video-frame--wide">
+                    <div class="video-frame__inner">
+                        <iframe
+                            class="video-frame__video"
+                            src="https://www.youtube.com/embed/Xi4-Ajpmchk"
+                            title="單元二教學影片：十三行人的三大工藝"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="video-frame__caption">
+                        <span>VIDEO&nbsp;02</span>
+                        <span>十三行人的三大工藝</span>
+                    </div>
+                </div>
+
+                <div class="quiz-intro" aria-label="測驗操作說明">
+                    <div class="quiz-intro__icon" aria-hidden="true">i</div>
+                    <div class="quiz-intro__body">
+                        <h4>開始測驗前，先看 3 個小提醒</h4>
+                        <ol>
+                            <li><b>每題答完</b>馬上會告訴你「答對／答錯」；答對的題目會自動鎖住。</li>
+                            <li><b>答錯不扣分</b>，可以再選一次，旁邊還會提示你回到哪一段複習。</li>
+                            <li><b>全部答完</b>會有慶祝特效，接著就可以前往單元三！</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 重點回顧 -->
+                <h3 class="mini-h">單元二・五個你一定要記得的重點</h3>
+                <div class="lead-block">
+                    <span class="lead-block__eyebrow">KEY TAKEAWAYS</span>
+                    <h4 class="lead-block__title">把整個單元濃縮成五句話</h4>
+                    <div class="lead-block__body">
+                        <p><strong>① 陶器</strong>是十三行挖到最多的文物，大多是<em>紅褐色夾砂陶</em>，用「拍墊法」手工做成，再露天堆燒。</p>
+                        <p><strong>② 加砂</strong>是做陶的智慧：砂粒像骨架，讓天天上火的鍋子<em>不怕冷熱變化、不容易裂開</em>。</p>
+                        <p><strong>③ 煉鐵</strong>：十三行是目前台灣唯一確認有史前煉鐵遺跡的地方，<em>爐渣和煉鐵爐遺跡</em>就是最直接的證據。</p>
+                        <p><strong>④ 塊煉法</strong>煉出的不是鐵水，而是<em>海綿鐵</em>，還要一直敲打去掉雜質，才能做成鐵刀、箭頭。</p>
+                        <p><strong>⑤ 玻璃珠和瑪瑙珠</strong>是從海外來的舶來品，顯示十三行很可能是<em>南島語族海上交換網</em>上的重要一站；社會也可能已經有身分高低的差別。</p>
+                    </div>
+                </div>
+
+                <div class="summary-grid summary-grid--solo">
+                <!-- 證據點選測驗 -->
+                <div class="quiz" data-review-target="#sub-2-4"
+                     data-correct-feedback="答對了！遺址沒有做玻璃的痕跡，珠子成分又和東南亞、南亞的玻璃很像，是「和海外交易」最直接的證據。"
+                     data-wrong-feedback="再想想看～這件文物雖然重要，但十三行人自己就做得出來，沒辦法直接證明「和海外交易」。">
+                    <span class="quiz__eyebrow">EVIDENCE PICK　・　證據點選</span>
+                    <h3 class="quiz__q">下列哪一件文物，最能證明十三行人曾與「海外」進行貿易？</h3>
+                    <div class="quiz__options">
+                        <button class="quiz-opt" type="button" data-correct="false" data-review-hint="夾砂陶罐是十三行人自己做的日常用品，回去複習 2-1「陶器的奧秘」吧！" data-review-link="#sub-2-1">
+                            <div class="quiz-opt__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="56" height="56"><path d="M26 28 Q23 48 27 66 L53 66 Q57 48 54 28 Q47 23 40 24 Q33 23 26 28 Z" fill="#B5653A" stroke="#5A2010" stroke-width="2"/><ellipse cx="40" cy="28" rx="14" ry="5" fill="#8E4526" stroke="#5A2010" stroke-width="2"/></svg>
+                            </div>
+                            <span class="quiz-opt__label">夾砂陶罐</span>
+                        </button>
+                        <button class="quiz-opt" type="button" data-correct="false" data-review-hint="爐渣證明的是「在這裡煉過鐵」，不是和海外交易，回去複習 2-2「煉鐵高手」吧！" data-review-link="#sub-2-2">
+                            <div class="quiz-opt__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="56" height="56"><path d="M20 60 L40 24 L60 60 Z" fill="#6E6E6E" stroke="#2E2E2E" stroke-width="2"/><circle cx="40" cy="46" r="4" fill="#FF7A45"/></svg>
+                            </div>
+                            <span class="quiz-opt__label">煉鐵爐渣</span>
+                        </button>
+                        <button class="quiz-opt" type="button" data-correct="true">
+                            <div class="quiz-opt__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="56" height="56"><circle cx="40" cy="40" r="20" fill="#7FB3D5" stroke="#1F3A5F" stroke-width="2"/><circle cx="40" cy="40" r="6" fill="#fff"/></svg>
+                            </div>
+                            <span class="quiz-opt__label">玻璃珠</span>
+                        </button>
+                    </div>
+                    <p class="quiz__feedback" aria-live="polite"></p>
+                </div>
+                </div>
+
+                <!-- 進階測驗 -->
+                <h3 class="mini-h">進階小測驗：5 題挑戰你的職人腦</h3>
+                <p style="font-size:14px;line-height:1.85;color:var(--c-text-soft);margin-bottom:18px;">
+                    不偷看上面的內容，你能答對幾題？點選項就能作答，答完會出現解說。
+                </p>
+
+                <div class="quiz-bank">
+                    <div class="quiz-q" data-correct="c" data-review-anchor="#sub-2-1" data-review-text="回到 2-1「陶器：出土數量第一名的文物」複習陶器特徵">
+                        <span class="quiz-q__no">QUESTION · 01</span>
+                        <h4 class="quiz-q__text">十三行挖到最多的陶器，最主要的特色是什麼？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>白色的瓷器，薄如蛋殼</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>上了藍色釉藥的彩繪陶</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>紅褐色、摻砂的夾砂陶</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>黑色的金屬光澤陶</span></button>
+                        </div>
+                        <p class="quiz-q__hint">十三行陶器大多是<b>紅褐色夾砂陶</b>。露天燒的時候氧氣充足，所以燒成紅褐色；加砂則讓鍋子耐火、不容易裂。</p>
+                    </div>
+
+                    <div class="quiz-q" data-correct="b" data-review-anchor="#sub-2-1" data-review-text="回到 2-1「互動工坊 STEP 3：成形」複習拍墊法">
+                        <span class="quiz-q__no">QUESTION · 02</span>
+                        <h4 class="quiz-q__text">十三行人沒有陶輪（轆轤），他們怎麼把罐壁做得又薄又平均？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>灌進石頭模具裡壓出形狀</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>木拍在外拍打、卵石在內墊住的「拍墊法」</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>用鐵刀一點一點削出來</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>請海外商人代工製作</span></button>
+                        </div>
+                        <p class="quiz-q__hint">「拍墊法」就是外面拍、裡面墊，邊拍邊轉的手工方法。木拍上的花紋，還會印在罐子表面，變成拍印紋。</p>
+                    </div>
+
+                    <div class="quiz-q" data-correct="d" data-review-anchor="#sub-2-2" data-review-text="回到 2-2「迷思破解：煉出來的不是鐵水」複習塊煉法">
+                        <span class="quiz-q__no">QUESTION · 03</span>
+                        <h4 class="quiz-q__text">用「塊煉法」煉鐵，最後爐子裡會得到什麼？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>一鍋滾燙的鐵水</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>一塊閃亮的不鏽鋼</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>直接成形的鐵刀</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>一塊像海綿一樣有很多小洞、還要再敲打的海綿鐵</span></button>
+                        </div>
+                        <p class="quiz-q__hint">塊煉爐大約 1100–1300°C，不到鐵的熔點 1538°C，所以鐵不會變成液體，而是變成<b>海綿鐵</b>，要趁熱一直敲打，把雜質去掉。</p>
+                    </div>
+
+                    <div class="quiz-q" data-correct="a" data-review-anchor="#sub-2-2" data-review-text="回到 2-2「煉鐵爐互動剖面」複習風口與鼓風的功能">
+                        <span class="quiz-q__no">QUESTION · 04</span>
+                        <h4 class="quiz-q__text">煉鐵時為什麼必須不停地「鼓風」？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>提供氧氣讓木炭燒得更旺、維持高溫</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>把爐子吹涼，避免爐壁熔化</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>把煙吹散，避免嗆到工匠</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>單純是一種祈福儀式</span></button>
+                        </div>
+                        <p class="quiz-q__hint">火要燒需要氧氣。一直送風，木炭才能燒得旺，爐溫才衝得上一千多度，就像對營火吹氣，火會變大一樣。</p>
+                    </div>
+
+                    <div class="quiz-q" data-correct="b" data-review-anchor="#sub-2-3" data-review-text="回到 2-3「米粒大的進口精品」複習玻璃珠的來源判斷">
+                        <span class="quiz-q__no">QUESTION · 05</span>
+                        <h4 class="quiz-q__text">考古學家認為「玻璃珠是舶來品」，下面哪一項「不是」他們的理由？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>遺址中沒有發現玻璃熔爐或半成品</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>珠子上刻了「東南亞製造」的字樣</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>成分和東南亞、南亞的玻璃很相似</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>本地沒有出土製造玻璃的相關工具</span></button>
+                        </div>
+                        <p class="quiz-q__hint">史前的珠子上不會刻「哪裡製造」！考古學家靠的是<b>有沒有製作痕跡</b>和<b>成分分析</b>這些科學證據。</p>
+                    </div>
+                </div>
+
+                <!-- 名詞解釋 -->
+                <h3 class="mini-h">關鍵名詞解釋</h3>
+                <div class="glossary">
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">夾砂陶</span>
+                            <span class="glossary__en">Sand-tempered Pottery</span>
+                        </div>
+                        <p class="glossary__def">陶土裡故意加了砂粒的陶器。砂粒像骨架，讓陶器耐火、不怕冷熱變化，很適合拿來煮東西。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">拍墊法</span>
+                            <span class="glossary__en">Paddle and Anvil</span>
+                        </div>
+                        <p class="glossary__def">一手拿木拍在罐子外面拍、一手拿卵石在裡面頂住的做陶方法，可以把罐壁拍薄拍勻，還會留下花紋。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">塊煉法</span>
+                            <span class="glossary__en">Bloomery Process</span>
+                        </div>
+                        <p class="glossary__def">很早期的煉鐵方法。爐溫（約 1100–1300°C）不到鐵的熔點，鐵不會變成液體，而是變成多孔的海綿鐵，還要再敲打才能用。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">海綿鐵</span>
+                            <span class="glossary__en">Iron Bloom</span>
+                        </div>
+                        <p class="glossary__def">塊煉法煉出來的鐵塊，裡面有很多小洞、還夾著爐渣，看起來像海綿，是打造鐵器的原料。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">鼓風</span>
+                            <span class="glossary__en">Air Blasting</span>
+                        </div>
+                        <p class="glossary__def">一直把風送進爐子裡，提供氧氣、讓溫度升高。這是讓煉鐵爐保持高溫最重要的工作。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">舶來品</span>
+                            <span class="glossary__en">Imported Goods</span>
+                        </div>
+                        <p class="glossary__def">從外地（尤其是海外）透過貿易或交換運來的東西。十三行的玻璃珠、瑪瑙珠、唐宋銅錢都是舶來品。</p>
+                    </div>
+                </div>
+
+                <div class="pull-quote">
+                    <p class="pull-quote__text">會做陶、會煉鐵、會交易——十三行人用一雙巧手，撐起了整個村落的生活與驕傲。</p>
+                    <p class="pull-quote__cite">— 致每一位完成單元二的小小職人</p>
+                </div>
+
+                <!-- 本節重點整理 -->
+                <div class="recap-block" aria-label="本節重點整理">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">RECAP　·　本節重點整理</span>
+                        <h3 class="recap-block__title">2-4 學到的 4 個核心觀念</h3>
+                    </div>
+                    <div class="recap-block__grid">
+                        <div class="recap-chip"><b>① 證據各有任務</b><span>陶器說明日常生活、爐渣說明煉鐵技術、玻璃珠說明海外貿易。</span></div>
+                        <div class="recap-chip"><b>② 技術就是文化</b><span>拍墊法和塊煉法，都是一代傳一代的寶貴知識。</span></div>
+                        <div class="recap-chip"><b>③ 分工合作</b><span>煉鐵需要大家輪流鼓風，看得出村落很會組織分工。</span></div>
+                        <div class="recap-chip"><b>④ 面向海洋</b><span>又會做工藝、又會做交易，十三行是充滿活力的河口村落。</span></div>
+                    </div>
+                    <div class="recap-block__actions">
+                        <a class="recap-block__btn" href="#sub-2-4" aria-label="再做一次測驗">↻ 再做一次測驗</a>
+                        <a class="recap-block__btn recap-block__btn--primary" href="unit3.html#unit-3" aria-label="前往單元三">繼續冒險：單元三 社會與信仰 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <p>© 2026 十三行行動博物館 ｜ 畢業專題作品．本網頁僅為教育用途，視覺風格參考新北市立十三行博物館官方網站。</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- ===== Tooltip 全域容器 ===== -->
+    <div class="floating-tip" id="floatingTip" role="tooltip" hidden></div>
+
+    <!-- ============================================================
+         ===== 全域 Modal：課程地圖 / 操作說明 / 重點整理 / 製作團隊 =====
+         ============================================================ -->
+    <div class="modal" id="modalRoot" hidden>
+        <div class="modal__backdrop" data-modal-close></div>
+
+        <!-- 1. 課程地圖 -->
+        <section class="modal__panel" data-modal="map" hidden role="dialog" aria-modal="true" aria-labelledby="modalMapTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">COURSE MAP　·　課程地圖</span>
+                    <h2 class="modal__title" id="modalMapTitle">三個單元，認識十三行人的世界</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <p class="modal__lead">點擊任一節點即可快速跳到對應的子單元；灰色節點為「即將推出」尚未開放。</p>
+
+                <ol class="cmap" role="list">
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 01</span>
+                            <h3 class="cmap__name">初識十三行</h3>
+                            <span class="cmap__time">40 分</span>
+                        </div>
+                        <p class="cmap__desc">從考古現場、建築智慧到信仰，建立對這座千年聚落的基本認識。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="unit1.html#sub-1-1" data-modal-close>
+                                <span class="cmap__node-i">1-1</span>
+                                <span class="cmap__node-t">我們的考古日記</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit1.html#sub-1-2" data-modal-close>
+                                <span class="cmap__node-i">1-2</span>
+                                <span class="cmap__node-t">奇特的房子</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit1.html#sub-1-3" data-modal-close>
+                                <span class="cmap__node-i">1-3</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit is-current">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 02</span>
+                            <h3 class="cmap__name">工藝大挑戰</h3>
+                            <span class="cmap__time">50 分</span>
+                        </div>
+                        <p class="cmap__desc">陶器、煉鐵、玻璃珠──認識十三行人精彩的手工業技術。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="#sub-2-1" data-modal-close>
+                                <span class="cmap__node-i">2-1</span>
+                                <span class="cmap__node-t">陶器的奧秘</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="#sub-2-2" data-modal-close>
+                                <span class="cmap__node-i">2-2</span>
+                                <span class="cmap__node-t">煉鐵高手</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                            <a class="cmap__node" href="#sub-2-3" data-modal-close>
+                                <span class="cmap__node-i">2-3</span>
+                                <span class="cmap__node-t">小小玻璃珠</span>
+                                <span class="cmap__node-m">11 min</span>
+                            </a>
+                            <a class="cmap__node" href="#sub-2-4" data-modal-close>
+                                <span class="cmap__node-i">2-4</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 03</span>
+                            <h3 class="cmap__name">社會與信仰</h3>
+                            <span class="cmap__time">45 分</span>
+                        </div>
+                        <p class="cmap__desc">墓葬、人面陶罐與儀式──走進十三行人的精神世界。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="unit3.html#sub-3-1" data-modal-close>
+                                <span class="cmap__node-i">3-1</span>
+                                <span class="cmap__node-t">墓葬的祕密</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit3.html#sub-3-2" data-modal-close>
+                                <span class="cmap__node-i">3-2</span>
+                                <span class="cmap__node-t">人面陶罐</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit3.html#sub-3-3" data-modal-close>
+                                <span class="cmap__node-i">3-3</span>
+                                <span class="cmap__node-t">信仰與儀式</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit3.html#sub-3-4" data-modal-close>
+                                <span class="cmap__node-i">3-4</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">11 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">FINAL QUIZ</span>
+                            <h3 class="cmap__name">終極總測驗</h3>
+                            <span class="cmap__time">10 分</span>
+                        </div>
+                        <p class="cmap__desc">10 題跨單元選擇題＋5 題全新視覺互動遊戲，搭配倒數計時與錯題檢討。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="quiz.html" data-modal-close>
+                                <span class="cmap__node-i">⏱</span>
+                                <span class="cmap__node-t">開始 15 題限時綜合挑戰</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 2. 操作說明 -->
+        <section class="modal__panel" data-modal="guide" hidden role="dialog" aria-modal="true" aria-labelledby="modalGuideTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">HOW TO USE　·　操作說明</span>
+                    <h2 class="modal__title" id="modalGuideTitle">五分鐘上手．這份教材怎麼讀？</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <ol class="guide-list">
+                    <li class="guide-item">
+                        <div class="guide-item__no">01</div>
+                        <div>
+                            <h4>左側：學習單元導覽列</h4>
+                            <p>頁面左側列出所有單元與子單元，點擊即可快速跳到對應段落，目前正在閱讀的節點會自動高亮。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">02</div>
+                        <div>
+                            <h4>頂部：四個常駐入口</h4>
+                            <p><b>課程地圖</b>看總覽、<b>操作說明</b>看使用方法、<b>重點整理</b>看核心知識、<b>製作團隊</b>看作者資訊。LOGO 點擊可回到頁面最上方。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">03</div>
+                        <div>
+                            <h4>互動元素：滑、點、拖</h4>
+                            <p>遇到<b>時光滑桿</b>請左右拖曳；<b>翻牌卡</b>點擊翻面；<b>建築模型</b>滑入部位查看解析；<b>FAQ</b>點擊展開答案。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">04</div>
+                        <div>
+                            <h4>評量區：答錯也別怕</h4>
+                            <p>單元最後的測驗會即時回饋；答錯時系統會<b>提示複習路徑</b>，引導你回到對應段落補充重點，再回來作答。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">05</div>
+                        <div>
+                            <h4>學習進度自動保存</h4>
+                            <p>頂部進度條會記錄你完成的子單元；重新打開瀏覽器仍會看到上次的進度（透過 localStorage 儲存）。</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="guide-keys">
+                    <span class="guide-keys__title">鍵盤快速鍵</span>
+                    <div class="guide-keys__row"><kbd>Esc</kbd><span>關閉彈窗</span></div>
+                    <div class="guide-keys__row"><kbd>Tab</kbd><span>切換焦點 / 互動元件</span></div>
+                    <div class="guide-keys__row"><kbd>Enter</kbd> / <kbd>Space</kbd><span>觸發按鈕、翻面、揭示</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 重點整理（全教材精華） -->
+        <section class="modal__panel" data-modal="recap" hidden role="dialog" aria-modal="true" aria-labelledby="modalRecapTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">KEY TAKEAWAYS　·　重點整理</span>
+                    <h2 class="modal__title" id="modalRecapTitle">整份教材最該記住的 10 件事</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <div class="recap-grid">
+                    <article class="recap-card"><span class="recap-card__no">01</span><h4>距今 1800–500 年</h4><p>十三行文化屬台灣鐵器時代晚期，是淡水河口南岸最完整的史前聚落。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">02</span><h4>1955 羅盤事件</h4><p>空軍飛機飛過八里、觀音山一帶時羅盤異常，後來才揭開十三行遺址。1957 年才正式發掘。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">03</span><h4>地名沿用</h4><p>「十三行」來自清代「十三行郊」，不是 13 棟房子。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">04</span><h4>干欄式建築</h4><p>把家架高 1.5–2.5 公尺，是河口潮濕環境下的最佳解。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">05</span><h4>四大功能</h4><p>架高設計同時達成防潮、避洪、避獸、通風四大功能。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">06</span><h4>柱洞是關鍵</h4><p>木頭會腐朽，但柱洞會在土壤裡留下印章，幫助還原建築。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">07</span><h4>上下文 (Context)</h4><p>考古學重視「文物在哪一層、附近有什麼」，而不是文物本身。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">08</span><h4>煉鐵爐渣</h4><p>是十三行人擁有煉鐵技術最直接的證據；十三行是目前台灣唯一確認有史前煉鐵遺跡的遺址。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">09</span><h4>玻璃珠 = 貿易</h4><p>來自東南亞、南亞一帶的玻璃珠，顯示這裡很可能是南島海洋貿易網的節點。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">10</span><h4>人面陶罐</h4><p>十三行的鎮館之寶，象徵祭祀、葬儀或祖靈信仰。</p></article>
+                </div>
+                <div class="recap-actions">
+                    <a class="recap-actions__btn" href="unit1.html#sub-1-3" data-modal-close>單元一測驗</a>
+                    <a class="recap-actions__btn" href="#sub-2-4" data-modal-close>單元二測驗</a>
+                    <a class="recap-actions__btn" href="unit3.html#sub-3-4" data-modal-close>單元三測驗</a>
+                    <a class="recap-actions__btn recap-actions__btn--primary" href="quiz.html">⏱ 終極總測驗 (10選擇+5互動) →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 製作團隊 -->
+        <section class="modal__panel" data-modal="team" hidden role="dialog" aria-modal="true" aria-labelledby="modalTeamTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">PRODUCTION TEAM　·　製作團隊</span>
+                    <h2 class="modal__title" id="modalTeamTitle">將千年歷史變成可互動的學堂</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <p class="modal__lead">本網頁為大學畢業專題作品，主題聚焦於台灣鐵器時代的「十三行文化」，結合數位學習設計與互動視覺，期望讓國小高年級到國中的學生，能夠輕鬆走進這段被遺忘的歷史。</p>
+
+                <div class="team-grid">
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">吳</div>
+                        <h4 class="team-card__name">吳俁杉</h4>
+                        <p class="team-card__role">網頁製作 ‧ 廠商溝通 ‧ 企劃</p>
+                        <p class="team-card__bio">負責整體網頁前端製作、與廠商及指導單位溝通協調，並統籌影片與網頁內容的企劃方向。</p>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">楊</div>
+                        <h4 class="team-card__name">楊昕達</h4>
+                        <p class="team-card__role">海報製作 ‧ 影片拍攝與後製</p>
+                        <p class="team-card__bio">負責專題海報視覺設計，並擔任影片拍攝、剪輯與後製工作，呈現遺址與週邊地景的教學畫面。</p>
+                    </article>
+                </div>
+
+                <div class="team-credit">
+                    <h4 class="team-credit__title">特別感謝</h4>
+                    <ul>
+                        <li><a href="https://www.sshm.ntpc.gov.tw/" target="_blank" rel="noopener noreferrer">新北市立十三行博物館</a>　線上展覽、典藏資料與教育資源</li>
+                        <li><a href="https://digiarch.sinica.edu.tw/" target="_blank" rel="noopener noreferrer">中央研究院・數位典藏資源網</a>　台灣考古文物高清影像</li>
+                        <li>指導老師、系上同學以及所有測試回饋的師長與朋友</li>
+                    </ul>
+                </div>
+                <p class="team-foot">© 2026 十三行行動博物館 ｜ 畢業專題作品 ‧ 僅供教育用途</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== 首次進入引導（Onboarding Spotlight） ===== -->
+    <div class="onboard" id="onboard" hidden>
+        <div class="onboard__card">
+            <span class="onboard__eyebrow">WELCOME　·　歡迎來到</span>
+            <h2 class="onboard__title">十三行行動博物館</h2>
+            <p class="onboard__lead">這是一份互動式數位教材，會帶你從<b>考古學基礎</b>，一路走進<b>千年前淡水河口的聚落</b>。下面是幾個你會用到的操作技巧：</p>
+            <div class="onboard__steps">
+                <div class="onboard__step"><span>1</span><p>左側欄是學習地圖，點擊可<b>快速跳到任何子單元</b>。</p></div>
+                <div class="onboard__step"><span>2</span><p>遇到<b>滑桿、翻牌卡、3D 模型</b>，就大膽拖曳和點擊。</p></div>
+                <div class="onboard__step"><span>3</span><p>結束有<b>測驗</b>，答錯也別怕，會引導你回到對應段落補充。</p></div>
+            </div>
+            <div class="onboard__actions">
+                <button class="onboard__btn onboard__btn--ghost" type="button" id="onboardSkip">略過</button>
+                <button class="onboard__btn onboard__btn--primary" type="button" id="onboardStart">開始學習</button>
+            </div>
+            <label class="onboard__check"><input type="checkbox" id="onboardDontShow"> 不再顯示</label>
+        </div>
+    </div>
+
+    <script src="js/audio.js" defer></script>
+    <script src="js/tour.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

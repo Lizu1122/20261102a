@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="十三行行動博物館｜終極總測驗：10 題跨單元選擇題＋5 題全新視覺互動遊戲，限時倒數挑戰！">
+    <title>終極總測驗 10 題選擇＋5 題互動遊戲 ｜ 十三行行動博物館</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/audio.css">
+    <link rel="stylesheet" href="css/tour.css">
+</head>
+<body>
+
+    <!-- ===== 頂部品牌列（全站一致） ===== -->
+    <header class="site-header" role="banner">
+        <a href="index.html" class="brand brand--link" id="homeLink" aria-label="回到首頁">
+            <span class="brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 60 60" width="42" height="42">
+                    <polygon points="10,50 30,8 50,50" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                    <polygon points="18,50 30,26 42,50" fill="currentColor" opacity="0.85"/>
+                    <line x1="6" y1="54" x2="54" y2="54" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </span>
+            <span class="brand__text">
+                <span class="brand__title">十三行行動博物館</span>
+                <span class="brand__subtitle">SHIHSANHANG&nbsp;|&nbsp;Mobile Museum of Archaeology</span>
+            </span>
+        </a>
+
+        <nav class="top-nav" aria-label="主要導覽">
+            <button class="top-nav__link" type="button" data-modal-open="map">課程地圖</button>
+            <button class="top-nav__link" type="button" data-modal-open="guide">操作說明</button>
+            <button class="top-nav__link" type="button" data-modal-open="recap">重點整理</button>
+            <button class="top-nav__link" type="button" data-modal-open="team">製作團隊</button>
+            <a class="top-nav__link top-nav__link--quiz" href="quiz.html" aria-current="page">⏱ 總測驗</a>
+        </nav>
+
+        <div class="header-progress" aria-hidden="true">
+            <span class="header-progress__bar" id="headerProgressBar" style="width:0%"></span>
+        </div>
+    </header>
+
+    <!-- ===== 目前位置 / 麵包屑工具列 ===== -->
+    <div class="locator" id="locator" aria-label="目前位置">
+        <div class="locator__inner">
+            <div class="locator__left">
+                <span class="locator__dot" aria-hidden="true"></span>
+                <span class="locator__path" id="locatorPath">終極總測驗　·　10 題綜合選擇＋5 題互動遊戲限時挑戰</span>
+            </div>
+            <div class="locator__right">
+                <span class="locator__progress-text" id="locatorProgress">作答進度 0%</span>
+                <button type="button" class="locator__quick" data-modal-open="map" aria-label="開啟課程地圖快速切換">快速切換單元</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 主版型：側邊欄 + 內容 ===== -->
+    <div class="layout">
+        <aside class="sidebar" aria-label="單元導覽">
+            <div class="sidebar__head">
+                <span class="sidebar__eyebrow">UNIT NAVIGATION</span>
+                <h2 class="sidebar__title">學習單元</h2>
+                <div class="sidebar__rule" aria-hidden="true"></div>
+            </div>
+
+            <ul class="unit-list" role="list">
+                <li class="unit-item" data-unit="1">
+                    <button class="unit-item__btn" type="button" data-unit-target="unit1.html">
+                        <span class="unit-item__no">01</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">初識十三行</span>
+                            <span class="unit-item__desc">考古現場・建築・信仰</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="unit1.html#sub-1-1" class="sub-link">1-1　我們的考古日記</a></li>
+                        <li><a href="unit1.html#sub-1-2" class="sub-link">1-2　奇特的房子</a></li>
+                        <li><a href="unit1.html#sub-1-3" class="sub-link">1-3　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item" data-unit="2">
+                    <button class="unit-item__btn" type="button" data-unit-target="unit2.html">
+                        <span class="unit-item__no">02</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">工藝大挑戰</span>
+                            <span class="unit-item__desc">陶器・煉鐵・玻璃珠</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="unit2.html#sub-2-1" class="sub-link">2-1　陶器的奧秘</a></li>
+                        <li><a href="unit2.html#sub-2-2" class="sub-link">2-2　煉鐵高手</a></li>
+                        <li><a href="unit2.html#sub-2-3" class="sub-link">2-3　小小玻璃珠</a></li>
+                        <li><a href="unit2.html#sub-2-4" class="sub-link">2-4　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item" data-unit="3">
+                    <button class="unit-item__btn" type="button" data-unit-target="unit3.html">
+                        <span class="unit-item__no">03</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">社會與信仰</span>
+                            <span class="unit-item__desc">墓葬・人面陶罐・儀式</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="unit3.html#sub-3-1" class="sub-link">3-1　墓葬的祕密</a></li>
+                        <li><a href="unit3.html#sub-3-2" class="sub-link">3-2　人面陶罐</a></li>
+                        <li><a href="unit3.html#sub-3-3" class="sub-link">3-3　信仰與儀式</a></li>
+                        <li><a href="unit3.html#sub-3-4" class="sub-link">3-4　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item unit-item--quiz is-active" data-unit="4">
+                    <button class="unit-item__btn" type="button" aria-current="page" data-unit-target="#unit-quiz">
+                        <span class="unit-item__no">04</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">終極總測驗</span>
+                            <span class="unit-item__desc">10 題選擇＋5 題互動遊戲</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">⏱</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="#quiz-intro" class="sub-link is-current">考前規則與倒數設定</a></li>
+                        <li><a href="#quiz-arena" class="sub-link">15 題限時作答區</a></li>
+                        <li><a href="#quiz-report" class="sub-link">成績公布與錯題檢討</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="sidebar__progress">
+                <div class="progress-label">
+                    <span>作答進度</span>
+                    <span class="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar"><span style="width:0%"></span></div>
+            </div>
+        </aside>
+
+        <!-- ===== 主要內容區 ===== -->
+        <main class="content" id="main">
+            <span id="top" tabindex="-1" aria-hidden="true"></span>
+
+            <!-- ===== 總測驗單元標頭 ===== -->
+            <section class="unit-hero" id="unit-quiz" aria-labelledby="unit-quiz-title">
+                <div class="unit-hero__crumbs">
+                    <a href="index.html">行動展廳</a><span>／</span><a href="#unit-quiz">終極總測驗</a><span>／</span><span>10 題選擇＋5 題互動遊戲</span>
+                </div>
+                <div class="unit-hero__grid">
+                    <div class="unit-hero__copy">
+                        <span class="unit-hero__eyebrow">FINAL COMPREHENSIVE QUIZ　・　終極總測驗</span>
+                        <h1 id="unit-quiz-title" class="unit-hero__title">十三行考古學院<br><em>選擇題 × 視覺互動遊戲考核</em></h1>
+                        <p class="unit-hero__lead">
+                            本測驗結合 <b>10 題跨單元全新選擇題</b> 與 <b>5 題全新設計的視覺互動遊戲題</b>（圖片配圖片、山河海資源拖曳歸位、田野證據推論配對、煉鐵四部曲排序、垂直探坑地層拼圖）。作答過程中不會提前透露對錯，<b>送出考卷後統一批改並公布成績與錯題檢討</b>！
+                        </p>
+                        <div class="unit-hero__meta">
+                            <span class="chip">題型｜10 題選擇（60分）＋ 5 題互動遊戲（40分）</span>
+                            <span class="chip">通過門檻｜選擇 ≥ 6 題 且 互動 ≥ 3 題</span>
+                            <span class="chip">機制｜即時倒數・送出後批改檢討</span>
+                        </div>
+                    </div>
+                    <div class="unit-hero__visual" aria-hidden="true">
+                        <div class="hero-stack">
+                            <div class="hero-stack__slab hero-stack__slab--1"></div>
+                            <div class="hero-stack__slab hero-stack__slab--2"></div>
+                            <div class="hero-stack__slab hero-stack__slab--3"></div>
+                            <div class="hero-stack__sun"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+                 ===== 階段一：考前設定與倒數模式選擇 (#quiz-intro) =====
+                 ============================================================ -->
+            <section id="quiz-intro" class="quiz-prep" aria-labelledby="quizPrepTitle">
+                <div class="quiz-prep__top">
+                    <div>
+                        <span class="quiz-prep__eyebrow">STEP 01　・　PASSING CRITERIA &amp; COUNTDOWN MODE</span>
+                        <h2 id="quizPrepTitle" class="quiz-prep__title">確認考核通過規則，選擇倒數計時模式</h2>
+                        <p class="quiz-prep__desc">
+                            為了檢驗你對十三行文化的完整理解，本測驗採取<b>「雙門檻通過制」</b>。作答時可自由修改選項與拖曳配對，點擊「送出考卷」或倒數歸零後，系統才會揭曉成績與你錯在哪裡。
+                        </p>
+                    </div>
+                    <div class="quiz-prep__best" aria-label="個人最佳紀錄">
+                        <span class="quiz-prep__best-label">🏆 個人最佳紀錄</span>
+                        <strong class="quiz-prep__best-val" id="prepBestVal">尚未挑戰</strong>
+                        <span class="quiz-prep__best-sub" id="prepBestSub">完成測驗即可解鎖紀錄</span>
+                    </div>
+                </div>
+
+                <!-- 雙門檻通過規則說明列 -->
+                <div class="quiz-rules-banner" aria-label="通過門檻說明">
+                    <div class="quiz-rule-item">
+                        <span class="quiz-rule-item__icon">📝</span>
+                        <div>
+                            <b>門檻一：10 題綜合選擇題</b>
+                            <span>每題 6 分（共 60 分），至少需<b>答對 6 題以上</b>。</span>
+                        </div>
+                    </div>
+                    <div class="quiz-rule-item">
+                        <span class="quiz-rule-item__icon">🎮</span>
+                        <div>
+                            <b>門檻二：5 題全新互動遊戲</b>
+                            <span>圖片配圖片、拖曳歸位與排序，每題 8 分（共 40 分），至少需<b>完成並答對 3 題以上</b>。</span>
+                        </div>
+                    </div>
+                    <div class="quiz-rule-item">
+                        <span class="quiz-rule-item__icon">🔍</span>
+                        <div>
+                            <b>送出後公布成績與錯題檢討</b>
+                            <span>送出後才揭曉對錯；若未通過將自動開啟<b>錯題檢討專區</b>並提供<b>再次作答</b>。</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 三種倒數計時模式 -->
+                <div class="quiz-modes" role="radiogroup" aria-label="選擇倒數計時長度">
+                    <button type="button" class="quiz-mode-btn is-selected" data-sec="600">
+                        <span class="quiz-mode-btn__tag">RECOMMENDED ・ 標準推薦</span>
+                        <h3 class="quiz-mode-btn__name">標準田野考核</h3>
+                        <div class="quiz-mode-btn__time">⏱ 10:00（600 秒）</div>
+                        <p class="quiz-mode-btn__note">充裕完成 10 題選擇與 5 道圖片拖曳配對遊戲，適合穩紮穩打通過雙門檻。</p>
+                    </button>
+
+                    <button type="button" class="quiz-mode-btn" data-sec="300">
+                        <span class="quiz-mode-btn__tag">SPEED CHALLENGE ・ 進階挑戰</span>
+                        <h3 class="quiz-mode-btn__name">極速搶救考古</h3>
+                        <div class="quiz-mode-btn__time">⚡ 05:00（300 秒）</div>
+                        <p class="quiz-mode-btn__note">限時 5 分鐘完成所有選擇題與拖曳遊戲！模擬工程逼近時的搶救發掘速度。</p>
+                    </button>
+
+                    <button type="button" class="quiz-mode-btn" data-sec="900">
+                        <span class="quiz-mode-btn__tag">RELAXED ・ 深度思考</span>
+                        <h3 class="quiz-mode-btn__name">從容深思模式</h3>
+                        <div class="quiz-mode-btn__time">🧭 15:00（900 秒）</div>
+                        <p class="quiz-mode-btn__note">提供 15 分鐘作答時間，適合第一次遊玩 5 道新互動題、細細觀察文物圖卡。</p>
+                    </button>
+                </div>
+
+                <div class="quiz-prep__controls">
+                    <div class="quiz-prep__options">
+                        <label>
+                            <input type="checkbox" id="optShuffle">
+                            <span>隨機打亂題目順序（每次挑戰都有新鮮感）</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="optAllView">
+                            <span>預設使用「全卷 15 題總覽模式」（測驗中亦可隨時切換）</span>
+                        </label>
+                    </div>
+
+                    <button type="button" class="quiz-start-btn" id="startExamBtn">
+                        <span>🚀 啟動倒數・開始 15 題綜合挑戰</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ============================================================
+                 ===== 階段二：限時作答競技場 (#quiz-arena) =====
+                 ============================================================ -->
+            <section id="quiz-arena" aria-label="總測驗作答區" hidden>
+                <!-- 黏性倒數計時與進度 HUD -->
+                <div class="quiz-hud" id="quizHud" role="region" aria-label="倒數計時與作答狀態">
+                    <div class="quiz-timer">
+                        <div class="quiz-timer__ring-wrap" aria-hidden="true">
+                            <svg class="quiz-timer__svg" viewBox="0 0 48 48">
+                                <circle class="quiz-timer__track" cx="24" cy="24" r="20"></circle>
+                                <circle class="quiz-timer__progress" id="quizRingProgress" cx="24" cy="24" r="20"></circle>
+                            </svg>
+                            <span class="quiz-timer__icon">⏱</span>
+                        </div>
+                        <div class="quiz-timer__text">
+                            <span class="quiz-timer__label">REMAINING TIME</span>
+                            <strong class="quiz-timer__clock" id="quizClock" aria-live="polite">10:00</strong>
+                        </div>
+                    </div>
+
+                    <div class="quiz-hud__center">
+                        <div class="quiz-hud__stats">
+                            <span id="hudAnsweredCount">已完成 0/15 題（選擇 0/10・互動 0/5）</span>
+                            <span id="hudFlaggedCount">🚩 標記 0 題</span>
+                        </div>
+                        <div class="quiz-hud__bar" aria-hidden="true">
+                            <span class="quiz-hud__bar-fill" id="hudProgressBar"></span>
+                        </div>
+                    </div>
+
+                    <div class="quiz-hud__actions">
+                        <button type="button" class="quiz-hud__mode-toggle" id="modeToggleBtn">
+                            📑 切換全卷總覽（15 題）
+                        </button>
+                        <button type="button" class="quiz-hud__submit" id="submitExamBtn">
+                            送出考卷並批改 ✓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 1-15 題號導覽盤 -->
+                <div class="quiz-palette" aria-label="題號快速導覽">
+                    <div class="quiz-palette__head">
+                        <span class="quiz-palette__title">QUESTION PALETTE　・　1–10 選擇題 ／ 🎮11–15 互動遊戲題</span>
+                        <div class="quiz-palette__legend">
+                            <span><i style="background:var(--c-indigo);"></i>目前題目</span>
+                            <span><i style="background:var(--c-sky);"></i>選擇題已答</span>
+                            <span><i style="background:var(--c-accent);"></i>互動題已完成</span>
+                            <span>🚩 待查標記</span>
+                        </div>
+                    </div>
+                    <div class="quiz-palette__grid" id="quizPaletteGrid"></div>
+                </div>
+
+                <!-- 題目卡片舞台 -->
+                <div class="quiz-stage" id="quizStage"></div>
+            </section>
+
+            <!-- ============================================================
+                 ===== 階段三：考後診斷與詳解報告 (#quiz-report) =====
+                 ============================================================ -->
+            <section id="quiz-report" class="quiz-report" aria-label="測驗成績與詳解報告" hidden>
+                <!-- 時間到自動交卷提示橫幅 -->
+                <div class="quiz-timeout-banner" id="timeoutBanner" hidden>
+                    <span>⏰ <b>倒數計時歸零！</b>系統已自動為您收卷並統一批改所有選擇題與互動題。</span>
+                </div>
+
+                <!-- 總分與通過狀態英雄卡 -->
+                <div class="report-hero" id="reportHeroCard">
+                    <div class="report-score-circle" aria-label="總測驗得分">
+                        <strong class="report-score-circle__num" id="reportScoreNum">0</strong>
+                        <span class="report-score-circle__unit">/ 100 分</span>
+                    </div>
+                    <div>
+                        <span class="report-hero__rank" id="reportRankBadge">考核結果計算中</span>
+                        <h2 class="report-hero__title" id="reportHeroTitle">測驗結果統計完成</h2>
+                        <p class="report-hero__desc" id="reportHeroDesc"></p>
+
+                        <div class="report-metrics">
+                            <div>
+                                <b id="metricCorrect">選擇 0/10・互動 0/5</b>
+                                <span>各題型答對題數</span>
+                            </div>
+                            <div>
+                                <b id="metricAccuracy">判定中</b>
+                                <span>雙門檻考核結果</span>
+                            </div>
+                            <div>
+                                <b id="metricTimeSpent">0 分 00 秒</b>
+                                <span>實際作答耗時</span>
+                            </div>
+                            <div>
+                                <b id="metricModeName">標準田野考核</b>
+                                <span>挑戰計時模式</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 雙門檻通過檢核卡（選擇題 >= 6/10 且 互動題 >= 3/5） -->
+                <div class="report-pass-grid" id="reportPassGrid" aria-label="雙門檻達標狀態"></div>
+
+                <!-- 若未通過，顯示醒目的錯題檢討提示與立即重考按鈕 -->
+                <div class="report-fail-callout" id="reportFailCallout" hidden>
+                    <div class="report-fail-callout__text">
+                        <h3>⚠️ 尚未通過本次考核！請先查看下方「錯題檢討專區」</h3>
+                        <p>必須同時達成「選擇題答對 ≥ 6 題」與「互動遊戲題答對 ≥ 3 題」才算通過。下方已自動為您篩出所有答錯或未完成的題目與正確對照，檢討完畢後可立即再次作答！</p>
+                    </div>
+                    <button type="button" class="report-fail-callout__btn" id="failRetryBtn">
+                        ↻ 檢討完畢・立即再次作答
+                    </button>
+                </div>
+
+                <!-- 三大單元能力分布 -->
+                <div class="report-units" id="reportUnits" aria-label="各單元得分率分析"></div>
+
+                <!-- 逐題詳解與篩選器 -->
+                <div class="report-review-head">
+                    <div>
+                        <span class="quiz-prep__eyebrow">WRONG-ANSWER REVIEW &amp; EXPLANATIONS</span>
+                        <h3 style="font-family:var(--f-display); font-size:22px; color:var(--c-indigo);">作答對照、錯題檢討與複習傳送門</h3>
+                    </div>
+                    <div class="report-filters" role="tablist" aria-label="篩選詳解題目">
+                        <button type="button" class="report-filter-btn is-active" data-filter="all">全部題目 (15)</button>
+                        <button type="button" class="report-filter-btn" data-filter="wrong">✗ 錯題檢討（答錯／未完成）</button>
+                        <button type="button" class="report-filter-btn" data-filter="correct">✓ 答對題目</button>
+                        <button type="button" class="report-filter-btn" data-filter="flagged">🚩 標記題目</button>
+                    </div>
+                </div>
+
+                <div class="report-list" id="reportReviewList"></div>
+
+                <!-- 底部再次作答與操作按鈕 -->
+                <div class="recap-block">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">TRY AGAIN OR REVIEW　・　再次作答與進階探索</span>
+                        <h3 class="recap-block__title">準備好再次挑戰或調整倒數時間了嗎？</h3>
+                    </div>
+                    <div class="recap-block__actions">
+                        <button type="button" class="recap-block__btn recap-block__btn--primary" id="retryExamBtn">
+                            ↻ 再次作答（重新開始 15 題挑戰）
+                        </button>
+                        <button type="button" class="recap-block__btn" id="backPrepBtn">
+                            ⚙ 返回考前設定（更換倒數時間／洗牌設定）
+                        </button>
+                        <button type="button" class="recap-block__btn" data-modal-open="recap">
+                            📋 查看全教材 10 大重點整理
+                        </button>
+                        <a class="recap-block__btn" href="index.html">
+                            🏠 回到行動博物館首頁
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 過關灑花容器 -->
+            <div class="celebrate" id="celebrate" aria-hidden="true"></div>
+
+            <footer class="site-footer">
+                <p>© 2026 十三行行動博物館 ｜ 畢業專題作品．本網頁僅為教育用途，視覺風格參考新北市立十三行博物館官方網站。</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- ===== Tooltip 全域容器 ===== -->
+    <div class="floating-tip" id="floatingTip" role="tooltip" hidden></div>
+
+    <!-- ============================================================
+         ===== 全域 Modal：課程地圖 / 操作說明 / 重點整理 / 製作團隊 =====
+         ============================================================ -->
+    <div class="modal" id="modalRoot" hidden>
+        <div class="modal__backdrop" data-modal-close></div>
+
+        <!-- 1. 課程地圖 -->
+        <section class="modal__panel" data-modal="map" hidden role="dialog" aria-modal="true" aria-labelledby="modalMapTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">COURSE MAP　·　課程地圖</span>
+                    <h2 class="modal__title" id="modalMapTitle">三個單元＋終極總測驗，完整認識十三行</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <p class="modal__lead">點擊任一節點即可快速跳到對應的子單元或總測驗。</p>
+
+                <ol class="cmap" role="list">
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 01</span>
+                            <h3 class="cmap__name">初識十三行</h3>
+                            <span class="cmap__time">40 分</span>
+                        </div>
+                        <p class="cmap__desc">從考古現場、建築智慧到信仰，建立對這座千年聚落的基本認識。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="unit1.html#sub-1-1" data-modal-close>
+                                <span class="cmap__node-i">1-1</span>
+                                <span class="cmap__node-t">我們的考古日記</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit1.html#sub-1-2" data-modal-close>
+                                <span class="cmap__node-i">1-2</span>
+                                <span class="cmap__node-t">奇特的房子</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit1.html#sub-1-3" data-modal-close>
+                                <span class="cmap__node-i">1-3</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 02</span>
+                            <h3 class="cmap__name">工藝大挑戰</h3>
+                            <span class="cmap__time">50 分</span>
+                        </div>
+                        <p class="cmap__desc">陶器、煉鐵、玻璃珠──認識十三行人精彩的手工業技術。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="unit2.html#sub-2-1" data-modal-close>
+                                <span class="cmap__node-i">2-1</span>
+                                <span class="cmap__node-t">陶器的奧秘</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit2.html#sub-2-2" data-modal-close>
+                                <span class="cmap__node-i">2-2</span>
+                                <span class="cmap__node-t">煉鐵高手</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit2.html#sub-2-3" data-modal-close>
+                                <span class="cmap__node-i">2-3</span>
+                                <span class="cmap__node-t">小小玻璃珠</span>
+                                <span class="cmap__node-m">11 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit2.html#sub-2-4" data-modal-close>
+                                <span class="cmap__node-i">2-4</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 03</span>
+                            <h3 class="cmap__name">社會與信仰</h3>
+                            <span class="cmap__time">45 分</span>
+                        </div>
+                        <p class="cmap__desc">墓葬、人面陶罐與儀式──走進十三行人的精神世界。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="unit3.html#sub-3-1" data-modal-close>
+                                <span class="cmap__node-i">3-1</span>
+                                <span class="cmap__node-t">墓葬的祕密</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit3.html#sub-3-2" data-modal-close>
+                                <span class="cmap__node-i">3-2</span>
+                                <span class="cmap__node-t">人面陶罐</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit3.html#sub-3-3" data-modal-close>
+                                <span class="cmap__node-i">3-3</span>
+                                <span class="cmap__node-t">信仰與儀式</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit3.html#sub-3-4" data-modal-close>
+                                <span class="cmap__node-i">3-4</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">11 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit is-current">
+                        <div class="cmap__head">
+                            <span class="cmap__no">FINAL QUIZ</span>
+                            <h3 class="cmap__name">終極總測驗</h3>
+                            <span class="cmap__time">10 分</span>
+                        </div>
+                        <p class="cmap__desc">10 題跨單元選擇題＋5 題全新視覺互動遊戲，搭配倒數計時與錯題檢討。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="#quiz-intro" data-modal-close>
+                                <span class="cmap__node-i">⏱</span>
+                                <span class="cmap__node-t">開始 15 題限時綜合挑戰</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 2. 操作說明 -->
+        <section class="modal__panel" data-modal="guide" hidden role="dialog" aria-modal="true" aria-labelledby="modalGuideTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">HOW TO USE　·　操作說明</span>
+                    <h2 class="modal__title" id="modalGuideTitle">總測驗與互動遊戲操作指南</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <ol class="guide-list">
+                    <li class="guide-item">
+                        <div class="guide-item__no">01</div>
+                        <div>
+                            <h4>雙門檻通過制（選擇 ≥ 6 題 且 互動 ≥ 3 題）</h4>
+                            <p>總測驗包含 <b>10 題單選題</b> 與 <b>5 題視覺互動遊戲題</b>，兩項皆達標才算正式通過考核。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">02</div>
+                        <div>
+                            <h4>互動遊戲題：支援「滑鼠拖曳」與「點擊配對」</h4>
+                            <p>你可以直接把上方托盤的圖卡<b>拖曳（Drag &amp; Drop）</b>到下方目標槽；或<b>先點一下上方圖卡、再點一下下方目標槽</b>完成配對。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">03</div>
+                        <div>
+                            <h4>送出考卷後統一揭曉對錯与錯題檢討</h4>
+                            <p>作答時可隨時更換選項或重置配對；點擊<b>「送出考卷並批改」</b>後才會公布分數、告訴你錯在哪裡，並提供再次作答。</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="guide-keys">
+                    <span class="guide-keys__title">總測驗鍵盤快速鍵（單題模式）</span>
+                    <div class="guide-keys__row"><kbd>1</kbd>–<kbd>4</kbd> 或 <kbd>A</kbd>–<kbd>D</kbd><span>選擇題快速選答案</span></div>
+                    <div class="guide-keys__row"><kbd>←</kbd> / <kbd>→</kbd><span>切換上一題 / 下一題</span></div>
+                    <div class="guide-keys__row"><kbd>F</kbd><span>切換「🚩 標記待查」</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 重點整理 -->
+        <section class="modal__panel" data-modal="recap" hidden role="dialog" aria-modal="true" aria-labelledby="modalRecapTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">KEY TAKEAWAYS　·　重點整理</span>
+                    <h2 class="modal__title" id="modalRecapTitle">考前必看！整份教材最該記住的 10 件事</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <div class="recap-grid">
+                    <article class="recap-card"><span class="recap-card__no">01</span><h4>距今 1800–500 年</h4><p>十三行文化屬台灣鐵器時代晚期，是淡水河口南岸最完整的史前聚落。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">02</span><h4>1955 羅盤事件</h4><p>空軍飛機飛過觀音山羅盤異常，地質學家林朝棨調查鐵渣，揭開遺址序幕。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">03</span><h4>地名與搶救考古</h4><p>地名源自清代「十三行郊」；1989 年因八里汙水廠工程引發社會搶救運動。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">04</span><h4>干欄式建築</h4><p>把家架高 1.5–2.5 公尺，45°–60° 陡斜茅草屋頂可快速排水。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">05</span><h4>柱洞是關鍵證據</h4><p>木頭雖腐朽，但土壤中超過 400 個「柱洞」排列痕跡幫助考古學家還原建築。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">06</span><h4>紅褐色夾砂陶</h4><p>黏土摻砂防裂、揉土排氣防炸窯，600–900°C 露天氧化焰燒出紅褐色。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">07</span><h4>木炭還原煉鐵</h4><p>約 1,200°C 爐內以木炭將磁鐵礦（鐵砂）中的氧還原，鍛打出可回收修補的鐵器。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">08</span><h4>玻璃珠與唐宋銅錢</h4><p>東南亞玻璃珠與唐宋銅錢皆為以物易物換來的珍貴飾品與地位象徵。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">09</span><h4>地層疊壓與屈肢葬</h4><p>越下層年代越古老；墓葬多為側身屈肢葬，完整陶罐多作為陪葬品出土。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">10</span><h4>人面陶罐與文化傳承</h4><p>具圈足、雙線菱形紋與圈印紋；十三行晚期文化轉化並延續至凱達格蘭族。</p></article>
+                </div>
+                <div class="recap-actions">
+                    <a class="recap-actions__btn" href="unit1.html">複習單元一</a>
+                    <a class="recap-actions__btn" href="unit2.html">複習單元二</a>
+                    <a class="recap-actions__btn" href="unit3.html">複習單元三</a>
+                    <button class="recap-actions__btn recap-actions__btn--primary" type="button" data-modal-close>回到總測驗繼續挑戰 →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 製作團隊 -->
+        <section class="modal__panel" data-modal="team" hidden role="dialog" aria-modal="true" aria-labelledby="modalTeamTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">PRODUCTION TEAM　·　製作團隊</span>
+                    <h2 class="modal__title" id="modalTeamTitle">將千年歷史變成可互動的學堂</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <p class="modal__lead">本網頁為大學畢業專題作品，主題聚焦於台灣鐵器時代的「十三行文化」，結合數位學習設計與互動視覺，期望讓國小高年級到國中的學生，能夠輕鬆走進這段被遺忘的歷史。</p>
+
+                <div class="team-grid">
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">吳</div>
+                        <h4 class="team-card__name">吳俁杉</h4>
+                        <p class="team-card__role">網頁製作 ‧ 廠商溝通 ‧ 企劃</p>
+                        <p class="team-card__bio">負責整體網頁前端製作、與廠商及指導單位溝通協調，並統籌影片與網頁內容的企劃方向。</p>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">楊</div>
+                        <h4 class="team-card__name">楊昕達</h4>
+                        <p class="team-card__role">海報製作 ‧ 影片拍攝與後製</p>
+                        <p class="team-card__bio">負責專題海報視覺設計，並擔任影片拍攝、剪輯與後製工作，呈現遺址與週邊地景的教學畫面。</p>
+                    </article>
+                </div>
+
+                <div class="team-credit">
+                    <h4 class="team-credit__title">特別感謝</h4>
+                    <ul>
+                        <li><a href="https://www.sshm.ntpc.gov.tw/" target="_blank" rel="noopener noreferrer">新北市立十三行博物館</a>　線上展覽、典藏資料與教育資源</li>
+                        <li><a href="https://digiarch.sinica.edu.tw/" target="_blank" rel="noopener noreferrer">中央研究院・數位典藏資源網</a>　台灣考古文物高清影像</li>
+                        <li>指導老師、系上同學以及所有測試回饋的師長與朋友</li>
+                    </ul>
+                </div>
+                <p class="team-foot">© 2026 十三行行動博物館 ｜ 畢業專題作品 ‧ 僅供教育用途</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/audio.js" defer></script>
+    <script src="js/tour.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+</body>
+</html>

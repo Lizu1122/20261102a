@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="十三行行動博物館｜走進臺灣考古現場，認識千年前的史前文化。">
+    <title>單元三 社會與信仰 ｜ 十三行行動博物館</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/audio.css">
+    <link rel="stylesheet" href="css/tour.css">
+</head>
+<body>
+
+    <!-- ===== 頂部品牌列（沿用原本風格，LOGO + 教材名稱 + 右側常駐導覽） ===== -->
+    <header class="site-header" role="banner">
+        <!-- 左：LOGO + 教材名稱（LOGO 點擊回首頁） -->
+        <a href="index.html" class="brand brand--link" id="homeLink" aria-label="回到首頁">
+            <span class="brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 60 60" width="42" height="42">
+                    <polygon points="10,50 30,8 50,50" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                    <polygon points="18,50 30,26 42,50" fill="currentColor" opacity="0.85"/>
+                    <line x1="6" y1="54" x2="54" y2="54" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </span>
+            <span class="brand__text">
+                <span class="brand__title">十三行行動博物館</span>
+                <span class="brand__subtitle">SHIHSANHANG&nbsp;|&nbsp;Mobile Museum of Archaeology</span>
+            </span>
+        </a>
+
+        <!-- 右：常駐選單 + 總測驗入口 -->
+        <nav class="top-nav" aria-label="主要導覽">
+            <button class="top-nav__link" type="button" data-modal-open="map">課程地圖</button>
+            <button class="top-nav__link" type="button" data-modal-open="guide">操作說明</button>
+            <button class="top-nav__link" type="button" data-modal-open="recap">重點整理</button>
+            <button class="top-nav__link" type="button" data-modal-open="team">製作團隊</button>
+            <a class="top-nav__link top-nav__link--quiz" href="quiz.html">⏱ 總測驗</a>
+        </nav>
+
+        <!-- 頂部超薄進度條（沿用原本側欄進度條的漸層配色） -->
+        <div class="header-progress" aria-hidden="true">
+            <span class="header-progress__bar" id="headerProgressBar" style="width:0%"></span>
+        </div>
+    </header>
+
+    <!-- ===== 目前位置 / 麵包屑工具列（薄薄一條，沿用既有 line/indigo） ===== -->
+    <div class="locator" id="locator" aria-label="目前位置">
+        <div class="locator__inner">
+            <div class="locator__left">
+                <span class="locator__dot" aria-hidden="true"></span>
+                <span class="locator__path" id="locatorPath">單元三　·　社會與信仰　／　3-1 墓葬的祕密</span>
+            </div>
+            <div class="locator__right">
+                <span class="locator__progress-text" id="locatorProgress">學習進度 0%</span>
+                <button type="button" class="locator__quick" data-modal-open="map" aria-label="開啟課程地圖快速切換">快速切換單元</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 主版型：側邊欄 + 內容 ===== -->
+    <div class="layout">
+        <aside class="sidebar" aria-label="單元導覽">
+            <div class="sidebar__head">
+                <span class="sidebar__eyebrow">UNIT NAVIGATION</span>
+                <h2 class="sidebar__title">學習單元</h2>
+                <div class="sidebar__rule" aria-hidden="true"></div>
+            </div>
+
+            <ul class="unit-list" role="list">
+                <li class="unit-item" data-unit="1">
+                    <button class="unit-item__btn" type="button" data-unit-target="unit1.html">
+                        <span class="unit-item__no">01</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">初識十三行</span>
+                            <span class="unit-item__desc">考古現場・建築・信仰</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="unit1.html#sub-1-1" class="sub-link">1-1　我們的考古日記</a></li>
+                        <li><a href="unit1.html#sub-1-2" class="sub-link">1-2　奇特的房子</a></li>
+                        <li><a href="unit1.html#sub-1-3" class="sub-link">1-3　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item" data-unit="2">
+                    <button class="unit-item__btn" type="button" data-unit-target="unit2.html">
+                        <span class="unit-item__no">02</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">工藝大挑戰</span>
+                            <span class="unit-item__desc">陶器・煉鐵・玻璃珠</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="unit2.html#sub-2-1" class="sub-link">2-1　陶器的奧秘</a></li>
+                        <li><a href="unit2.html#sub-2-2" class="sub-link">2-2　煉鐵高手</a></li>
+                        <li><a href="unit2.html#sub-2-3" class="sub-link">2-3　小小玻璃珠</a></li>
+                        <li><a href="unit2.html#sub-2-4" class="sub-link">2-4　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item is-active" data-unit="3">
+                    <button class="unit-item__btn" type="button" aria-current="page" data-unit-target="#unit-3">
+                        <span class="unit-item__no">03</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">社會與信仰</span>
+                            <span class="unit-item__desc">墓葬・人面陶罐・儀式</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">●</span>
+                    </button>
+                    <ul class="sub-list" role="list">
+                        <li><a href="#sub-3-1" class="sub-link is-current">3-1　墓葬的祕密</a></li>
+                        <li><a href="#sub-3-2" class="sub-link">3-2　人面陶罐</a></li>
+                        <li><a href="#sub-3-3" class="sub-link">3-3　信仰與儀式</a></li>
+                        <li><a href="#sub-3-4" class="sub-link">3-4　單元總結與評量</a></li>
+                    </ul>
+                </li>
+
+                <li class="unit-item unit-item--quiz" data-unit="4">
+                    <button class="unit-item__btn" type="button" data-unit-target="quiz.html">
+                        <span class="unit-item__no">04</span>
+                        <span class="unit-item__body">
+                            <span class="unit-item__name">終極總測驗</span>
+                            <span class="unit-item__desc">10 題選擇＋5 題互動遊戲</span>
+                        </span>
+                        <span class="unit-item__status" aria-hidden="true">⏱</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="sidebar__progress">
+                <div class="progress-label">
+                    <span>學習進度</span>
+                    <span class="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar"><span style="width:0%"></span></div>
+            </div>
+        </aside>
+
+        <!-- ===== 主要內容區 ===== -->
+        <main class="content" id="main">
+            <span id="top" tabindex="-1" aria-hidden="true"></span>
+            <!-- ============================================================
+                 ===== 單元三：社會與信仰 =====
+                 ============================================================ -->
+            <section class="unit-hero" id="unit-3" aria-labelledby="unit-3-title">
+                <div class="unit-hero__crumbs">
+                    <a href="index.html">行動展廳</a><span>／</span><a href="#unit-3">單元三</a><span>／</span><span>社會與信仰</span>
+                </div>
+                <div class="unit-hero__grid">
+                    <div class="unit-hero__copy">
+                        <span class="unit-hero__eyebrow">UNIT 03　・　社會與信仰</span>
+                        <h1 id="unit-3-title" class="unit-hero__title">走進十三行人的<br><em>心靈世界</em></h1>
+                        <p class="unit-hero__lead">
+                            他們怎麼告別逝去的家人？那張陶罐上的臉又是誰？從 200 多座墓葬與一件國寶出發，探索千年前的社會與信仰。本單元包含四個子主題，預計學習時間 <b>45 分鐘</b>。
+                        </p>
+                        <div class="unit-hero__meta">
+                            <span class="chip">年級｜國小高年級</span>
+                            <span class="chip">領域｜社會・綜合</span>
+                            <span class="chip">時長｜45 分</span>
+                        </div>
+                    </div>
+                    <div class="unit-hero__visual" aria-hidden="true">
+                        <div class="hero-stack">
+                            <div class="hero-stack__slab hero-stack__slab--1"></div>
+                            <div class="hero-stack__slab hero-stack__slab--2"></div>
+                            <div class="hero-stack__slab hero-stack__slab--3"></div>
+                            <div class="hero-stack__sun"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 子單元 3-1：墓葬的祕密 ===== -->
+            <section id="sub-3-1" class="sub-section" aria-labelledby="sub-3-1-title">
+                <header class="sub-section__head">
+                    <span class="sub-section__index">3-1</span>
+                    <div>
+                        <h2 id="sub-3-1-title" class="sub-section__title">墓葬的祕密</h2>
+                        <p class="sub-section__sub">拿起你的毛刷，親手清開泥土——看看一座千年墓葬會告訴我們什麼。</p>
+                    </div>
+                    <span class="sub-section__time">12 min</span>
+                </header>
+
+                <div class="objectives" aria-label="本單元學習目標">
+                    <div class="objectives__head">
+                        <span class="objectives__eyebrow">LEARNING OBJECTIVES　·　學習目標</span>
+                        <div class="objectives__meta">
+                            <span class="objectives__time">⏱ 預估完成時間　<b>12 分鐘</b></span>
+                            <span class="objectives__level">難度　<b>★ ★ ☆</b></span>
+                        </div>
+                    </div>
+                    <h3 class="objectives__title">完成本節後，你將能夠：</h3>
+                    <ul class="objectives__list">
+                        <li><span class="objectives__num">01</span><div>說明十三行墓葬的兩大特徵：<b>側身屈肢</b>與<b>頭朝西南</b>。</div></li>
+                        <li><span class="objectives__num">02</span><div>透過模擬發掘，體驗考古學家<b>清理墓葬的耐心工作</b>。</div></li>
+                        <li><span class="objectives__num">03</span><div>解讀<b>陪葬品</b>透露的身分與信仰訊息。</div></li>
+                        <li><span class="objectives__num">04</span><div>認識<b>無頭葬</b>之謎，練習「多重假設」的科學思考。</div></li>
+                    </ul>
+                </div>
+
+                <h3 class="mini-h">墓葬：一封千年前寫給未來的信</h3>
+                <div class="lead-block">
+                    <span class="lead-block__eyebrow">BURIALS　·　墓葬</span>
+                    <h4 class="lead-block__title">怎麼送走親人，就能看出這個社會在想什麼</h4>
+                    <div class="lead-block__body">
+                        <p>十三行遺址挖出超過 <strong>200 座墓葬</strong>，在台灣史前遺址裡算很多。一座墓像一封沒拆完的信：骨頭可以告訴我們年紀、健康；怎麼躺、頭朝哪，跟<em>習慣和想法</em>有關；放進墓裡的東西，則可能跟<em>身分或感情</em>有關。</p>
+                        <p>大多數十三行人是<strong>側身、彎著腳</strong>下葬，看起來像側睡；頭又常常朝<strong>西南</strong>。大家用同一套規矩，表示這不是隨便躺，而是聚落裡共同遵守的做法。至於「為什麼朝西南」，到現在還是推測，還沒有單一標準答案。</p>
+                    </div>
+                </div>
+
+                <!-- 互動：模擬考古發掘 -->
+                <h3 class="mini-h">模擬發掘：用滑鼠當毛刷，清開探坑的泥土</h3>
+                <p style="font-size:13.5px;color:var(--c-text-soft);margin-bottom:12px;letter-spacing:var(--ls-wide);">
+                    在下方探坑<b style="color:var(--c-indigo);">按住滑鼠左鍵並慢慢移動</b>（手機用手指滑動），把覆蓋的泥土一格格刷掉。清完 85% 以上，就能看到完整的墓葬現場！
+                </p>
+                <div class="dig-game" id="digGame" aria-label="模擬考古發掘互動">
+                    <div class="dig-game__bar">
+                        <span class="dig-game__label">T1 探坑・M64 號墓（模擬）</span>
+                        <div class="dig-game__meta">
+                            <span id="digProgress">已清理 0%</span>
+                            <button type="button" class="dig-game__reset" id="digReset">↻ 重新覆土</button>
+                        </div>
+                    </div>
+                    <div class="dig-game__pit" id="digPit">
+                        <svg viewBox="0 0 640 400" class="dig-game__svg" role="img" aria-label="側身屈肢葬墓葬示意圖">
+                            <rect x="0" y="0" width="640" height="400" fill="#7A5C3A"/>
+                            <rect x="0" y="0" width="640" height="400" fill="url(#digHatch)"/>
+                            <defs>
+                                <pattern id="digHatch" patternUnits="userSpaceOnUse" width="26" height="26">
+                                    <circle cx="6" cy="8" r="1.5" fill="#5A3F1A" opacity="0.5"/>
+                                    <circle cx="18" cy="20" r="1.2" fill="#8A6438" opacity="0.5"/>
+                                </pattern>
+                            </defs>
+                            <ellipse cx="320" cy="205" rx="252" ry="140" fill="#8A6B45"/>
+                            <ellipse cx="320" cy="205" rx="236" ry="126" fill="#96774E"/>
+
+                            <!-- 骨骸：側身屈肢（頭在左＝西南方） -->
+                            <g stroke="#EDE3C8" fill="#EDE3C8" stroke-linecap="round">
+                                <!-- 頭骨 -->
+                                <circle cx="172" cy="168" r="26" fill="#EDE3C8" stroke="#C9B98E" stroke-width="2"/>
+                                <circle cx="164" cy="162" r="4" fill="#7A5C3A"/>
+                                <circle cx="180" cy="162" r="4" fill="#7A5C3A"/>
+                                <path d="M166,180 L184,180" stroke="#C9B98E" stroke-width="2.5" fill="none"/>
+                                <!-- 脊椎（彎曲側躺） -->
+                                <path d="M196,178 Q250,186 296,206 Q330,220 352,218" fill="none" stroke="#EDE3C8" stroke-width="9"/>
+                                <g stroke="#D9CBA4" stroke-width="2">
+                                    <line x1="222" y1="176" x2="218" y2="196"/>
+                                    <line x1="244" y1="182" x2="240" y2="202"/>
+                                    <line x1="266" y1="190" x2="262" y2="210"/>
+                                    <line x1="288" y1="198" x2="284" y2="218"/>
+                                </g>
+                                <!-- 骨盆 -->
+                                <ellipse cx="362" cy="220" rx="20" ry="15" fill="#EDE3C8" stroke="#C9B98E" stroke-width="2"/>
+                                <!-- 手臂（屈起在胸前） -->
+                                <path d="M226,182 Q240,214 268,222" fill="none" stroke="#EDE3C8" stroke-width="7"/>
+                                <path d="M268,222 Q288,228 300,216" fill="none" stroke="#EDE3C8" stroke-width="6"/>
+                                <!-- 大腿與小腿（屈肢） -->
+                                <path d="M370,228 Q412,244 448,232" fill="none" stroke="#EDE3C8" stroke-width="9"/>
+                                <path d="M448,232 Q436,270 396,278" fill="none" stroke="#EDE3C8" stroke-width="8"/>
+                                <path d="M368,234 Q404,258 434,252" fill="none" stroke="#EDE3C8" stroke-width="8" opacity="0.85"/>
+                                <path d="M434,252 Q420,284 386,290" fill="none" stroke="#EDE3C8" stroke-width="7" opacity="0.85"/>
+                                <!-- 腳掌 -->
+                                <ellipse cx="390" cy="282" rx="10" ry="5" transform="rotate(-18 390 282)"/>
+                                <ellipse cx="382" cy="292" rx="9" ry="4.5" transform="rotate(-16 382 292)" opacity="0.85"/>
+                            </g>
+
+                            <!-- 陪葬品：陶罐 -->
+                            <g transform="translate(130,238)">
+                                <path d="M-16 -14 Q-19 4 -15 20 L15 20 Q19 4 16 -14 Q8 -20 0 -18 Q-8 -20 -16 -14 Z" fill="#B5653A" stroke="#5A2010" stroke-width="2"/>
+                                <ellipse cx="0" cy="-14" rx="12" ry="4.5" fill="#8E4526" stroke="#5A2010" stroke-width="2"/>
+                            </g>
+                            <!-- 陪葬品：珠串 -->
+                            <g>
+                                <circle cx="216" cy="222" r="5" fill="#4F86B3" stroke="#1F3A5F" stroke-width="1.2"/>
+                                <circle cx="228" cy="228" r="5" fill="#E8A845" stroke="#6B4A2A" stroke-width="1.2"/>
+                                <circle cx="240" cy="232" r="5" fill="#B5432A" stroke="#5A2010" stroke-width="1.2"/>
+                                <circle cx="252" cy="234" r="5" fill="#4F86B3" stroke="#1F3A5F" stroke-width="1.2"/>
+                            </g>
+                            <!-- 陪葬品：鐵刀 -->
+                            <g transform="translate(478,196) rotate(24)">
+                                <rect x="-5" y="-34" width="10" height="20" rx="3" fill="#6B4A2A" stroke="#3D2A18" stroke-width="1.5"/>
+                                <path d="M-4,-14 L4,-14 L3,30 L0,36 L-3,30 Z" fill="#8A8A8A" stroke="#4A4A4A" stroke-width="1.5"/>
+                            </g>
+
+                            <!-- 方位標示 -->
+                            <g transform="translate(60,58)">
+                                <circle r="24" fill="rgba(255,255,255,0.85)" stroke="#1F3A5F" stroke-width="1.5"/>
+                                <polygon points="0,-15 4,2 0,15 -4,2" fill="#1F3A5F" transform="rotate(-135)"/>
+                                <text y="-30" text-anchor="middle" font-size="11" fill="#1F3A5F" font-weight="700">西南 SW</text>
+                            </g>
+                            <rect x="150" y="358" width="340" height="30" rx="15" fill="rgba(30,20,10,0.72)"/>
+                            <text x="320" y="379" text-anchor="middle" font-size="15" fill="#FFF8E7" font-weight="700" letter-spacing="2">側身屈肢・頭朝西南・陪葬陶罐與珠飾</text>
+                        </svg>
+                        <div class="dig-game__cover" id="digCover" aria-hidden="true"></div>
+                    </div>
+                    <div class="dig-game__finds" id="digFinds">
+                        <div class="dig-find">
+                            <b>① 側身屈肢的骨骸</b>
+                            <span>身體側躺、雙腿彎起，像熟睡的姿勢。全聚落統一的葬式，代表共同的信仰規範。</span>
+                        </div>
+                        <div class="dig-find">
+                            <b>② 頭朝西南方</b>
+                            <span>大多數墓葬的頭都指向西南。學者推測可能與海洋、祖先來的方向或聚落的宇宙觀有關。</span>
+                        </div>
+                        <div class="dig-find">
+                            <b>③ 陪葬品</b>
+                            <span>陶罐、瑪瑙珠、玻璃珠、鐵刀……有些墓陪葬豐厚、有些幾乎沒有，透露社會可能已有身分差異。</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 墓葬觀察四重點 -->
+                <h3 class="mini-h">考古學家看墓葬的四個重點</h3>
+                <div class="know-grid cols-4">
+                    <article class="know-card">
+                        <div class="know-card__no">CLUE · 01</div>
+                        <h4 class="know-card__title">葬式（姿勢）</h4>
+                        <div class="know-card__body">
+                            <p>十三行大多是<b>側身、彎著腳</b>下葬。大家用差不多的姿勢，表示這是聚落裡共同的規矩。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">CLUE · 02</div>
+                        <h4 class="know-card__title">方向</h4>
+                        <div class="know-card__body">
+                            <p>頭大多朝<b>西南方</b>。為什麼朝那邊？現在還在推測，但方向很一致，不像隨便躺。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">CLUE · 03</div>
+                        <h4 class="know-card__title">陪葬品</h4>
+                        <div class="know-card__body">
+                            <p>珠飾、陶罐、鐵器的<b>多寡與貴重程度</b>，是推測墓主身分地位的重要線索。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">CLUE · 04</div>
+                        <h4 class="know-card__title">骨骸本身</h4>
+                        <div class="know-card__body">
+                            <p>從骨頭能判讀<b>年齡、性別、疾病與飲食</b>，還原一個人真實的一生。</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 先猜猜看 -->
+                <div class="spoiler">
+                    <span class="spoiler__label">GUESS · 01</span>
+                    <h4 class="spoiler__q">為什麼要把逝者的腿彎起來，用「屈肢」的姿勢下葬？</h4>
+                    <div class="spoiler__answer" role="button" tabindex="0" aria-label="點擊揭示答案">
+                        <div class="spoiler__answer-content">
+                            <b>答案：目前沒有標準答案，學者有多種推測。</b>可能性包括：① 模仿<em>睡眠或胎兒</em>的姿勢，象徵回到出生的狀態、迎接重生；② 用繩索或布包裹屈起的身體，是一種<em>入殮習俗</em>；③ 屈肢可以<em>縮小墓穴</em>、節省挖掘工作。考古學家會把每種假設都列出來，再尋找證據支持或排除——<b>承認「不知道」，正是科學的起點</b>。
+                        </div>
+                    </div>
+                    <p class="spoiler__hint">提示：想想睡覺時你的腿是什麼姿勢。</p>
+                </div>
+
+                <div class="spoiler">
+                    <span class="spoiler__label">GUESS · 02</span>
+                    <h4 class="spoiler__q">頭朝西南方，那個方向有什麼？</h4>
+                    <div class="spoiler__answer" role="button" tabindex="0" aria-label="點擊揭示答案">
+                        <div class="spoiler__answer-content">
+                            <b>答案：從十三行往西南望去，是台灣海峽與大海。</b>有學者推測，這可能與<em>祖先渡海而來的方向</em>、或「靈魂歸向海洋彼方」的信仰有關；也有人認為與聚落地形、季風方向相關。無論答案為何，「幾乎所有人都朝同一個方向」這件事本身，就證明十三行人擁有<b>一套共同的世界觀</b>。
+                        </div>
+                    </div>
+                    <p class="spoiler__hint">提示：他們是南島語族，最重要的舞台是什麼？</p>
+                </div>
+
+                <!-- 無頭葬 -->
+                <div class="tip-box is-myth">
+                    <div class="tip-box__icon">?</div>
+                    <div>
+                        <div class="tip-box__title">未解之謎：沒有頭的墓葬</div>
+                        <div class="tip-box__body">
+                            十三行的墓葬中，有少數骨骸<b>沒有頭骨</b>，被稱為「無頭葬」。是生前的戰爭或衝突？是<em>獵首習俗</em>的受害者？還是下葬後頭骨被特別取出、另作儀式使用？目前證據還不足以下定論。考古學最迷人的地方就在這裡：<b>有些問題，可能要等你這一代的考古學家來回答</b>。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-strip">
+                    <div class="data-strip__cell">
+                        <span class="data-strip__num">200+</span>
+                        <span class="data-strip__label">出土墓葬數</span>
+                    </div>
+                    <div class="data-strip__cell">
+                        <span class="data-strip__num">側身屈肢</span>
+                        <span class="data-strip__label">主流葬式</span>
+                    </div>
+                    <div class="data-strip__cell">
+                        <span class="data-strip__num">西南</span>
+                        <span class="data-strip__label">頭部朝向</span>
+                    </div>
+                    <div class="data-strip__cell">
+                        <span class="data-strip__num">?</span>
+                        <span class="data-strip__label">無頭葬待解謎團</span>
+                    </div>
+                </div>
+
+                <!-- 互動：地層排序 -->
+                <h3 class="mini-h">小挑戰：把地層疊回原來的樣子！</h3>
+                <p style="font-size:14px;color:var(--c-text-soft);margin-bottom:16px;letter-spacing:var(--ls-wide);">
+                    墓葬埋在地下，泥土會一層一層往上堆，所以<b style="color:var(--c-earth);">越下面越古老</b>。請從<b style="color:var(--c-indigo);">最古老的一層</b>開始，依序點選，把地層疊起來！
+                </p>
+                <div class="strata-game" aria-label="地層排序遊戲">
+                    <div class="strata-game__bar">
+                        <span>⛏️ 考古探坑剖面</span>
+                        <span class="strata-game__progress" aria-live="polite">0 / 4</span>
+                        <button type="button" class="strata-game__reset">↻ 重玩</button>
+                    </div>
+                    <div class="strata-game__body">
+                        <div class="strata-game__pool">
+                            <button type="button" class="strata-card" style="--layer:#7C8A99" data-order="4" data-name="現代表土" data-reveal="最上面、最新的一層，裡面有塑膠瓶蓋和鋁罐。"><b>🥤 塑膠瓶蓋、鋁罐</b><span>這一層挖到的東西</span></button>
+                            <button type="button" class="strata-card" style="--layer:#6B4A2A" data-order="2" data-name="十三行文化層" data-reveal="十三行人生活的地方！爐渣、人面陶罐、玻璃珠都在這一層。"><b>🏺 爐渣、人面陶罐、玻璃珠</b><span>這一層挖到的東西</span></button>
+                            <button type="button" class="strata-card" style="--layer:#E1C48F" data-order="1" data-name="沙丘層（還沒有人住）" data-reveal="最深、最古老的一層，只有沙子，那時候這裡還沒有人居住。"><b>🏖️ 只有細細的沙子</b><span>這一層挖到的東西</span></button>
+                            <button type="button" class="strata-card" style="--layer:#A88A5C" data-order="3" data-name="清代層" data-reveal="比十三行晚很多，有漢人留下的瓷碗碎片和銅錢。"><b>🥣 瓷碗碎片、銅錢</b><span>這一層挖到的東西</span></button>
+                        </div>
+                        <div class="strata-game__column" aria-live="polite">
+                            <p class="strata-game__empty">點左邊的卡片，<br>從最下面開始疊地層</p>
+                        </div>
+                    </div>
+                    <p class="strata-game__msg">提示：先想想看，哪一層裡<b>完全沒有</b>人留下的東西？</p>
+                </div>
+
+                <!-- 本節重點整理 -->
+                <div class="recap-block" aria-label="本節重點整理">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">RECAP　·　本節重點整理</span>
+                        <h3 class="recap-block__title">3-1 學到的 4 個核心觀念</h3>
+                    </div>
+                    <div class="recap-block__grid">
+                        <div class="recap-chip"><b>① 側身屈肢</b><span>像睡著般側躺屈腿，是全聚落統一遵守的葬式。</span></div>
+                        <div class="recap-chip"><b>② 頭朝西南</b><span>一致的方向暗示共同的信仰與宇宙觀，可能與海洋有關。</span></div>
+                        <div class="recap-chip"><b>③ 陪葬品差異</b><span>珠飾與鐵器的多寡，是判讀身分地位的關鍵線索。</span></div>
+                        <div class="recap-chip"><b>④ 科學的謙虛</b><span>無頭葬等謎團提醒我們：列出假設、等待證據，不急著下結論。</span></div>
+                    </div>
+                    <div class="recap-block__actions">
+                        <a class="recap-block__btn" href="#sub-3-1" aria-label="再讀一次本節">↻ 再讀一次</a>
+                        <a class="recap-block__btn recap-block__btn--primary" href="#sub-3-2" aria-label="繼續閱讀 3-2">繼續閱讀：3-2 人面陶罐 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 子單元 3-2：人面陶罐（重點） ===== -->
+            <section id="sub-3-2" class="sub-section sub-section--feature" aria-labelledby="sub-3-2-title">
+                <header class="sub-section__head">
+                    <span class="sub-section__index">3-2</span>
+                    <div>
+                        <h2 id="sub-3-2-title" class="sub-section__title">人面陶罐</h2>
+                        <p class="sub-section__sub">十三行博物館的鎮館之寶——這張凝視千年的臉，到底是誰？</p>
+                    </div>
+                    <span class="sub-section__time">12 min</span>
+                </header>
+
+                <div class="objectives" aria-label="本單元學習目標">
+                    <div class="objectives__head">
+                        <span class="objectives__eyebrow">LEARNING OBJECTIVES　·　學習目標</span>
+                        <div class="objectives__meta">
+                            <span class="objectives__time">⏱ 預估完成時間　<b>12 分鐘</b></span>
+                            <span class="objectives__level">難度　<b>★ ★ ★</b></span>
+                        </div>
+                    </div>
+                    <h3 class="objectives__title">完成本節後，你將能夠：</h3>
+                    <ul class="objectives__list">
+                        <li><span class="objectives__num">01</span><div>透過互動模型，指出人面陶罐的<b>口緣、人面、紋飾、圈足</b>四個部位。</div></li>
+                        <li><span class="objectives__num">02</span><div>說明人面陶罐<b>出土於墓葬</b>這個脈絡為什麼重要。</div></li>
+                        <li><span class="objectives__num">03</span><div>列舉學者對人面陶罐用途的<b>幾種推測</b>。</div></li>
+                        <li><span class="objectives__num">04</span><div>理解為什麼「僅此一件的完整品」讓它成為<b>鎮館之寶</b>。</div></li>
+                    </ul>
+                </div>
+
+                <!-- 互動：人面陶罐解析 -->
+                <div class="house-lab">
+                    <div class="house-stage" id="potfaceStage" role="region" aria-label="人面陶罐互動模型">
+                        <div class="house-stage__hint">
+                            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                                <path d="M12 3v18M3 12h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>滑鼠移上陶罐的不同部位查看解析</span>
+                        </div>
+
+                        <div class="house-3d">
+                            <svg viewBox="0 0 520 520" class="house-svg" role="img" aria-label="人面陶罐構造解析">
+                                <defs>
+                                    <radialGradient id="potfaceGrad" cx="42%" cy="36%" r="75%">
+                                        <stop offset="0%" stop-color="#C89A68"/>
+                                        <stop offset="60%" stop-color="#9A6E42"/>
+                                        <stop offset="100%" stop-color="#5F4225"/>
+                                    </radialGradient>
+                                    <linearGradient id="potfaceRimGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#8A6438"/>
+                                        <stop offset="100%" stop-color="#5A3F1A"/>
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- 地面陰影 -->
+                                <ellipse cx="260" cy="472" rx="150" ry="18" fill="#000" opacity="0.16"/>
+
+                                <!-- 口緣 part:rim -->
+                                <g class="house-part" data-part="rim" tabindex="0" role="button" aria-label="侈口口緣">
+                                    <path d="M180,120 Q180,96 160,84 L360,84 Q340,96 340,120 Q300,132 260,132 Q220,132 180,120 Z" fill="url(#potfaceRimGrad)" stroke="#3D2A18" stroke-width="2.5"/>
+                                    <ellipse cx="260" cy="84" rx="100" ry="18" fill="#6E5230" stroke="#3D2A18" stroke-width="2.5"/>
+                                    <ellipse cx="260" cy="84" rx="78" ry="12" fill="#3D2A18"/>
+                                </g>
+
+                                <!-- 罐身與人面 part:face -->
+                                <g class="house-part" data-part="face" tabindex="0" role="button" aria-label="人面">
+                                    <!-- 頸部人面區 -->
+                                    <path d="M180,120 Q176,196 196,232 L324,232 Q344,196 340,120 Q300,134 260,134 Q220,134 180,120 Z" fill="url(#potfaceGrad)" stroke="#3D2A18" stroke-width="2.5"/>
+                                    <!-- 眉與鼻（相連的浮塑） -->
+                                    <path d="M218,158 Q240,146 258,158 M262,158 Q284,146 306,158" fill="none" stroke="#3D2A18" stroke-width="5" stroke-linecap="round"/>
+                                    <path d="M256,152 Q260,178 252,196 Q260,204 270,196 Q262,178 266,152" fill="#7A5630" stroke="#3D2A18" stroke-width="2"/>
+                                    <!-- 眼睛（圓凸眼） -->
+                                    <g>
+                                        <circle cx="228" cy="172" r="13" fill="#B08556" stroke="#3D2A18" stroke-width="2.5"/>
+                                        <circle cx="228" cy="172" r="5" fill="#2A1A0A"/>
+                                        <circle cx="294" cy="172" r="13" fill="#B08556" stroke="#3D2A18" stroke-width="2.5"/>
+                                        <circle cx="294" cy="172" r="5" fill="#2A1A0A"/>
+                                    </g>
+                                    <!-- 嘴 -->
+                                    <path d="M240,214 Q260,226 282,214" fill="none" stroke="#2A1A0A" stroke-width="4.5" stroke-linecap="round"/>
+                                    <!-- 耳 -->
+                                    <path d="M182,166 Q170,176 182,192" fill="none" stroke="#3D2A18" stroke-width="4" stroke-linecap="round"/>
+                                    <path d="M338,166 Q350,176 338,192" fill="none" stroke="#3D2A18" stroke-width="4" stroke-linecap="round"/>
+                                </g>
+
+                                <!-- 罐腹紋飾 part:body -->
+                                <g class="house-part" data-part="body" tabindex="0" role="button" aria-label="罐腹與紋飾">
+                                    <path d="M196,232 Q160,300 178,376 Q200,428 260,432 Q320,428 342,376 Q360,300 324,232 Q290,240 260,240 Q230,240 196,232 Z" fill="url(#potfaceGrad)" stroke="#3D2A18" stroke-width="2.5"/>
+                                    <!-- 幾何印紋 -->
+                                    <g stroke="#4A331C" stroke-width="1.6" opacity="0.75" fill="none">
+                                        <path d="M186,268 Q260,286 334,268"/>
+                                        <path d="M180,300 Q260,318 340,300"/>
+                                        <path d="M178,332 Q260,350 342,332"/>
+                                        <path d="M182,364 Q260,382 338,364"/>
+                                    </g>
+                                    <g stroke="#4A331C" stroke-width="1.4" opacity="0.6">
+                                        <line x1="204" y1="262" x2="212" y2="372"/>
+                                        <line x1="232" y1="272" x2="238" y2="382"/>
+                                        <line x1="260" y1="276" x2="260" y2="386"/>
+                                        <line x1="288" y1="272" x2="282" y2="382"/>
+                                        <line x1="316" y1="262" x2="308" y2="372"/>
+                                    </g>
+                                </g>
+
+                                <!-- 圈足 part:foot -->
+                                <g class="house-part" data-part="foot" tabindex="0" role="button" aria-label="圈足">
+                                    <path d="M222,428 L298,428 L310,464 L210,464 Z" fill="url(#potfaceRimGrad)" stroke="#3D2A18" stroke-width="2.5"/>
+                                    <ellipse cx="260" cy="464" rx="50" ry="9" fill="#5A3F1A" stroke="#3D2A18" stroke-width="2"/>
+                                </g>
+
+                                <!-- 部位指示線 -->
+                                <g class="part-callouts" aria-hidden="true">
+                                    <g class="callout" data-for="rim">
+                                        <line x1="340" y1="100" x2="440" y2="80" stroke="#1F3A5F" stroke-width="1" stroke-dasharray="3 3"/>
+                                        <circle cx="440" cy="80" r="4" fill="#1F3A5F"/>
+                                        <text x="448" y="76" fill="#1F3A5F" font-size="13" font-weight="600">侈口口緣</text>
+                                    </g>
+                                    <g class="callout" data-for="face">
+                                        <line x1="200" y1="176" x2="90" y2="150" stroke="#1F3A5F" stroke-width="1" stroke-dasharray="3 3"/>
+                                        <circle cx="90" cy="150" r="4" fill="#1F3A5F"/>
+                                        <text x="82" y="140" text-anchor="end" fill="#1F3A5F" font-size="13" font-weight="600">浮塑人面</text>
+                                    </g>
+                                    <g class="callout" data-for="body">
+                                        <line x1="340" y1="330" x2="450" y2="330" stroke="#1F3A5F" stroke-width="1" stroke-dasharray="3 3"/>
+                                        <circle cx="450" cy="330" r="4" fill="#1F3A5F"/>
+                                        <text x="458" y="334" fill="#1F3A5F" font-size="13" font-weight="600">幾何印紋</text>
+                                    </g>
+                                    <g class="callout" data-for="foot">
+                                        <line x1="230" y1="448" x2="120" y2="440" stroke="#1F3A5F" stroke-width="1" stroke-dasharray="3 3"/>
+                                        <circle cx="120" cy="440" r="4" fill="#1F3A5F"/>
+                                        <text x="112" y="434" text-anchor="end" fill="#1F3A5F" font-size="13" font-weight="600">圈足</text>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <aside class="info-panel" aria-live="polite">
+                        <div class="info-card info-card--default" data-info="default">
+                            <span class="info-card__eyebrow">ARTIFACT ANALYSIS</span>
+                            <h3 class="info-card__title">人面陶罐</h3>
+                            <p class="info-card__lead">將滑鼠移到左側陶罐的不同部位，仔細觀察這件十三行文化最著名的器物——它出土於墓葬，全台完整者僅此一件。</p>
+                            <div class="info-card__stats">
+                                <div><b>1</b><span>完整出土件數</span></div>
+                                <div><b>墓葬</b><span>出土脈絡</span></div>
+                                <div><b>國寶級</b><span>文資地位</span></div>
+                            </div>
+                        </div>
+
+                        <div class="info-card" data-info="rim" hidden>
+                            <span class="info-card__eyebrow">PART 01　・　RIM</span>
+                            <h3 class="info-card__title">侈口口緣</h3>
+                            <p class="info-card__lead">罐口向外翻張（考古學稱「侈口」），是十三行陶罐常見的形制。</p>
+                            <ul class="info-card__list">
+                                <li><b>形制</b>：口緣外敞，方便繫繩或覆蓋。</li>
+                                <li><b>工藝</b>：口緣線條規整，顯示製作者手藝純熟。</li>
+                                <li><b>觀察</b>：形制與日用罐相似，但整體更精緻。</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card" data-info="face" hidden>
+                            <span class="info-card__eyebrow">PART 02　・　FACE</span>
+                            <h3 class="info-card__title">浮塑人面</h3>
+                            <p class="info-card__lead">整件器物的靈魂：在罐頸捏塑出一張立體的臉——圓凸的雙眼、挺直的鼻、微張的嘴。</p>
+                            <ul class="info-card__list">
+                                <li><b>技法</b>：以捏塑、堆貼做出五官，再細修成形。</li>
+                                <li><b>表情</b>：靜穆安詳，有人形容像在「凝視遠方」。</li>
+                                <li><b>謎團</b>：是祖先？逝者？還是神靈？至今沒有定論。</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card" data-info="body" hidden>
+                            <span class="info-card__eyebrow">PART 03　・　BODY</span>
+                            <h3 class="info-card__title">罐腹與幾何印紋</h3>
+                            <p class="info-card__lead">圓鼓的罐腹上布滿細密的幾何印紋，與日用陶器的拍印紋飾一脈相承。</p>
+                            <ul class="info-card__list">
+                                <li><b>紋飾</b>：以拍印、刻劃形成規律的幾何圖案。</li>
+                                <li><b>意義</b>：紋飾可能兼具裝飾與文化識別功能。</li>
+                                <li><b>連結</b>：證明它出自本地製陶傳統，不是舶來品。</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card" data-info="foot" hidden>
+                            <span class="info-card__eyebrow">PART 04　・　FOOT</span>
+                            <h3 class="info-card__title">圈足</h3>
+                            <p class="info-card__lead">罐底有一圈矮足，讓器物能穩穩站立——這在日常炊煮罐上較少見。</p>
+                            <ul class="info-card__list">
+                                <li><b>功能</b>：穩定放置，適合陳設或儀式場合。</li>
+                                <li><b>線索</b>：不是拿來煮飯的！器底無煙燻痕跡。</li>
+                                <li><b>推測</b>：支持「特殊用途器物」的判斷。</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="divider">DEEP DIVE　·　深度教學</div>
+
+                <h3 class="mini-h">為什麼一個陶罐能成為「鎮館之寶」？</h3>
+                <div class="lead-block">
+                    <span class="lead-block__eyebrow">MASTERPIECE　·　鎮館之寶</span>
+                    <h4 class="lead-block__title">重點不是它多漂亮，而是它「躺在哪裡」</h4>
+                    <div class="lead-block__body">
+                        <p>考古學很重視文物的「<strong>上下文（Context）</strong>」，也就是它在哪裡、和什麼東西一起被發現。人面陶罐的價值，正來自它的出土脈絡：它是在<strong>墓葬中</strong>被發現的，作為陪葬品安放在逝者身旁。這告訴我們，它不是日用品，而是與<strong>死亡、告別、信仰</strong>直接相關的器物。</p>
+                        <p>再加上兩個事實——<strong>完整器全台僅此一件</strong>、製作工藝在同期文物中極為突出——讓它成為十三行文化的代表符號。今天你在十三行博物館看到的館徽與紀念品上，都有這張凝視千年的臉。</p>
+                    </div>
+                </div>
+
+                <!-- 三大謎團翻牌 -->
+                <h3 class="mini-h">人面陶罐的三大謎團（點卡片翻面）</h3>
+                <div class="flip-grid" data-flipgrid>
+                    <div class="flip-card" tabindex="0" role="button" aria-label="翻面查看學者推測">
+                        <div class="flip-card__inner">
+                            <div class="flip-card__face flip-card__front">
+                                <div class="flip-card__no">01</div>
+                                <h4 class="flip-card__title">那張臉是誰？</h4>
+                                <p class="flip-card__hint-line">祖先、逝者本人，還是守護的神靈？</p>
+                                <div class="flip-card__cta">
+                                    <span>查看推測</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M3 12a9 9 0 1 0 3-6.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 3v6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                            <div class="flip-card__face flip-card__back">
+                                <h4 class="flip-card__back-title">HYPOTHESES　·　學者推測</h4>
+                                <p class="flip-card__back-text">
+                                    主流推測有三：① <b>祖靈說</b>——臉代表祖先，罐子是祖靈的居所；② <b>逝者說</b>——為特定逝者塑像，是紀念物；③ <b>神靈說</b>——代表守護亡者旅程的神靈。三種說法都與<em>喪葬信仰</em>相關，這點是學界共識。
+                                </p>
+                                <div class="flip-card__cta">
+                                    <span>翻回正面</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M21 12a9 9 0 1 1-3-6.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M21 3v6h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card" tabindex="0" role="button" aria-label="翻面查看學者推測">
+                        <div class="flip-card__inner">
+                            <div class="flip-card__face flip-card__front">
+                                <div class="flip-card__no">02</div>
+                                <h4 class="flip-card__title">罐子裡裝過什麼？</h4>
+                                <p class="flip-card__hint-line">食物？水？還是更特別的東西？</p>
+                                <div class="flip-card__cta">
+                                    <span>查看推測</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M3 12a9 9 0 1 0 3-6.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 3v6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                            <div class="flip-card__face flip-card__back">
+                                <h4 class="flip-card__back-title">HYPOTHESES　·　學者推測</h4>
+                                <p class="flip-card__back-text">
+                                    可能是<b>獻給逝者的食物或飲品</b>，供他在「另一個世界」使用；也可能什麼都沒裝，罐子本身就是<em>儀式器</em>。器底沒有煙燻痕跡，說明它<b>從未被拿來炊煮</b>——它從誕生起就注定是一件特別的器物。
+                                </p>
+                                <div class="flip-card__cta">
+                                    <span>翻回正面</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M21 12a9 9 0 1 1-3-6.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M21 3v6h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card" tabindex="0" role="button" aria-label="翻面查看學者推測">
+                        <div class="flip-card__inner">
+                            <div class="flip-card__face flip-card__front">
+                                <div class="flip-card__no">03</div>
+                                <h4 class="flip-card__title">為什麼這麼稀有？</h4>
+                                <p class="flip-card__hint-line">十萬片陶片中，人面完整器只有一件。</p>
+                                <div class="flip-card__cta">
+                                    <span>查看推測</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M3 12a9 9 0 1 0 3-6.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 3v6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                            <div class="flip-card__face flip-card__back">
+                                <h4 class="flip-card__back-title">HYPOTHESES　·　學者推測</h4>
+                                <p class="flip-card__back-text">
+                                    稀有可能意味著：① 只有<b>特殊身分的人</b>（如領袖、祭司）才能擁有；② 只在<b>特殊場合</b>（如重要人物的葬禮）才製作；③ 製作它需要<em>特別授權的工匠</em>。稀有性本身，就是十三行社會<b>存在階層與分工</b>的證據。
+                                </p>
+                                <div class="flip-card__cta">
+                                    <span>翻回正面</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M21 12a9 9 0 1 1-3-6.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M21 3v6h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pull-quote">
+                    <p class="pull-quote__text">一千多年前，有一位工匠在陶土上捏出這張臉。他想留住的，也許是一個再也見不到的人。</p>
+                    <p class="pull-quote__cite">— 面對人面陶罐時的想像</p>
+                </div>
+
+                <!-- 本節重點整理 -->
+                <div class="recap-block" aria-label="本節重點整理">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">RECAP　·　本節重點整理</span>
+                        <h3 class="recap-block__title">3-2 學到的 4 個核心觀念</h3>
+                    </div>
+                    <div class="recap-block__grid">
+                        <div class="recap-chip"><b>① 出土於墓葬</b><span>脈絡決定意義：它是陪葬品，與喪葬信仰直接相關。</span></div>
+                        <div class="recap-chip"><b>② 不是日用品</b><span>器底無煙燻、有圈足，從未拿來炊煮，是特殊用途器。</span></div>
+                        <div class="recap-chip"><b>③ 多重假設</b><span>祖靈、逝者、神靈三說並存，等待更多證據裁決。</span></div>
+                        <div class="recap-chip"><b>④ 稀有＝分層</b><span>僅此一件的完整器，暗示社會存在身分與分工差異。</span></div>
+                    </div>
+                    <div class="recap-block__actions">
+                        <a class="recap-block__btn" href="#sub-3-2" aria-label="再讀一次本節">↻ 再讀一次</a>
+                        <a class="recap-block__btn recap-block__btn--primary" href="#sub-3-3" aria-label="繼續閱讀 3-3">繼續閱讀：3-3 信仰與儀式 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 子單元 3-3：信仰與儀式 ===== -->
+            <section id="sub-3-3" class="sub-section" aria-labelledby="sub-3-3-title">
+                <header class="sub-section__head">
+                    <span class="sub-section__index">3-3</span>
+                    <div>
+                        <h2 id="sub-3-3-title" class="sub-section__title">信仰與儀式</h2>
+                        <p class="sub-section__sub">沒有留下任何文字的十三行人，把他們的信仰藏在哪裡？他們後來又去了哪裡？</p>
+                    </div>
+                    <span class="sub-section__time">10 min</span>
+                </header>
+
+                <div class="objectives" aria-label="本單元學習目標">
+                    <div class="objectives__head">
+                        <span class="objectives__eyebrow">LEARNING OBJECTIVES　·　學習目標</span>
+                        <div class="objectives__meta">
+                            <span class="objectives__time">⏱ 預估完成時間　<b>10 分鐘</b></span>
+                            <span class="objectives__level">難度　<b>★ ★ ☆</b></span>
+                        </div>
+                    </div>
+                    <h3 class="objectives__title">完成本節後，你將能夠：</h3>
+                    <ul class="objectives__list">
+                        <li><span class="objectives__num">01</span><div>說明考古學家如何從<b>物質證據</b>重建無文字社會的信仰。</div></li>
+                        <li><span class="objectives__num">02</span><div>列舉十三行遺址中<b>與信仰儀式相關的線索</b>。</div></li>
+                        <li><span class="objectives__num">03</span><div>說明十三行文化與<b>凱達格蘭族</b>的可能關聯。</div></li>
+                        <li><span class="objectives__num">04</span><div>理解「文化不會消失，只會轉變」的歷史觀點。</div></li>
+                    </ul>
+                </div>
+
+                <h3 class="mini-h">如何研究「看不見的信仰」？</h3>
+                <div class="lead-block">
+                    <span class="lead-block__eyebrow">BELIEF　·　信仰</span>
+                    <h4 class="lead-block__title">信仰不會變成化石，可是會在物品上留下影子</h4>
+                    <div class="lead-block__body">
+                        <p>想法本身挖不到。可是人們<strong>因為想法去做的事</strong>——用固定姿勢埋葬家人、把珠子放進墓裡、在陶罐上捏一張臉——都會留下<strong>看得到的痕跡</strong>。</p>
+                        <p>考古學家就把這些痕跡蒐集起來，<em>小心推測</em>背後可能在想什麼。十三行人沒有留下文字，所以我們只能說：從墓葬和陪葬品來看，他們<strong>很可能相信人過世後還有去處</strong>。這是有根據的推測，不是已經拍到的照片。</p>
+                    </div>
+                </div>
+
+                <!-- 信仰的四條線索 -->
+                <h3 class="mini-h">拼湊信仰世界的四條線索</h3>
+                <div class="know-grid cols-4">
+                    <article class="know-card">
+                        <div class="know-card__no">CLUE · 01</div>
+                        <h4 class="know-card__title">統一的葬式</h4>
+                        <div class="know-card__body">
+                            <p>側身屈肢、頭朝西南——全聚落共守的規矩，代表一套<b>關於死亡的共同信念</b>。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">CLUE · 02</div>
+                        <h4 class="know-card__title">陪葬品</h4>
+                        <div class="know-card__body">
+                            <p>為逝者準備陶罐與珠飾，暗示他們相信<b>死後的世界仍需要這些物品</b>。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">CLUE · 03</div>
+                        <h4 class="know-card__title">人面陶罐</h4>
+                        <div class="know-card__body">
+                            <p>專為喪葬情境製作的特殊器物，可能承載<b>祖靈或神靈的形象</b>。</p>
+                        </div>
+                    </article>
+                    <article class="know-card">
+                        <div class="know-card__no">CLUE · 04</div>
+                        <h4 class="know-card__title">特殊器物</h4>
+                        <div class="know-card__body">
+                            <p>青銅刀柄、銅鈴等罕見物品，可能屬於<b>儀式或特殊身分者</b>所有。</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 儀式想像 -->
+                <div class="two-col">
+                    <div class="two-col__col">
+                        <p><b>一場千年前的告別式，可能是什麼樣子？</b>根據墓葬證據，我們可以合理想像：家人為逝者清洗、穿戴上他生前最珍愛的瑪瑙珠鍊，將身體輕輕彎成側睡的姿勢，用布或繩固定，然後朝著西南方——海的方向——安放進墓穴。</p>
+                        <p>接著放入陶罐，也許裝著食物；也許有人唱起送行的歌謠。這些聲音早已消散，但<em>姿勢、方向與陪葬品</em>，把儀式的骨架留到了今天。</p>
+                    </div>
+                    <div class="two-col__col">
+                        <p><b>要小心的是：想像必須有證據當地基。</b>上面的描述中，哪些是證據？（葬式、方向、陪葬品）哪些是推測？（歌謠、布繩、食物內容）考古學家永遠會把兩者<b>分開標示</b>。</p>
+                        <p>這正是這份教材想教你的核心能力：<em>大膽想像，小心求證</em>。你可以想像千年前的儀式，但要能說出「我的證據是什麼」。</p>
+                    </div>
+                </div>
+
+                <!-- 互動：證據 vs 推測 -->
+                <h3 class="mini-h">偵探挑戰：這是「證據」還是「推測」？</h3>
+                <p style="font-size:13.5px;color:var(--c-text-soft);margin-bottom:12px;letter-spacing:var(--ls-wide);">
+                    <b style="color:var(--c-indigo);">證據</b>是挖出來、看得到的東西；<b style="color:var(--c-accent);">推測</b>是根據證據想像出來、還不能百分之百確定的事。一起來分分看！
+                </p>
+                <div class="sort-game" aria-label="證據或推測分類遊戲" data-done-text="你已經會分辨證據和推測了！">
+                    <div class="sort-game__score" aria-live="polite">已答對 0 / 6</div>
+                    <div class="sort-game__grid">
+                        <div class="sort-card sort-card--text" data-answer="evidence" data-why="墓裡的骨骸就是這樣擺的，考古學家親眼看得到。">
+                            <div class="sort-card__img" aria-hidden="true">🦴</div>
+                            <h5 class="sort-card__name">墓裡的人大多是側躺、腳彎起來</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="evidence">證據</button>
+                                <button type="button" data-choice="guess">推測</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card sort-card--text" data-answer="guess" data-why="聲音不會留在土裡，唱歌只是合理的想像，沒有辦法挖出來證明。">
+                            <div class="sort-card__img" aria-hidden="true">🎵</div>
+                            <h5 class="sort-card__name">送別時，家人唱著送行的歌</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="evidence">證據</button>
+                                <button type="button" data-choice="guess">推測</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card sort-card--text" data-answer="evidence" data-why="陶罐和珠子真的從墓裡挖出來了，是看得到、摸得到的證據。">
+                            <div class="sort-card__img" aria-hidden="true">🏺</div>
+                            <h5 class="sort-card__name">有些墓裡放著陶罐和珠子</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="evidence">證據</button>
+                                <button type="button" data-choice="guess">推測</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card sort-card--text" data-answer="guess" data-why="食物早就腐爛不見了，罐子裡原本裝什麼，只能推測。">
+                            <div class="sort-card__img" aria-hidden="true">🍚</div>
+                            <h5 class="sort-card__name">陶罐裡裝著逝者最愛吃的食物</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="evidence">證據</button>
+                                <button type="button" data-choice="guess">推測</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card sort-card--text" data-answer="evidence" data-why="量一量骨骸的方向就知道，大多數墓葬的頭都朝向西南。">
+                            <div class="sort-card__img" aria-hidden="true">🧭</div>
+                            <h5 class="sort-card__name">大多數墓葬的頭朝向西南方</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="evidence">證據</button>
+                                <button type="button" data-choice="guess">推測</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                        <div class="sort-card sort-card--text" data-answer="guess" data-why="方向是證據，但「為什麼」朝西南，目前還只是學者的推測。">
+                            <div class="sort-card__img" aria-hidden="true">🌊</div>
+                            <h5 class="sort-card__name">頭朝西南，是因為相信祖先從海上來</h5>
+                            <div class="sort-card__btns">
+                                <button type="button" data-choice="evidence">證據</button>
+                                <button type="button" data-choice="guess">推測</button>
+                            </div>
+                            <p class="sort-card__fb" aria-live="polite"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 他們去哪了：時間軸 -->
+                <h3 class="mini-h">然後呢？十三行人去哪裡了</h3>
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <span class="timeline__year">距今約 1800 年前</span>
+                        <h5 class="timeline__title">聚落興起</h5>
+                        <p class="timeline__desc">十三行人在淡水河口南岸定居，發展出煉鐵、製陶與海上貿易並行的聚落生活。</p>
+                    </div>
+                    <div class="timeline__item">
+                        <span class="timeline__year">距今約 1000 年前</span>
+                        <h5 class="timeline__title">文化持續發展</h5>
+                        <p class="timeline__desc">貿易往來頻繁，出土的唐宋錢幣與瓷器碎片顯示與外界的接觸愈來愈多。</p>
+                    </div>
+                    <div class="timeline__item">
+                        <span class="timeline__year">距今約 500 年前</span>
+                        <h5 class="timeline__title">走入歷史時代</h5>
+                        <p class="timeline__desc">十三行文化的晚期與文獻記載中的平埔族群時代重疊，聚落型態逐漸轉變。</p>
+                    </div>
+                    <div class="timeline__item">
+                        <span class="timeline__year">17 世紀起</span>
+                        <h5 class="timeline__title">凱達格蘭族的時代</h5>
+                        <p class="timeline__desc">有些學者推測，十三行文化晚期的人群，可能和後來台北盆地一帶的<b>凱達格蘭族</b>有關係。這是重要線索，但還不能百分之百說「他們就是同一群人的後代」。</p>
+                    </div>
+                    <div class="timeline__item">
+                        <span class="timeline__year">今天</span>
+                        <h5 class="timeline__title">文化仍在你身邊</h5>
+                        <p class="timeline__desc">「北投」、「大龍峒」等地名都源自凱達格蘭語。千年前的文化沒有消失，它化成地名、血脈與記憶，繼續生活在這座城市裡。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <h3 class="mini-h">關於信仰與去向的 4 個大哉問（點擊展開）</h3>
+                <div class="accordion">
+                    <div class="accordion__item">
+                        <button type="button" class="accordion__head" aria-expanded="false">
+                            <span class="accordion__num">Q1</span>
+                            <span class="accordion__q">十三行人相信「死後的世界」嗎？</span>
+                            <span class="accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion__body">
+                            <div class="accordion__content">
+                                <p>很可能相信。最有力的證據是<b>陪葬品</b>：如果死亡就是一切的終點，何必把珍貴的瑪瑙珠、鐵刀與陶罐放進墓裡？為逝者準備物品的行為，通常意味著相信<em>「他在某個地方還用得到」</em>。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button type="button" class="accordion__head" aria-expanded="false">
+                            <span class="accordion__num">Q2</span>
+                            <span class="accordion__q">有「祭司」或「巫師」這種人存在嗎？</span>
+                            <span class="accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion__body">
+                            <div class="accordion__content">
+                                <p>沒有直接證據，但有間接線索：少數墓葬的陪葬品特別豐厚或特殊（如青銅器、大量珠飾），墓主可能擁有<b>特殊身分</b>。在許多南島語族社會中，主持儀式的長老或巫師正是這類人物。這是合理推測，但仍需更多證據。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button type="button" class="accordion__head" aria-expanded="false">
+                            <span class="accordion__num">Q3</span>
+                            <span class="accordion__q">怎麼知道凱達格蘭族可能是十三行人的後裔？</span>
+                            <span class="accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion__body">
+                            <div class="accordion__content">
+                                <p>三條線索：① <b>時間銜接</b>——十三行文化晚期與文獻中凱達格蘭族出現的年代相連；② <b>地域重疊</b>——兩者都活動於台北盆地與淡水河口一帶；③ <b>生活方式相似</b>——都是善於漁撈與交易的河海族群。不過這仍是「有力的推測」而非定論，相關研究持續進行中。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button type="button" class="accordion__head" aria-expanded="false">
+                            <span class="accordion__num">Q4</span>
+                            <span class="accordion__q">十三行文化算是「消失」了嗎？</span>
+                            <span class="accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion__body">
+                            <div class="accordion__content">
+                                <p>更準確的說法是「<b>轉變</b>」。文化像河流：會改道、會匯入其他河流，但水還在流。十三行人的後代可能融入凱達格蘭族，再融入今天的台灣社會。當你說出「北投」這個地名（源自凱達格蘭語，意為「女巫」），千年前的聲音其實還在被使用。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pull-quote">
+                    <p class="pull-quote__text">文化不會真正消失。它只是換了一種方式，繼續活在地名裡、血脈裡，和願意記得它的人心裡。</p>
+                    <p class="pull-quote__cite">— 寫給每一位讀到這裡的你</p>
+                </div>
+
+                <!-- 本節重點整理 -->
+                <div class="recap-block" aria-label="本節重點整理">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">RECAP　·　本節重點整理</span>
+                        <h3 class="recap-block__title">3-3 學到的 4 個核心觀念</h3>
+                    </div>
+                    <div class="recap-block__grid">
+                        <div class="recap-chip"><b>① 信仰有影子</b><span>信仰透過葬式、陪葬品與儀式器物留下物質痕跡。</span></div>
+                        <div class="recap-chip"><b>② 死後有去處</b><span>陪葬品是他們相信死後世界最有力的證據。</span></div>
+                        <div class="recap-chip"><b>③ 凱達格蘭</b><span>時間、地域與生活方式三線索指向可能的後裔關係。</span></div>
+                        <div class="recap-chip"><b>④ 轉變非消失</b><span>文化像河流改道；地名與血脈中仍有十三行的迴聲。</span></div>
+                    </div>
+                    <div class="recap-block__actions">
+                        <a class="recap-block__btn" href="#sub-3-3" aria-label="再讀一次本節">↻ 再讀一次</a>
+                        <a class="recap-block__btn recap-block__btn--primary" href="#sub-3-4" aria-label="前往 3-4 評量">最終挑戰：3-4 單元評量 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 子單元 3-4：單元總結與評量 ===== -->
+            <section id="sub-3-4" class="sub-section" aria-labelledby="sub-3-4-title">
+                <header class="sub-section__head">
+                    <span class="sub-section__index">3-4</span>
+                    <div>
+                        <h2 id="sub-3-4-title" class="sub-section__title">單元總結與評量</h2>
+                        <p class="sub-section__sub">整趟十三行之旅的最終挑戰——用證據回答關於心靈世界的問題。</p>
+                    </div>
+                    <span class="sub-section__time">11 min</span>
+                </header>
+
+                <div class="objectives" aria-label="本單元學習目標">
+                    <div class="objectives__head">
+                        <span class="objectives__eyebrow">LEARNING OBJECTIVES　·　學習目標</span>
+                        <div class="objectives__meta">
+                            <span class="objectives__time">⏱ 預估完成時間　<b>11 分鐘</b></span>
+                            <span class="objectives__level">難度　<b>★ ★ ★</b></span>
+                        </div>
+                    </div>
+                    <h3 class="objectives__title">完成本節後，你將能夠：</h3>
+                    <ul class="objectives__list">
+                        <li><span class="objectives__num">01</span><div>觀看<b>單元回顧影片</b>，把 3-1 至 3-3 的核心知識<b>濃縮成五句話</b>。</div></li>
+                        <li><span class="objectives__num">02</span><div>運用證據思考，<b>挑出最能反映信仰世界的文物</b>。</div></li>
+                        <li><span class="objectives__num">03</span><div>透過 5 題進階測驗，<b>完成整套教材的最終挑戰</b>。</div></li>
+                        <li><span class="objectives__num">04</span><div>掌握<b>側身屈肢葬、陪葬品、祖靈信仰</b>等關鍵名詞。</div></li>
+                    </ul>
+                </div>
+
+                <h3 class="mini-h">先看教學影片，再開始闖關</h3>
+                <p class="watch-lead">把 3-1 到 3-3 的重點在腦子裡轉一圈。看完再往下挑戰，會輕鬆很多！</p>
+                <div class="video-frame video-frame--wide">
+                    <div class="video-frame__inner">
+                        <iframe
+                            class="video-frame__video"
+                            src="https://www.youtube.com/embed/BM1Wxnjk3S0?si=KodR2Xh_cFuwm9nA"
+                            title="單元三教學影片：十三行人的心靈世界"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="video-frame__caption">
+                        <span>VIDEO&nbsp;03</span>
+                        <span>十三行人的心靈世界</span>
+                    </div>
+                </div>
+
+                <div class="quiz-intro" aria-label="測驗操作說明">
+                    <div class="quiz-intro__icon" aria-hidden="true">i</div>
+                    <div class="quiz-intro__body">
+                        <h4>最終評量前，先看 3 個小提醒</h4>
+                        <ol>
+                            <li><b>每題答完</b>馬上會告訴你「答對／答錯」；答對的題目會自動鎖住。</li>
+                            <li><b>答錯不扣分</b>，可以再選一次，旁邊還會提示你回到哪一段複習。</li>
+                            <li><b>全部答完</b>就完成了整套教材——恭喜你成為小小考古學家！</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 重點回顧 -->
+                <h3 class="mini-h">單元三・五個你一定要記得的重點</h3>
+                <div class="lead-block">
+                    <span class="lead-block__eyebrow">KEY TAKEAWAYS</span>
+                    <h4 class="lead-block__title">把整個單元濃縮成五句話</h4>
+                    <div class="lead-block__body">
+                        <p><strong>① 十三行墓葬</strong>超過 200 座，主流葬式為<em>側身屈肢、頭朝西南</em>，統一的規矩反映共同的信仰。</p>
+                        <p><strong>② 陪葬品</strong>是相信「死後世界」的關鍵證據，其多寡差異也暗示社會可能已有<em>身分階層</em>。</p>
+                        <p><strong>③ 人面陶罐</strong>出土於墓葬、器底無使用痕跡，是與喪葬信仰相關的<em>特殊儀式器物</em>，完整器全台僅一件。</p>
+                        <p><strong>④ 無文字的信仰</strong>要靠物質證據反推：大膽想像、小心求證，並永遠把<em>證據與推測分開</em>。</p>
+                        <p><strong>⑤ 十三行人沒有消失</strong>——他們可能與<em>凱達格蘭族</em>有密切關聯，文化以地名與血脈的形式延續至今。</p>
+                    </div>
+                </div>
+
+                <div class="summary-grid summary-grid--solo">
+                <!-- 證據點選測驗 -->
+                <div class="quiz" data-review-target="#sub-3-4"
+                     data-correct-feedback="答對了！人面陶罐出土於墓葬、從未用於炊煮，是最能直接反映十三行人信仰世界的器物。"
+                     data-wrong-feedback="再想想看～這件文物反映的是生活或技術層面，和「信仰世界」的關聯比較間接。">
+                    <span class="quiz__eyebrow">EVIDENCE PICK　・　證據點選</span>
+                    <h3 class="quiz__q">下列哪一件文物，最能直接反映十三行人的「信仰世界」？</h3>
+                    <div class="quiz__options">
+                        <button class="quiz-opt" type="button" data-correct="false" data-review-hint="磨製石斧是日常生產工具，反映的是生活技術——複習 3-2「為什麼一個陶罐能成為鎮館之寶」。" data-review-link="#sub-3-2">
+                            <div class="quiz-opt__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="56" height="56"><polygon points="32,16 48,16 56,64 24,64" fill="#7E7E7E" stroke="#2E2E2E" stroke-width="2"/><polygon points="32,16 48,16 46,26 34,26" fill="#5A5A5A"/></svg>
+                            </div>
+                            <span class="quiz-opt__label">磨製石斧</span>
+                        </button>
+                        <button class="quiz-opt" type="button" data-correct="true">
+                            <div class="quiz-opt__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="56" height="56"><ellipse cx="40" cy="50" rx="26" ry="20" fill="#C8A878" stroke="#6B4A2A" stroke-width="2"/><ellipse cx="40" cy="36" rx="18" ry="6" fill="#A88A5C" stroke="#6B4A2A" stroke-width="2"/><circle cx="33" cy="48" r="3" fill="#1F1208"/><circle cx="47" cy="48" r="3" fill="#1F1208"/><path d="M33 58 Q40 63 47 58" fill="none" stroke="#1F1208" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="quiz-opt__label">人面陶罐</span>
+                        </button>
+                        <button class="quiz-opt" type="button" data-correct="false" data-review-hint="骨針證明的是縫紉與紡織技術，屬於生活層面——複習 3-3「拼湊信仰世界的四條線索」。" data-review-link="#sub-3-3">
+                            <div class="quiz-opt__img" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" width="56" height="56"><rect x="16" y="46" width="50" height="3" fill="#E8DFC9" stroke="#6B4A2A" stroke-width="1.2" transform="rotate(-18 40 48)"/><circle cx="20" cy="54" r="3" fill="none" stroke="#6B4A2A" stroke-width="1.2"/></svg>
+                            </div>
+                            <span class="quiz-opt__label">骨針</span>
+                        </button>
+                    </div>
+                    <p class="quiz__feedback" aria-live="polite"></p>
+                </div>
+                </div>
+
+                <!-- 進階測驗 -->
+                <h3 class="mini-h">最終測驗：5 題挑戰你的考古腦</h3>
+                <p style="font-size:14px;line-height:1.85;color:var(--c-text-soft);margin-bottom:18px;">
+                    這是整套教材的最後一關。試試看不偷看上面的教材，能答對幾題？
+                </p>
+
+                <div class="quiz-bank">
+                    <div class="quiz-q" data-correct="b" data-review-anchor="#sub-3-1" data-review-text="回到 3-1「墓葬：一封千年前寫給未來的信」複習葬式特徵">
+                        <span class="quiz-q__no">QUESTION · 01</span>
+                        <h4 class="quiz-q__text">十三行人最主要的埋葬方式是？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>平躺伸直、頭朝東方的仰身直肢葬</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>側躺屈腿、頭朝西南的側身屈肢葬</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>火化後裝入陶罐的甕棺葬</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>將逝者安置於樹上的樹葬</span></button>
+                        </div>
+                        <p class="quiz-q__hint">十三行墓葬以<b>側身屈肢、頭朝西南</b>為主流，統一的葬式反映全聚落共同的喪葬信仰。</p>
+                    </div>
+
+                    <div class="quiz-q" data-correct="d" data-review-anchor="#sub-3-1" data-review-text="回到 3-1「考古學家看墓葬的四個重點」複習陪葬品的意義">
+                        <span class="quiz-q__no">QUESTION · 02</span>
+                        <h4 class="quiz-q__text">墓葬中「陪葬品的多寡差異很大」，最可能說明什麼？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>有些人下葬時東西剛好用完了</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>陪葬品會隨時間自己分解消失</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>盜墓者偷走了部分墓的物品</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>社會中可能已出現身分地位的差異</span></button>
+                        </div>
+                        <p class="quiz-q__hint">陪葬品的<b>系統性差異</b>是考古學判斷社會分層的經典指標：有人擁有大量珠飾與鐵器，有人幾乎沒有。</p>
+                    </div>
+
+                    <div class="quiz-q" data-correct="a" data-review-anchor="#sub-3-2" data-review-text="回到 3-2「重點不是它多漂亮，而是它躺在哪裡」複習出土脈絡">
+                        <span class="quiz-q__no">QUESTION · 03</span>
+                        <h4 class="quiz-q__text">人面陶罐被判斷「與信仰有關」，最關鍵的證據是？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>它出土於墓葬中，且器底沒有炊煮使用痕跡</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>它的體積比一般陶罐大很多</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>罐子裡發現了文字記載</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>它是用進口的黏土製作的</span></button>
+                        </div>
+                        <p class="quiz-q__hint">又是「上下文」的力量！<b>出土於墓葬</b>＋<b>無日常使用痕跡</b>，兩者結合指向喪葬儀式用途。</p>
+                    </div>
+
+                    <div class="quiz-q" data-correct="c" data-review-anchor="#sub-3-3" data-review-text="回到 3-3「然後呢？十三行人去哪裡了」複習時間軸">
+                        <span class="quiz-q__no">QUESTION · 04</span>
+                        <h4 class="quiz-q__text">學者推測，十三行文化晚期的人群可能與哪個族群有密切關聯？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>阿美族</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>排灣族</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>凱達格蘭族</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>達悟族</span></button>
+                        </div>
+                        <p class="quiz-q__hint">時間銜接、地域重疊（台北盆地與淡水河口）、生活方式相似，三條線索都指向<b>凱達格蘭族</b>。</p>
+                    </div>
+
+                    <div class="quiz-q" data-correct="b" data-review-anchor="#sub-3-3" data-review-text="回到 3-3「如何研究看不見的信仰」複習證據與推測的分別">
+                        <span class="quiz-q__no">QUESTION · 05</span>
+                        <h4 class="quiz-q__text">下列關於「研究無文字社會的信仰」的敘述，哪一項最正確？</h4>
+                        <div class="quiz-q__choices">
+                            <button class="quiz-choice" data-ans="a"><span class="quiz-choice__letter">A</span><span>沒有文字就無法研究，只能放棄</span></button>
+                            <button class="quiz-choice" data-ans="b"><span class="quiz-choice__letter">B</span><span>從葬式、陪葬品等物質痕跡反推，並把證據與推測分開</span></button>
+                            <button class="quiz-choice" data-ans="c"><span class="quiz-choice__letter">C</span><span>直接套用現代宗教的內容去解釋</span></button>
+                            <button class="quiz-choice" data-ans="d"><span class="quiz-choice__letter">D</span><span>全憑想像自由發揮，反正沒人能證明</span></button>
+                        </div>
+                        <p class="quiz-q__hint">核心方法是<b>由物質證據反推行為與信念</b>，並且誠實標示哪些是證據、哪些是推測——大膽想像，小心求證。</p>
+                    </div>
+                </div>
+
+                <!-- 名詞解釋 -->
+                <h3 class="mini-h">關鍵名詞解釋</h3>
+                <div class="glossary">
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">側身屈肢葬</span>
+                            <span class="glossary__en">Flexed Burial</span>
+                        </div>
+                        <p class="glossary__def">身體側躺、四肢彎曲的埋葬姿勢，是十三行文化最主要的葬式。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">陪葬品</span>
+                            <span class="glossary__en">Grave Goods</span>
+                        </div>
+                        <p class="glossary__def">隨逝者一同埋入墓中的物品，反映當時的信仰觀念與墓主的身分地位。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">無頭葬</span>
+                            <span class="glossary__en">Headless Burial</span>
+                        </div>
+                        <p class="glossary__def">缺少頭骨的墓葬，成因可能與衝突、獵首或特殊儀式有關，目前尚無定論。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">祖靈信仰</span>
+                            <span class="glossary__en">Ancestor Worship</span>
+                        </div>
+                        <p class="glossary__def">相信祖先的靈魂持續存在並影響現世的信仰型態，普遍見於南島語族社會。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">凱達格蘭族</span>
+                            <span class="glossary__en">Ketagalan</span>
+                        </div>
+                        <p class="glossary__def">台北盆地與淡水河口一帶的平埔族群，學者推測與十三行文化晚期人群關係密切。</p>
+                    </div>
+                    <div class="glossary__term">
+                        <div class="glossary__word">
+                            <span class="glossary__zh">社會分層</span>
+                            <span class="glossary__en">Social Stratification</span>
+                        </div>
+                        <p class="glossary__def">社會成員間出現身分、財富或權力差異的現象，可由陪葬品差異等考古證據推知。</p>
+                    </div>
+                </div>
+
+                <div class="pull-quote">
+                    <p class="pull-quote__text">你已經走完了十三行人的一生：他們的家、他們的手藝、他們的告別。從今天起，這段千年的故事，也由你繼續傳下去。</p>
+                    <p class="pull-quote__cite">— 致完成全部三個單元的小小考古學家</p>
+                </div>
+
+                <!-- 本節重點整理 -->
+                <div class="recap-block" aria-label="本節重點整理">
+                    <div class="recap-block__head">
+                        <span class="recap-block__eyebrow">RECAP　·　本節重點整理</span>
+                        <h3 class="recap-block__title">3-4 學到的 4 個核心觀念</h3>
+                    </div>
+                    <div class="recap-block__grid">
+                        <div class="recap-chip"><b>① 證據式思考</b><span>回答信仰問題時，先問「這件文物的出土脈絡是什麼？」</span></div>
+                        <div class="recap-chip"><b>② 人面陶罐</b><span>墓葬脈絡＋無使用痕跡，是信仰世界最直接的物證。</span></div>
+                        <div class="recap-chip"><b>③ 分層社會</b><span>陪葬品差異揭示十三行社會可能已有身分之別。</span></div>
+                        <div class="recap-chip"><b>④ 文化延續</b><span>十三行—凱達格蘭—今日台灣，故事仍在繼續。</span></div>
+                    </div>
+                    <div class="recap-block__actions">
+                        <a class="recap-block__btn" href="#sub-3-4" aria-label="再做一次測驗">↻ 再做一次測驗</a>
+                        <button class="recap-block__btn" type="button" data-modal-open="recap" aria-label="查看全教材重點整理">查看全教材重點整理</button>
+                        <a class="recap-block__btn recap-block__btn--primary" href="quiz.html" aria-label="前往終極總測驗">前往終極總測驗：10 題選擇＋5 題互動遊戲 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <p>© 2026 十三行行動博物館 ｜ 畢業專題作品．本網頁僅為教育用途，視覺風格參考新北市立十三行博物館官方網站。</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- ===== Tooltip 全域容器 ===== -->
+    <div class="floating-tip" id="floatingTip" role="tooltip" hidden></div>
+
+    <!-- ============================================================
+         ===== 全域 Modal：課程地圖 / 操作說明 / 重點整理 / 製作團隊 =====
+         ============================================================ -->
+    <div class="modal" id="modalRoot" hidden>
+        <div class="modal__backdrop" data-modal-close></div>
+
+        <!-- 1. 課程地圖 -->
+        <section class="modal__panel" data-modal="map" hidden role="dialog" aria-modal="true" aria-labelledby="modalMapTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">COURSE MAP　·　課程地圖</span>
+                    <h2 class="modal__title" id="modalMapTitle">三個單元，認識十三行人的世界</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <p class="modal__lead">點擊任一節點即可快速跳到對應的子單元；灰色節點為「即將推出」尚未開放。</p>
+
+                <ol class="cmap" role="list">
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 01</span>
+                            <h3 class="cmap__name">初識十三行</h3>
+                            <span class="cmap__time">40 分</span>
+                        </div>
+                        <p class="cmap__desc">從考古現場、建築智慧到信仰，建立對這座千年聚落的基本認識。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="unit1.html#sub-1-1" data-modal-close>
+                                <span class="cmap__node-i">1-1</span>
+                                <span class="cmap__node-t">我們的考古日記</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit1.html#sub-1-2" data-modal-close>
+                                <span class="cmap__node-i">1-2</span>
+                                <span class="cmap__node-t">奇特的房子</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit1.html#sub-1-3" data-modal-close>
+                                <span class="cmap__node-i">1-3</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 02</span>
+                            <h3 class="cmap__name">工藝大挑戰</h3>
+                            <span class="cmap__time">50 分</span>
+                        </div>
+                        <p class="cmap__desc">陶器、煉鐵、玻璃珠──認識十三行人精彩的手工業技術。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="unit2.html#sub-2-1" data-modal-close>
+                                <span class="cmap__node-i">2-1</span>
+                                <span class="cmap__node-t">陶器的奧秘</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit2.html#sub-2-2" data-modal-close>
+                                <span class="cmap__node-i">2-2</span>
+                                <span class="cmap__node-t">煉鐵高手</span>
+                                <span class="cmap__node-m">15 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit2.html#sub-2-3" data-modal-close>
+                                <span class="cmap__node-i">2-3</span>
+                                <span class="cmap__node-t">小小玻璃珠</span>
+                                <span class="cmap__node-m">11 min</span>
+                            </a>
+                            <a class="cmap__node" href="unit2.html#sub-2-4" data-modal-close>
+                                <span class="cmap__node-i">2-4</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit is-current">
+                        <div class="cmap__head">
+                            <span class="cmap__no">UNIT 03</span>
+                            <h3 class="cmap__name">社會與信仰</h3>
+                            <span class="cmap__time">45 分</span>
+                        </div>
+                        <p class="cmap__desc">墓葬、人面陶罐與儀式──走進十三行人的精神世界。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="#sub-3-1" data-modal-close>
+                                <span class="cmap__node-i">3-1</span>
+                                <span class="cmap__node-t">墓葬的祕密</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="#sub-3-2" data-modal-close>
+                                <span class="cmap__node-i">3-2</span>
+                                <span class="cmap__node-t">人面陶罐</span>
+                                <span class="cmap__node-m">12 min</span>
+                            </a>
+                            <a class="cmap__node" href="#sub-3-3" data-modal-close>
+                                <span class="cmap__node-i">3-3</span>
+                                <span class="cmap__node-t">信仰與儀式</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                            <a class="cmap__node" href="#sub-3-4" data-modal-close>
+                                <span class="cmap__node-i">3-4</span>
+                                <span class="cmap__node-t">單元總結與評量</span>
+                                <span class="cmap__node-m">11 min</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cmap__unit">
+                        <div class="cmap__head">
+                            <span class="cmap__no">FINAL QUIZ</span>
+                            <h3 class="cmap__name">終極總測驗</h3>
+                            <span class="cmap__time">10 分</span>
+                        </div>
+                        <p class="cmap__desc">10 題跨單元選擇題＋5 題全新視覺互動遊戲，搭配倒數計時與錯題檢討。</p>
+                        <div class="cmap__nodes">
+                            <a class="cmap__node" href="quiz.html" data-modal-close>
+                                <span class="cmap__node-i">⏱</span>
+                                <span class="cmap__node-t">開始 15 題限時綜合挑戰</span>
+                                <span class="cmap__node-m">10 min</span>
+                            </a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 2. 操作說明 -->
+        <section class="modal__panel" data-modal="guide" hidden role="dialog" aria-modal="true" aria-labelledby="modalGuideTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">HOW TO USE　·　操作說明</span>
+                    <h2 class="modal__title" id="modalGuideTitle">五分鐘上手．這份教材怎麼讀？</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <ol class="guide-list">
+                    <li class="guide-item">
+                        <div class="guide-item__no">01</div>
+                        <div>
+                            <h4>左側：學習單元導覽列</h4>
+                            <p>頁面左側列出所有單元與子單元，點擊即可快速跳到對應段落，目前正在閱讀的節點會自動高亮。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">02</div>
+                        <div>
+                            <h4>頂部：四個常駐入口</h4>
+                            <p><b>課程地圖</b>看總覽、<b>操作說明</b>看使用方法、<b>重點整理</b>看核心知識、<b>製作團隊</b>看作者資訊。LOGO 點擊可回到頁面最上方。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">03</div>
+                        <div>
+                            <h4>互動元素：滑、點、拖</h4>
+                            <p>遇到<b>時光滑桿</b>請左右拖曳；<b>翻牌卡</b>點擊翻面；<b>建築模型</b>滑入部位查看解析；<b>FAQ</b>點擊展開答案。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">04</div>
+                        <div>
+                            <h4>評量區：答錯也別怕</h4>
+                            <p>單元最後的測驗會即時回饋；答錯時系統會<b>提示複習路徑</b>，引導你回到對應段落補充重點，再回來作答。</p>
+                        </div>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-item__no">05</div>
+                        <div>
+                            <h4>學習進度自動保存</h4>
+                            <p>頂部進度條會記錄你完成的子單元；重新打開瀏覽器仍會看到上次的進度（透過 localStorage 儲存）。</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="guide-keys">
+                    <span class="guide-keys__title">鍵盤快速鍵</span>
+                    <div class="guide-keys__row"><kbd>Esc</kbd><span>關閉彈窗</span></div>
+                    <div class="guide-keys__row"><kbd>Tab</kbd><span>切換焦點 / 互動元件</span></div>
+                    <div class="guide-keys__row"><kbd>Enter</kbd> / <kbd>Space</kbd><span>觸發按鈕、翻面、揭示</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 重點整理（全教材精華） -->
+        <section class="modal__panel" data-modal="recap" hidden role="dialog" aria-modal="true" aria-labelledby="modalRecapTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">KEY TAKEAWAYS　·　重點整理</span>
+                    <h2 class="modal__title" id="modalRecapTitle">整份教材最該記住的 10 件事</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <div class="recap-grid">
+                    <article class="recap-card"><span class="recap-card__no">01</span><h4>距今 1800–500 年</h4><p>十三行文化屬台灣鐵器時代晚期，是淡水河口南岸最完整的史前聚落。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">02</span><h4>1955 羅盤事件</h4><p>空軍飛機飛過觀音山羅盤異常，意外揭開十三行遺址的存在。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">03</span><h4>地名沿用</h4><p>「十三行」來自清代「十三行郊」，不是 13 棟房子。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">04</span><h4>干欄式建築</h4><p>把家架高 1.5–2.5 公尺，是河口潮濕環境下的最佳解。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">05</span><h4>四大功能</h4><p>架高設計同時達成防潮、避洪、避獸、通風四大功能。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">06</span><h4>柱洞是關鍵</h4><p>木頭會腐朽，但柱洞會在土壤裡留下印章，幫助還原建築。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">07</span><h4>上下文 (Context)</h4><p>考古學重視「文物在哪一層、附近有什麼」，而不是文物本身。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">08</span><h4>煉鐵爐渣</h4><p>是十三行人擁有煉鐵技術最直接的證據，並被歸為鐵器時代。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">09</span><h4>玻璃珠 = 貿易</h4><p>東南亞風格玻璃珠證明這裡是南島海洋貿易網的節點。</p></article>
+                    <article class="recap-card"><span class="recap-card__no">10</span><h4>人面陶罐</h4><p>十三行的鎮館之寶，象徵祭祀、葬儀或祖靈信仰。</p></article>
+                </div>
+                <div class="recap-actions">
+                    <a class="recap-actions__btn" href="unit1.html#sub-1-3" data-modal-close>單元一測驗</a>
+                    <a class="recap-actions__btn" href="unit2.html#sub-2-4" data-modal-close>單元二測驗</a>
+                    <a class="recap-actions__btn" href="#sub-3-4" data-modal-close>單元三測驗</a>
+                    <a class="recap-actions__btn recap-actions__btn--primary" href="quiz.html">⏱ 終極總測驗 (10選擇+5互動) →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 製作團隊 -->
+        <section class="modal__panel" data-modal="team" hidden role="dialog" aria-modal="true" aria-labelledby="modalTeamTitle">
+            <header class="modal__head">
+                <div>
+                    <span class="modal__eyebrow">PRODUCTION TEAM　·　製作團隊</span>
+                    <h2 class="modal__title" id="modalTeamTitle">將千年歷史變成可互動的學堂</h2>
+                </div>
+                <button class="modal__close" type="button" data-modal-close aria-label="關閉視窗">×</button>
+            </header>
+            <div class="modal__body">
+                <p class="modal__lead">本網頁為大學畢業專題作品，主題聚焦於台灣鐵器時代的「十三行文化」，結合數位學習設計與互動視覺，期望讓國小高年級到國中的學生，能夠輕鬆走進這段被遺忘的歷史。</p>
+
+                <div class="team-grid">
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">吳</div>
+                        <h4 class="team-card__name">吳俁杉</h4>
+                        <p class="team-card__role">網頁製作 ‧ 廠商溝通 ‧ 企劃</p>
+                        <p class="team-card__bio">負責整體網頁前端製作、與廠商及指導單位溝通協調，並統籌影片與網頁內容的企劃方向。</p>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">楊</div>
+                        <h4 class="team-card__name">楊昕達</h4>
+                        <p class="team-card__role">海報製作 ‧ 影片拍攝與後製</p>
+                        <p class="team-card__bio">負責專題海報視覺設計，並擔任影片拍攝、剪輯與後製工作，呈現遺址與週邊地景的教學畫面。</p>
+                    </article>
+                </div>
+
+                <div class="team-credit">
+                    <h4 class="team-credit__title">特別感謝</h4>
+                    <ul>
+                        <li><a href="https://www.sshm.ntpc.gov.tw/" target="_blank" rel="noopener noreferrer">新北市立十三行博物館</a>　線上展覽、典藏資料與教育資源</li>
+                        <li><a href="https://digiarch.sinica.edu.tw/" target="_blank" rel="noopener noreferrer">中央研究院・數位典藏資源網</a>　台灣考古文物高清影像</li>
+                        <li>指導老師、系上同學以及所有測試回饋的師長與朋友</li>
+                    </ul>
+                </div>
+                <p class="team-foot">© 2026 十三行行動博物館 ｜ 畢業專題作品 ‧ 僅供教育用途</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== 首次進入引導（Onboarding Spotlight） ===== -->
+    <div class="onboard" id="onboard" hidden>
+        <div class="onboard__card">
+            <span class="onboard__eyebrow">WELCOME　·　歡迎來到</span>
+            <h2 class="onboard__title">十三行行動博物館</h2>
+            <p class="onboard__lead">這是一份互動式數位教材，會帶你從<b>考古學基礎</b>，一路走進<b>千年前淡水河口的聚落</b>。下面是幾個你會用到的操作技巧：</p>
+            <div class="onboard__steps">
+                <div class="onboard__step"><span>1</span><p>左側欄是學習地圖，點擊可<b>快速跳到任何子單元</b>。</p></div>
+                <div class="onboard__step"><span>2</span><p>遇到<b>滑桿、翻牌卡、3D 模型</b>，就大膽拖曳和點擊。</p></div>
+                <div class="onboard__step"><span>3</span><p>結束有<b>測驗</b>，答錯也別怕，會引導你回到對應段落補充。</p></div>
+            </div>
+            <div class="onboard__actions">
+                <button class="onboard__btn onboard__btn--ghost" type="button" id="onboardSkip">略過</button>
+                <button class="onboard__btn onboard__btn--primary" type="button" id="onboardStart">開始學習</button>
+            </div>
+            <label class="onboard__check"><input type="checkbox" id="onboardDontShow"> 不再顯示</label>
+        </div>
+    </div>
+
+    <script src="js/audio.js" defer></script>
+    <script src="js/tour.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

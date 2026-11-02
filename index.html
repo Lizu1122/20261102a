@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="十三行行動博物館｜互動式數位教材：約 135 分鐘，帶你認識千年前淡水河口的十三行文化。">
+    <title>十三行行動博物館 ｜ Shihsanhang Mobile Museum</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/audio.css">
+</head>
+<body class="home">
+
+    <!-- ===== 頂部品牌列 ===== -->
+    <header class="site-header" role="banner">
+        <a href="index.html" class="brand brand--link" aria-label="十三行行動博物館首頁">
+            <span class="brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 60 60" width="42" height="42">
+                    <polygon points="10,50 30,8 50,50" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                    <polygon points="18,50 30,26 42,50" fill="currentColor" opacity="0.85"/>
+                    <line x1="6" y1="54" x2="54" y2="54" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </span>
+            <span class="brand__text">
+                <span class="brand__title">十三行行動博物館</span>
+                <span class="brand__subtitle">SHIHSANHANG&nbsp;|&nbsp;Mobile Museum of Archaeology</span>
+            </span>
+        </a>
+        <nav class="home-nav" aria-label="首頁導覽">
+            <a href="#learn">學習內容</a>
+            <a href="#warmup">出發熱身</a>
+            <a href="#time">學習時間</a>
+            <a href="quiz.html" class="home-nav__quiz">⏱ 總測驗</a>
+            <a href="unit1.html?guide=1#sub-1-1" class="home-nav__go">進入課程</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== 主視覺 ===== -->
+        <section class="home-hero" aria-labelledby="homeTitle">
+            <div class="home-hero__copy">
+                <span class="home-eyebrow">INTERACTIVE MUSEUM　·　互動式數位教材</span>
+                <h1 id="homeTitle" class="home-hero__title">穿越 <em>千年</em>，<br>挖出淡水河口的<br>史前祕密！</h1>
+                <p class="home-hero__lead">
+                    一架飛機的羅盤突然亂轉，竟然讓人發現了地底下的古老村落！
+                    跟著考古學家一起出發，看看十三行人怎麼<b>蓋房子、煉鐵、做陶器</b>，
+                    又怎麼靠<b>海上貿易</b>換到漂亮的玻璃珠。邊看、邊玩、邊闖關，一起解開泥土裡的祕密。
+                </p>
+
+                <ul class="home-facts" aria-label="課程資訊">
+                    <li><b>約 <span data-count="135">135</span> 分鐘</b><span>總學習時間</span></li>
+                    <li><b><span data-count="3">3</span> 大單元</b><span>11 個小節</span></li>
+                    <li><b><span data-count="20">20</span> 題</b><span>倒數總測驗</span></li>
+                    <li><b>6–16 歲</b><span>適用對象</span></li>
+                </ul>
+
+                <div class="home-hero__actions">
+                    <a href="unit1.html?guide=1#sub-1-1" class="start-btn" aria-label="開始學習，進入 1-1 我們的考古日記">
+                        <span class="start-btn__label">開始探索</span>
+                        <span class="start-btn__sub">從 1-1 我們的考古日記出發</span>
+                        <span class="start-btn__arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </a>
+                    <a href="#learn" class="ghost-btn">先看看會學到什麼 ↓</a>
+                </div>
+            </div>
+
+            <!-- 主視覺插畫：地層與出土文物 -->
+            <div class="home-hero__visual" aria-hidden="true">
+                <span class="hero-chip hero-chip--1">🔍 1955 羅盤異常</span>
+                <span class="hero-chip hero-chip--2">🔥 台灣史前煉鐵</span>
+                <span class="hero-chip hero-chip--3">🏺 國寶人面陶罐</span>
+                <svg viewBox="0 0 520 520" class="strata">
+                    <defs>
+                        <linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#F7E6C4"/>
+                            <stop offset="100%" stop-color="#FBF5EA"/>
+                        </linearGradient>
+                        <linearGradient id="hWater" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#4F86B3"/>
+                            <stop offset="100%" stop-color="#1F3A5F"/>
+                        </linearGradient>
+                        <radialGradient id="hBead" cx="35%" cy="35%" r="65%">
+                            <stop offset="0%" stop-color="#9FD3F0"/>
+                            <stop offset="100%" stop-color="#1F3A5F"/>
+                        </radialGradient>
+                        <radialGradient id="hPot" cx="45%" cy="40%" r="60%">
+                            <stop offset="0%" stop-color="#D9B888"/>
+                            <stop offset="100%" stop-color="#6B4A2A"/>
+                        </radialGradient>
+                        <clipPath id="hClip"><circle cx="260" cy="260" r="240"/></clipPath>
+                    </defs>
+
+                    <g clip-path="url(#hClip)">
+                        <rect width="520" height="520" fill="url(#hSky)"/>
+
+                        <!-- 遠景（視差：最慢） -->
+                        <g class="px" data-depth="6">
+                        <g class="strata__rays" transform="translate(380,120)">
+                            <g class="strata__rays-spin" stroke="#FFD86E" stroke-width="3" stroke-linecap="round" opacity=".55">
+                                <line x1="0" y1="-52" x2="0" y2="-62"/><line x1="0" y1="52" x2="0" y2="62"/>
+                                <line x1="-52" y1="0" x2="-62" y2="0"/><line x1="52" y1="0" x2="62" y2="0"/>
+                                <line x1="37" y1="37" x2="44" y2="44"/><line x1="-37" y1="-37" x2="-44" y2="-44"/>
+                                <line x1="37" y1="-37" x2="44" y2="-44"/><line x1="-37" y1="37" x2="-44" y2="44"/>
+                            </g>
+                        </g>
+                        <circle class="strata__sun" cx="380" cy="120" r="38" fill="#FFD86E"/>
+                        <g class="strata__cloud strata__cloud--1" fill="#fff" opacity=".9">
+                            <ellipse cx="90" cy="70" rx="34" ry="12"/><ellipse cx="108" cy="60" rx="20" ry="13"/><ellipse cx="76" cy="62" rx="14" ry="10"/>
+                        </g>
+                        <g class="strata__cloud strata__cloud--2" fill="#fff" opacity=".75">
+                            <ellipse cx="300" cy="44" rx="26" ry="9"/><ellipse cx="314" cy="36" rx="15" ry="10"/>
+                        </g>
+                        <path d="M0,180 L70,130 L130,85 L185,55 L240,84 L300,125 L360,160 L420,178 L520,186 L520,200 L0,200 Z" fill="#6E7A55"/>
+                        <path d="M130,85 L185,55 L240,84" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="3"/>
+                        <g class="strata__birds" fill="none" stroke="#3A2A0A" stroke-width="2" stroke-linecap="round">
+                            <g transform="translate(230,98)"><path class="strata__wing" d="M-8,0 Q-4,-5 0,0 Q4,-5 8,0"/></g>
+                            <g transform="translate(252,86) scale(.75)"><path class="strata__wing strata__wing--b" d="M-8,0 Q-4,-5 0,0 Q4,-5 8,0"/></g>
+                            <g transform="translate(212,82) scale(.6)"><path class="strata__wing strata__wing--c" d="M-8,0 Q-4,-5 0,0 Q4,-5 8,0"/></g>
+                        </g>
+                        </g>
+
+                        <!-- 炊煙 -->
+                        <g fill="#fff">
+                            <circle class="strata__smoke" cx="346" cy="146" r="5"/>
+                            <circle class="strata__smoke strata__smoke--b" cx="346" cy="146" r="6"/>
+                            <circle class="strata__smoke strata__smoke--c" cx="346" cy="146" r="4"/>
+                        </g>
+
+                        <!-- 干欄屋 + 火堆 -->
+                        <g transform="translate(340, 182)">
+                            <line x1="-18" y1="0" x2="-18" y2="16" stroke="#3A2A0A" stroke-width="3"/>
+                            <line x1="-6" y1="0" x2="-6" y2="16" stroke="#3A2A0A" stroke-width="3"/>
+                            <line x1="6" y1="0" x2="6" y2="16" stroke="#3A2A0A" stroke-width="3"/>
+                            <line x1="18" y1="0" x2="18" y2="16" stroke="#3A2A0A" stroke-width="3"/>
+                            <rect x="-22" y="-12" width="44" height="12" fill="#A88A5C" stroke="#5A3A1A"/>
+                            <polygon points="-26,-12 0,-34 26,-12" fill="#6B4A2A" stroke="#3A2A0A"/>
+                            <g class="strata__fire" transform="translate(38, 10)">
+                                <ellipse cx="0" cy="6" rx="8" ry="3" fill="#3A2A0A" opacity=".45"/>
+                                <path d="M-5,6 Q-2,-10 0,6 Q2,-14 5,6" fill="#FF8A45"/>
+                                <path d="M-2,6 Q0,-6 2,6" fill="#FFE066"/>
+                            </g>
+                        </g>
+
+                        <!-- 河面 -->
+                        <rect x="0" y="196" width="520" height="38" fill="url(#hWater)"/>
+                        <g class="strata__waves" fill="none" stroke="#fff" stroke-width="1.5" opacity=".45">
+                            <path d="M-40,208 q20,-6 40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0"/>
+                            <path d="M-60,222 q20,-6 40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0"/>
+                        </g>
+                        <g transform="translate(140, 212)">
+                            <g class="strata__canoe">
+                                <ellipse cx="0" cy="0" rx="30" ry="5" fill="#4A2F1A"/>
+                                <circle cx="-6" cy="-6" r="4" fill="#A88A5C"/>
+                                <line x1="0" y1="-6" x2="12" y2="-18" stroke="#3A2A0A" stroke-width="2"/>
+                            </g>
+                        </g>
+                        <g transform="translate(430, 214)">
+                            <g class="strata__fish">
+                                <path d="M0,0 q8,-6 16,0 q-8,6 -16,0 z M16,0 l6,-4 v8 z" fill="#E8A845"/>
+                            </g>
+                        </g>
+
+                        <!-- 地層 -->
+                        <rect x="0" y="234" width="520" height="48" fill="#BFA37A"/>
+                        <rect x="0" y="282" width="520" height="48" fill="#9C7E55"/>
+                        <rect x="0" y="330" width="520" height="190" fill="#6B4A2A"/>
+                        <g stroke="rgba(0,0,0,.12)" stroke-width="1.5">
+                            <line x1="0" y1="282" x2="520" y2="282"/>
+                            <line x1="0" y1="330" x2="520" y2="330"/>
+                        </g>
+                        <g fill="rgba(255,255,255,.18)">
+                            <circle cx="60" cy="256" r="3"/><circle cx="200" cy="270" r="2"/><circle cx="420" cy="250" r="3"/>
+                            <circle cx="110" cy="300" r="2"/><circle cx="380" cy="312" r="3"/><circle cx="470" cy="296" r="2"/>
+                            <circle cx="120" cy="470" r="3"/><circle cx="260" cy="488" r="2"/><circle cx="400" cy="466" r="3"/>
+                        </g>
+                        <g font-size="12" font-weight="700" letter-spacing="3" text-anchor="middle">
+                            <text x="260" y="263" fill="#5A3A1A">現代層</text>
+                            <text x="260" y="311" fill="#F2E6D0">清代層</text>
+                            <text x="260" y="356" fill="#FFD86E">▼ 十三行文化層　距今 1800–500 年</text>
+                        </g>
+
+                        <!-- 出土文物（外層定位、內層動畫） -->
+                        <g transform="translate(165, 405)">
+                            <g class="strata__find strata__find--1">
+                                <ellipse cx="0" cy="4" rx="34" ry="28" fill="url(#hPot)" stroke="#3D2A18" stroke-width="2"/>
+                                <ellipse cx="0" cy="-22" rx="20" ry="7" fill="#A88A5C" stroke="#3D2A18" stroke-width="2"/>
+                                <circle cx="-9" cy="0" r="3.5" fill="#1F1208"/>
+                                <circle cx="9" cy="0" r="3.5" fill="#1F1208"/>
+                                <path d="M0,2 L-3,10 L3,10 Z" fill="#3D2A18"/>
+                                <path d="M-9,16 Q0,21 9,16" fill="none" stroke="#1F1208" stroke-width="2" stroke-linecap="round"/>
+                            </g>
+                        </g>
+                        <g transform="translate(250, 398)">
+                            <g class="strata__find strata__find--2">
+                                <circle cx="0" cy="0" r="14" fill="url(#hBead)" stroke="#0F2238" stroke-width="2"/>
+                                <circle cx="26" cy="10" r="10" fill="#E8A845" stroke="#6B4A2A" stroke-width="2"/>
+                                <circle cx="8" cy="24" r="8" fill="#7FB3D5" stroke="#1F3A5F" stroke-width="2"/>
+                                <circle cx="-4" cy="-4" r="4" fill="#fff" opacity=".7"/>
+                            </g>
+                        </g>
+                        <g transform="translate(360, 405)">
+                            <g class="strata__find strata__find--3">
+                                <path d="M-24,18 L0,-22 L24,18 Z" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+                                <circle cx="0" cy="4" r="6" fill="#FF7A45"/>
+                            </g>
+                        </g>
+                        <g font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#F2E6D0">
+                            <text x="165" y="456">人面陶罐</text>
+                            <text x="262" y="456">玻璃珠</text>
+                            <text x="360" y="456">煉鐵爐渣</text>
+                        </g>
+                        <g transform="translate(430, 360)">
+                            <g class="strata__digger">
+                                <circle cx="0" cy="-18" r="7" fill="#F2D2A8"/>
+                                <rect x="-7" y="-10" width="14" height="16" rx="3" fill="#1F3A5F"/>
+                                <rect x="8" y="2" width="16" height="4" rx="1" fill="#C8965C"/>
+                                <rect x="20" y="-2" width="5" height="10" fill="#8A8A8A"/>
+                            </g>
+                        </g>
+
+                        <!-- 閃光 -->
+                        <g fill="#FFE7A8">
+                            <path class="strata__spark" d="M200,372 l3,8 8,3 -8,3 -3,8 -3,-8 -8,-3 8,-3z"/>
+                            <path class="strata__spark strata__spark--b" d="M292,380 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z"/>
+                            <path class="strata__spark strata__spark--c" d="M392,372 l3,8 8,3 -8,3 -3,8 -3,-8 -8,-3 8,-3z"/>
+                            <path class="strata__spark strata__spark--d" d="M128,384 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z"/>
+                        </g>
+
+                        <!-- 考古探照光 -->
+                        <circle class="strata__scan" cx="165" cy="408" r="44" fill="none" stroke="#FFD86E" stroke-width="3" stroke-dasharray="6 6"/>
+                    </g>
+                    <circle cx="260" cy="260" r="240" fill="none" stroke="#1F3A5F" stroke-width="2"/>
+                    <circle cx="260" cy="260" r="252" fill="none" stroke="#C8965C" stroke-width="1" stroke-dasharray="3 7"/>
+                </svg>
+                <span class="hero-mote" style="--x:12%; --d:9s"></span>
+                <span class="hero-mote" style="--x:38%; --d:12s"></span>
+                <span class="hero-mote" style="--x:71%; --d:8s"></span>
+                <span class="hero-mote" style="--x:86%; --d:11s"></span>
+            </div>
+        </section>
+
+        <section class="home-section home-section--how" aria-labelledby="howTitle">
+            <div class="home-section__head">
+                <span class="home-eyebrow">HOW TO PLAY　·　怎麼玩</span>
+                <h2 id="howTitle" class="home-section__title">三個小提醒，冒險比較順</h2>
+            </div>
+            <ol class="how-steps">
+                <li class="reveal-up"><b>01</b><h3>先看再玩</h3><p>每一站都有短短的故事。看完再點互動，比較不容易迷路。</p></li>
+                <li class="reveal-up"><b>02</b><h3>答錯沒關係</h3><p>測驗不會扣分。答錯會告訴你該回到哪一頁再看一次。</p></li>
+                <li class="reveal-up"><b>03</b><h3>進度會記得你</h3><p>學習進度存在這台裝置。今天玩不完，下次還能接著走。</p></li>
+            </ol>
+        </section>
+
+        <!-- ===== 你會學到什麼 ===== -->
+        <section class="home-section" id="learn" aria-labelledby="learnTitle">
+            <div class="home-section__head">
+                <span class="home-eyebrow">WHAT YOU WILL LEARN　·　學習內容</span>
+                <h2 id="learnTitle" class="home-section__title">三站冒險＋終極總測驗，認識完整的十三行文化</h2>
+                <p class="home-section__lead">每一站都有短短的閱讀、好玩的互動和小挑戰。學完三個單元後，還能挑戰「10 題選擇＋5 題互動遊戲」限時總測驗！</p>
+            </div>
+
+            <div class="unit-cards">
+                <article class="reveal-up unit-card unit-card--1" data-progress-key="unit1">
+                    <div class="unit-card__top">
+                        <span class="unit-card__no">UNIT 01</span>
+                        <span class="unit-card__time">⏱ 40 分鐘</span>
+                    </div>
+                    <h3 class="unit-card__title">初識十三行</h3>
+                    <p class="unit-card__desc">考古學家每天都在做什麼？十三行遺址是怎麼被發現的？千年前的人住在什麼樣的房子裡？</p>
+                    <ul class="unit-card__list">
+                        <li>考古學與考古工具</li>
+                        <li>遺址的發現故事與名字由來</li>
+                        <li>干欄式建築的構造與智慧</li>
+                    </ul>
+                    <div class="unit-card__play">
+                        <span>互動體驗</span>
+                        <em>時光地圖</em><em>工具配對</em><em>建築拆解</em><em>文物盲盒</em>
+                    </div>
+                    <a href="unit1.html?guide=1#sub-1-1" class="unit-card__link">從這裡開始 →</a>
+                </article>
+
+                <article class="reveal-up unit-card unit-card--2" data-progress-key="unit2">
+                    <div class="unit-card__top">
+                        <span class="unit-card__no">UNIT 02</span>
+                        <span class="unit-card__time">⏱ 50 分鐘</span>
+                    </div>
+                    <h3 class="unit-card__title">工藝大挑戰</h3>
+                    <p class="unit-card__desc">十三行人是史前的工藝高手：會做陶器、會煉鐵，還用貿易換到遠方來的玻璃珠。</p>
+                    <ul class="unit-card__list">
+                        <li>陶器的製作步驟與燒製溫度</li>
+                        <li>煉鐵技術與鐵器時代</li>
+                        <li>玻璃珠與海洋貿易網</li>
+                    </ul>
+                    <div class="unit-card__play">
+                        <span>互動體驗</span>
+                        <em>燒陶模擬</em><em>鼓風煉鐵</em><em>玻璃珠工坊</em><em>文物分類</em>
+                    </div>
+                    <a href="unit2.html#sub-2-1" class="unit-card__link">單元二 →</a>
+                </article>
+
+                <article class="reveal-up unit-card unit-card--3" data-progress-key="unit3">
+                    <div class="unit-card__top">
+                        <span class="unit-card__no">UNIT 03</span>
+                        <span class="unit-card__time">⏱ 45 分鐘</span>
+                    </div>
+                    <h3 class="unit-card__title">社會與信仰</h3>
+                    <p class="unit-card__desc">他們怎麼和過世的家人道別？國寶「人面陶罐」上的那張臉，可能藏著什麼意思？</p>
+                    <ul class="unit-card__list">
+                        <li>墓葬方式與陪葬品</li>
+                        <li>人面陶罐的祕密</li>
+                        <li>十三行人的信仰與儀式</li>
+                    </ul>
+                    <div class="unit-card__play">
+                        <span>互動體驗</span>
+                        <em>模擬發掘</em><em>地層排序</em><em>證據偵探</em><em>陶罐解析</em>
+                    </div>
+                    <a href="unit3.html#sub-3-1" class="unit-card__link">單元三 →</a>
+                </article>
+            </div>
+
+            <!-- 終極總測驗橫幅入口 -->
+            <div class="reveal-up home-quiz-banner">
+                <div class="home-quiz-banner__badge" aria-hidden="true">⏱</div>
+                <div class="home-quiz-banner__body">
+                    <div class="home-quiz-banner__tags">
+                        <span class="home-quiz-banner__eyebrow">FINAL CHALLENGE　·　終極總測驗</span>
+                        <span class="home-quiz-banner__best" id="homeQuizBest" hidden></span>
+                    </div>
+                    <h3 class="home-quiz-banner__title">三個單元都讀完了？挑戰「10 題選擇＋5 題互動遊戲」限時總測驗！</h3>
+                    <p class="home-quiz-banner__desc">全新綜合選擇題搭配 5 道視覺拖曳與圖片配對遊戲，需同時達成「選擇題 ≥ 6 題」與「互動題 ≥ 3 題」雙門檻才算通過，送出後公布成績與錯題檢討！</p>
+                </div>
+                <a href="quiz.html" class="home-quiz-banner__btn">進入總測驗挑戰 →</a>
+            </div>
+        </section>
+
+        <!-- ===== 你知道嗎？小知識翻牌 ===== -->
+        <section class="home-section home-section--facts" aria-labelledby="factTitle">
+            <div class="fun-fact reveal-up" id="funFact">
+                <div class="fun-fact__badge" aria-hidden="true">?</div>
+                <div class="fun-fact__body">
+                    <span class="home-eyebrow">DID YOU KNOW　·　你知道嗎？</span>
+                    <h2 id="factTitle" class="fun-fact__title">考古冷知識</h2>
+                    <p class="fun-fact__text" id="funFactText" aria-live="polite">1955 年，空軍飛機飛過八里上空時，飛行員發現羅盤怪怪的。學者後來前來調查，在田裡撿到陶片和煉鐵爐渣。1957 年才正式開始挖掘。</p>
+                    <div class="fun-fact__foot">
+                        <div class="fun-fact__meta">
+                            <span class="fun-fact__count" id="funFactCount">1 / 6</span>
+                            <div class="fun-fact__dots" id="funFactDots" aria-hidden="true"></div>
+                        </div>
+                        <button type="button" class="fun-fact__next" id="funFactNext">再翻一張 ↻</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section" id="warmup" aria-labelledby="warmTitle">
+            <div class="home-section__head">
+                <span class="home-eyebrow">WARM UP　·　出發前熱身</span>
+                <h2 id="warmTitle" class="home-section__title">3 題小熱身，看看你已經知道多少</h2>
+                <p class="home-section__lead">答錯沒關係，這不是考試。答完再出發，腦子會比較熱。</p>
+            </div>
+            <div class="warmup reveal-up" id="warmupGame">
+                <div class="warmup__progress" aria-hidden="true">
+                    <span class="warmup__progress-bar" id="warmupBar" style="width: 33.3%"></span>
+                </div>
+                <p class="warmup__q" id="warmupQ"></p>
+                <div class="warmup__opts" id="warmupOpts"></div>
+                <p class="warmup__fb" id="warmupFb" aria-live="polite"></p>
+                <div class="warmup__foot">
+                    <span class="warmup__count" id="warmupCount">1 / 3</span>
+                    <a href="unit1.html?guide=1#sub-1-1" class="warmup__go" hidden>熱身完成，開始探索 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 學習時間 ===== -->
+        <section class="home-section home-section--alt" id="time" aria-labelledby="timeTitle">
+            <div class="home-section__head">
+                <span class="home-eyebrow">HOW LONG　·　學習時間</span>
+                <h2 id="timeTitle" class="home-section__title">全部完成大約需要 <em>135 分鐘</em></h2>
+                <p class="home-section__lead">大約是 <b>3 堂課</b>（每堂 45 分鐘）。不用一次學完！學習進度會自動存在這台裝置上，下次可以接著玩。</p>
+            </div>
+
+            <div class="time-plan reveal-up" role="list">
+                <div class="time-plan__seg time-plan__seg--1" style="flex: 40" role="listitem">
+                    <b>單元一</b><span>40 分</span>
+                </div>
+                <div class="time-plan__seg time-plan__seg--2" style="flex: 50" role="listitem">
+                    <b>單元二</b><span>50 分</span>
+                </div>
+                <div class="time-plan__seg time-plan__seg--3" style="flex: 45" role="listitem">
+                    <b>單元三</b><span>45 分</span>
+                </div>
+            </div>
+
+            <div class="outcomes reveal-up">
+                <h3 class="outcomes__title">完成後，你將能夠：</h3>
+                <ol class="outcomes__list">
+                    <li><span>01</span>說出考古學家怎麼靠<b>地層和出土文物</b>，找回沒有文字記錄的歷史。</li>
+                    <li><span>02</span>介紹十三行人<b>住在哪裡、住什麼房子、平常怎麼生活</b>。</li>
+                    <li><span>03</span>舉例說明<b>陶器、煉鐵、玻璃珠</b>，以及它們和海上貿易的關係。</li>
+                    <li><span>04</span>從墓葬和人面陶罐，推想十三行人的<b>社會與信仰</b>，並分辨「證據」和「推測」。</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ===== 結尾呼籲 ===== -->
+        <section class="home-cta" aria-labelledby="ctaTitle">
+            <h2 id="ctaTitle" class="home-cta__title">準備好當一天考古學家了嗎？</h2>
+            <p class="home-cta__lead">第一站：<b>1-1 我們的考古日記</b>，轉動時光地圖，看看淡水河口一千多年來的變化！</p>
+            <div class="home-cta__actions">
+                <a href="unit1.html?guide=1#sub-1-1" class="start-btn start-btn--light" aria-label="開始學習，進入 1-1 我們的考古日記">
+                    <span class="start-btn__label">開始探索</span>
+                    <span class="start-btn__sub">進入 1-1 我們的考古日記</span>
+                    <span class="start-btn__arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </a>
+                <a href="quiz.html" class="ghost-btn ghost-btn--light">或直接挑戰「10 題選擇＋5 題互動」總測驗 →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer home-footer">
+        <p>© 2026 十三行行動博物館 ｜ 畢業專題作品．本網頁僅為教育用途，視覺風格參考新北市立十三行博物館官方網站。</p>
+    </footer>
+
+    <script src="js/audio.js" defer></script>
+    <script src="js/home.js" defer></script>
+
+</body>
+</html>

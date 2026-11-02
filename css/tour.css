@@ -1,0 +1,276 @@
+/* =========================================================
+   十三行行動博物館 - 互動式操作說明直接引導樣式 (css/tour.css)
+   ========================================================= */
+
+/* ---------- 1. 全螢幕防點擊遮罩與動態聚光燈 ---------- */
+.tour-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    pointer-events: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tour-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 智慧聚光燈高亮框（以巨大的外擴陰影實現精準縷空） */
+.tour-spotlight {
+    position: fixed;
+    z-index: 10001;
+    pointer-events: none;
+    border-radius: 14px;
+    border: 2.5px solid #C96A3B;
+    box-shadow: 
+        0 0 0 9999px rgba(12, 23, 38, 0.8),
+        0 0 24px rgba(201, 106, 59, 0.75);
+    transition: 
+        top 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+        left 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+        width 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+        height 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.25s ease;
+    animation: tourSpotlightGlow 2.2s infinite ease-in-out;
+}
+
+@keyframes tourSpotlightGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 0 9999px rgba(12, 23, 38, 0.8),
+            0 0 18px rgba(201, 106, 59, 0.65);
+    }
+    50% {
+        box-shadow: 
+            0 0 0 9999px rgba(12, 23, 38, 0.8),
+            0 0 32px rgba(201, 106, 59, 0.95);
+    }
+}
+
+/* ---------- 2. 引導卡片 (Tour Card) ---------- */
+.tour-card {
+    position: fixed;
+    z-index: 10002;
+    width: min(450px, 92vw);
+    background: #FFFDF9;
+    border-radius: 20px;
+    border: 1.5px solid rgba(196, 109, 59, 0.38);
+    box-shadow: 0 24px 60px rgba(10, 20, 35, 0.42), 0 4px 14px rgba(0, 0, 0, 0.08);
+    padding: 22px 24px;
+    transition: 
+        top 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+        left 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.3s ease,
+        opacity 0.25s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: var(--c-body, #2c3e50);
+}
+
+/* 頂部標頭 */
+.tour-card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.tour-card__badge-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tour-card__step-badge {
+    background: linear-gradient(135deg, #1F3A5F, #2A4D7E);
+    color: #FFFDF9;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+}
+
+.tour-card__target-tag {
+    background: rgba(201, 106, 59, 0.12);
+    color: #C96A3B;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tour-card__close {
+    background: transparent;
+    border: none;
+    color: #7A7267;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.tour-card__close:hover {
+    background: rgba(0, 0, 0, 0.06);
+    color: #222;
+}
+
+/* 內容主體 */
+.tour-card__title {
+    margin: 0 0 8px;
+    font-size: 17.5px;
+    font-weight: 700;
+    color: var(--c-indigo, #1F3A5F);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.35;
+}
+
+.tour-card__desc {
+    margin: 0 0 16px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #4A443B;
+}
+
+.tour-card__desc b {
+    color: #C96A3B;
+    font-weight: 700;
+}
+
+.tour-card__list {
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    background: #F7F3EB;
+    border-radius: 12px;
+    padding: 10px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tour-card__list li {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.tour-card__list li b {
+    color: var(--c-indigo, #1F3A5F);
+}
+
+/* 底部操作按鈕 */
+.tour-card__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tour-btn {
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tour-btn--skip {
+    background: transparent;
+    color: #7A7267;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.tour-btn--skip:hover {
+    color: #222;
+    text-decoration: underline;
+}
+
+.tour-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tour-btn--prev {
+    background: #EAE5DE;
+    color: #554D43;
+}
+
+.tour-btn--prev:hover {
+    background: #DFD9CE;
+    color: #222;
+}
+
+.tour-btn--prev[disabled] {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.tour-btn--next {
+    background: linear-gradient(135deg, #C96A3B, #A85024);
+    color: #FFFDF9;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(201, 106, 59, 0.35);
+}
+
+.tour-btn--next:hover {
+    background: linear-gradient(135deg, #D97845, #B85D30);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(201, 106, 59, 0.45);
+}
+
+.tour-btn--finish {
+    background: linear-gradient(135deg, #27AE60, #1E824C);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(39, 174, 96, 0.35);
+}
+
+.tour-btn--finish:hover {
+    background: linear-gradient(135deg, #2ECC71, #27AE60);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(39, 174, 96, 0.45);
+}
+
+/* ---------- 3. 行動裝置響應適配 ---------- */
+@media (max-width: 680px) {
+    .tour-card {
+        width: calc(100vw - 32px);
+        left: 16px !important;
+        padding: 18px 18px;
+        border-radius: 16px;
+    }
+    .tour-card__title {
+        font-size: 16px;
+    }
+    .tour-card__desc {
+        font-size: 12.5px;
+        margin-bottom: 12px;
+    }
+    .tour-btn {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+}
